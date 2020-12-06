@@ -13,6 +13,7 @@ tablets, smart watches, bundles or deals to find their desired product of choice
 
 ## User Stories 
 
+
 ### Shoppers 
 
 * As a shopper i want to be able to find and locate a device, that i wish to buy.
@@ -22,6 +23,7 @@ tablets, smart watches, bundles or deals to find their desired product of choice
 * As a shopper i want to be able to compare devices so i can see which one suits my needs best for me.
 
 * As a shopper i want to be able to see upcoming deals so i can save money on my next purchase
+
 
 ### Frequent User 
 
@@ -34,6 +36,15 @@ tablets, smart watches, bundles or deals to find their desired product of choice
 * As a user i wish to be able to contact customer support quickly, incase i have any issues or general help.
 
 * As a frequent buyer, i wish to be able to recieve discounts for multiple times of purchasing.
+
+
+### Sorting 
+
+* As a shopper i wish to be able to sort the page by price so i can budget properly.
+
+* As a shopper i wish to be able to sort the page by make, so i can select my favourite and familiar devices first.
+
+* As a shopper i wish to be able to sort the page by release, so i can select newest products. 
 
 ---
 
