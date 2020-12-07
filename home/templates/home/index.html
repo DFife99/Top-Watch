@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
+{% load static %}
+
 {% block content %}
-<div class="container-fluid mt-5">
+<div class="container-fluid mt-3 mb-3">
     <div class="row">
         <div class="col-3"></div>
         <div class="col-6 text-center font-weight-bold">
@@ -10,11 +12,38 @@
         </div>
         <div class="col-3"></div>
     </div>
-    <div class="row">
-    
+    <div id="first_call" class="row">
+        <img id="first_call_bg" src="/media/gettyimages-1215266758-170667a.jpg" alt="First Deal Display Background">
+        <div class="col-3 text-white d-none d-lg-flex pt-3">
+            <div class="mt-4 ml-4">
+                <strong>Bundle & Save</strong><br>
+                <br>
+                <p>Save on a smartwatch with a purchase of a new phone.</p>
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-12 col-md-6 d-flex pt-3">
+            <img src="/media/Bundle-01.png" alt="Bundle Deal 1" class="bundle-image">
+            <p class="text-white ml-5 mt-3">APPLE<br>
+                <strong>iPhone 11<br>
+                +</strong><br>
+                APPLE<br>
+                <strong>SE WATCH</strong><br>
+                <button type="button" class="btn btn-outline-light shop-now mt-1">Shop Now</button>
+            </p>
+        </div>
+        <div class="col-lg-4 col-sm-12 col-md-6 d-none d-md-flex pt-3">
+            <img src="/media/Bundle-02.png" alt="Bundle Deal 2" class="bundle-image">
+            <p class="text-white ml-5 mt-3">SAMSUNG<br>
+                <strong>Galaxy S20<br>
+                +</strong><br>
+                SAMSUNG<br>
+                <strong>Galaxy Watch</strong><br>
+                <button type="button" class="btn btn-outline-light shop-now mt-1">Shop Now</button>
+            </p>
+        </div>
     </div>
-    <div class="row">
-    
+    <div id="second_call" class="row">
+        <img id="second_call_bg" src="/media/gettyimages-1217216982-170667a.jpg" alt="First Deal Display Background">
     </div>
 </div>
 {% endblock %}

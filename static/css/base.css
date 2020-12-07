@@ -1,0 +1,21 @@
+#first_call,
+#second_call {
+    height: 250px;
+}
+
+#first_call_bg,
+#second_call_bg { 
+    height: 250px;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.bundle-image {
+    height: 200px;
+}
+
+.shop-now {
+    border: 2px solid white;
+    border-radius: 5px;
+}
