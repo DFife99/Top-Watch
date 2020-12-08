@@ -19,3 +19,25 @@
     border: 2px solid white;
     border-radius: 5px;
 }
+
+/* TABLETS */
+@media only screen and (min-width: 600px) {
+    #bundle-2{
+        display: flex !important;
+    }
+}
+
+/* LARGE LAPTOPS */
+
+@media only screen and (min-width: 1200px) {
+    #first_call,
+    #second_call,
+    #first_call_bg,
+    #second_call_bg {
+    height: 400px;
+    }
+
+    .bundle-image {
+    height: 350px;
+    }
+}

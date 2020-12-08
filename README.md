@@ -7,7 +7,7 @@ tablets, smart watches, bundles or deals to find their desired product of choice
 
 ---
 
-# Version 0.1.0
+# Version 0.1.1
 
 ---
 
@@ -48,3 +48,7 @@ tablets, smart watches, bundles or deals to find their desired product of choice
 
 ---
 
+### Sources
+
+* bundle-background.jpg 
+    * https://wallpapersafari.com/w/wyI6X0
