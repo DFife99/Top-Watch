@@ -1,5 +1,20 @@
+/* NAVBAR */    
+
+.navbar {
+    background-color: #092749;
+}
+
+.nav-link,
+.navbar-brand {
+    text-decoration: none;
+    color: white;
+}
+
+/* CALLOUT */
+
 #first_call,
-#second_call {
+#second_call,
+#carouselExampleIndicators {
     height: 250px;
 }
 
@@ -33,7 +48,8 @@
     #first_call,
     #second_call,
     #first_call_bg,
-    #second_call_bg {
+    #second_call_bg,
+    #carouselExampleIndicators {
     height: 400px;
     }
 

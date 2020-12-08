@@ -7,7 +7,7 @@ tablets, smart watches, bundles or deals to find their desired product of choice
 
 ---
 
-# Version 0.1.1
+# Version 0.1.2
 
 ---
 
