@@ -35,10 +35,43 @@
     border-radius: 5px;
 }
 
+/* PHONES */
+@media only screen and (max-width: 600px) {
+    #bundle-1,
+    #bundle-3 {
+        padding:0;
+        padding-left: 3em;
+    }
+    
+    .bundle-text {
+        font-size: 12px;
+    }
+
+    .bundle-text .btn {
+        font-size: 12px;
+        margin-top: 3em !important;
+    }
+}
+
+@media only screen and (min-width: 425px) and (max-width: 800px) {
+    #bundle-1,
+    #bundle-3 {
+        padding:0;
+        padding-left: 5em;
+    }
+}
+
 /* TABLETS */
 @media only screen and (min-width: 600px) {
-    #bundle-2{
+    #bundle-2,
+    #bundle-4 {
         display: flex !important;
+        padding: 0;
+        padding-left: 2em;
+    }
+
+    .bundle-text {
+        font-size: 1rem;
     }
 }
 
