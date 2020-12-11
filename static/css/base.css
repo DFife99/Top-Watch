@@ -35,6 +35,11 @@
     border-radius: 5px;
 }
 
+#honor-8-pro-image {
+    height: 340px;
+    padding-top: 20px;
+}
+
 /* PHONES */
 @media only screen and (max-width: 600px) {
     #bundle-1,
@@ -64,7 +69,8 @@
 /* TABLETS */
 @media only screen and (min-width: 600px) {
     #bundle-2,
-    #bundle-4 {
+    #bundle-4,
+    #discounted-phone-2 {
         display: flex !important;
         padding: 0;
         padding-left: 2em;
