@@ -14,7 +14,8 @@
 
 #first_call,
 #second_call,
-#carouselExampleIndicators {
+#carouselExampleIndicators,
+.carousel-inner {
     height: 250px;
 }
 
@@ -67,7 +68,8 @@
 @media only screen and (max-width: 600px) {
     #bundle-1,
     #bundle-3,
-    #discounted-phone-1 {
+    #discounted-phone-1,
+    #tablet-1 {
         padding:0;
         padding-left: 3em;
         height: 250px;
@@ -86,7 +88,8 @@
 @media only screen and (min-width: 425px) and (max-width: 800px) {
     #bundle-1,
     #bundle-3,
-    #discounted-phone-1 {
+    #discounted-phone-1,
+    #tablet-1 {
         padding:0;
         padding-left: 5em;
     }
@@ -96,7 +99,8 @@
 @media only screen and (min-width: 600px) {
     #bundle-2,
     #bundle-4,
-    #discounted-phone-2 {
+    #discounted-phone-2,
+    #tablet-2 {
         display: flex !important;
         padding: 0;
         padding-left: 2em;
@@ -114,7 +118,8 @@
     #second_call,
     #first_call_bg,
     #second_call_bg,
-    #carouselExampleIndicators {
+    #carouselExampleIndicators,
+    .carousel-inner {
     height: 400px;
     }
 
@@ -124,7 +129,8 @@
 
     #bundle-1,
     #bundle-3,
-    #discounted-phone-1 {
+    #discounted-phone-1,
+    #tablet-1 {
         height: 400px;
     }
 }
