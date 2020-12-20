@@ -1,0 +1,207 @@
+[{
+    "Devices": {
+        "pk": 0,
+        "model": "products.product",
+        "fields": {
+            "sku": "",
+            "category": "",
+            "name": "",
+            "release": "",
+            "description": {
+                "weight": "",
+                "size": "",
+                "os": "",
+                "display": {
+                    "screen": {
+                        "size": "",
+                        "type": ""
+                    },
+                    "touchscreen": "",
+                    "resolution": ""
+                },
+                "camera": {
+                    "main_camera": {
+                        "number_of_cams": "",
+                        "specs": {
+                            "camera_1": "",
+                            "camera_2": "",
+                            "camera_3": ""
+                        },
+                        "video": ""
+                    },
+                    "selfie_camera": {
+                        "picture": "",
+                        "video": ""
+                    }
+                },
+                "memory": {
+                    "storage": "",
+                    "card_reader": "",
+                    "card_supported": ""
+                },
+                "storage_cap": "",
+                "network": {
+                    "wireless": "",
+                    "bluetooth": "",
+                    "gps": "",
+                    "nfc": "",
+                    "radio": "",
+                    "usb": ""
+                },
+                "built_in_devices": {
+                    "microphone": "",
+                    "fingerprint_reader": "",
+                    "speakers": "",
+                    "headphone_jack": "",
+                    "accelerometer": "",
+                    "gyro": "",
+                    "proximity": "",
+                    "compass": ""
+                },
+                "charging_port": "",
+                "battery": ""
+            },
+            "price": "",
+            "image_url": "",
+            "image": "",
+            "summary": "",
+            "ratings": {}
+        },
+
+        "pk": 1,
+        "model": "products.product",
+        "fields": {
+            "sku": "onpl7t271019",
+            "category": "1",
+            "name": "OnePlus 7T",
+            "release": "27 September 2019",
+            "description": {
+                "weight": "190g (6.7oz)",
+                "size": "160.9 x 74.4 x 8.1mm (6.33 x 2.93 x 0.32in)",
+                "os": "Android 10, OxygenOS 10.0.7",
+                "display": {
+                    "screen": {
+                        "size": "103.6cm Squared",
+                        "type": "Fluid AMOLED"
+                    },
+                    "touchscreen": true,
+                    "resolution": "1080 x 2400"
+                },
+                "camera": {
+                    "main_camera": {
+                        "number_of_cams": 3,
+                        "specs": {
+                            "camera_1": "48MP, 26mm ( wide )",
+                            "camera_2": "12MP, 51mm ( telephoto )",
+                            "camera_3": "16MP, 17mm ( ultrawide )"
+                        },
+                        "video": "4k@30/60 FPS - 1080p@30/60/240fps - 720p@960fps"
+                    },
+                    "selfie_camera": {
+                        "picture": "16MP 25mm wide",
+                        "video": "1080p@30fps"
+                    }
+                },
+                "memory": {
+                    "storage": "8GB RAM",
+                    "card_reader": false,
+                    "card_supported": "N/A"
+                },
+                "storage_cap": "128GB / 256GB",
+                "network": {
+                    "wireless": true,
+                    "bluetooth": true,
+                    "gps": true,
+                    "nfc": true,
+                    "radio": false,
+                    "usb": "Type-C 3.1"
+                },
+                "built_in_devices": {
+                    "microphone": true,
+                    "fingerprint_reader": true,
+                    "speakers": true,
+                    "headphone_jack": false,
+                    "accelerometer": true,
+                    "gyro": true,
+                    "proximity": true,
+                    "compass": true
+                },
+                "charging_port": "Fast Charging",
+                "battery": "3800 mAh"
+            },
+            "price": "£379, $399.99",
+            "image_url": "https://cdn.dxomark.com/wp-content/uploads/medias/post-38226/OnePlus-7-pro_Main-Camera-1200%C3%979001.jpg",
+            "image": "",
+            "summary": "With a responsive 90 Hz refresh rate and the latest HDR10+ technology, the OnePlus 7T’s Fluid Display is smooth, vivid, and incredibly immersive. If it sounds too good to be true, just wait until you see it.",
+            "ratings": {}
+        },
+
+        "pk": 2,
+        "model": "products.product",
+        "fields": {
+            "sku": "sagsno20u5g",
+            "category": "1",
+            "name": "Samsung Galaxy Note20 Ultra",
+            "release": "August 21, 2020",
+            "description": {
+                "weight": "208 g (7.34 oz)",
+                "size": "164.8 x 77.2 x 8.1 mm (6.49 x 3.04 x 0.32 in)",
+                "os": "Android 10, One UI 2.5",
+                "display": {
+                    "screen": {
+                        "size": "6.9 inches",
+                        "type": "Dynamic AMOLED 2X"
+                    },
+                    "touchscreen": "",
+                    "resolution": ""
+                },
+                "camera": {
+                    "main_camera": {
+                        "number_of_cams": "",
+                        "specs": {
+                            "camera_1": "",
+                            "camera_2": "",
+                            "camera_3": ""
+                        },
+                        "video": ""
+                    },
+                    "selfie_camera": {
+                        "picture": "",
+                        "video": ""
+                    }
+                },
+                "memory": {
+                    "storage": "",
+                    "card_reader": "",
+                    "card_supported": ""
+                },
+                "storage_cap": "",
+                "network": {
+                    "wireless": "",
+                    "bluetooth": "",
+                    "gps": "",
+                    "nfc": "",
+                    "radio": "",
+                    "usb": ""
+                },
+                "built_in_devices": {
+                    "microphone": "",
+                    "fingerprint_reader": "",
+                    "speakers": "",
+                    "headphone_jack": "",
+                    "accelerometer": "",
+                    "gyro": "",
+                    "proximity": "",
+                    "compass": ""
+                },
+                "charging_port": "",
+                "battery": ""
+            },
+            "price": "",
+            "image_url": "",
+            "image": "",
+            "summary": "",
+            "ratings": {}
+        },
+    }
+}]
