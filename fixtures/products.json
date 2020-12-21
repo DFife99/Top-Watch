@@ -40,14 +40,6 @@
                     "card_supported": ""
                 },
                 "storage_cap": "",
-                "network": {
-                    "wireless": "",
-                    "bluetooth": "",
-                    "gps": "",
-                    "nfc": "",
-                    "radio": "",
-                    "usb": ""
-                },
                 "built_in_devices": {
                     "microphone": "",
                     "fingerprint_reader": "",
@@ -64,7 +56,6 @@
             "price": "",
             "image_url": "",
             "image": "",
-            "summary": "",
             "ratings": {}
         },
 
@@ -108,14 +99,6 @@
                     "card_supported": "N/A"
                 },
                 "storage_cap": "128GB / 256GB",
-                "network": {
-                    "wireless": true,
-                    "bluetooth": true,
-                    "gps": true,
-                    "nfc": true,
-                    "radio": false,
-                    "usb": "Type-C 3.1"
-                },
                 "built_in_devices": {
                     "microphone": true,
                     "fingerprint_reader": true,
@@ -132,7 +115,6 @@
             "price": "£379, $399.99",
             "image_url": "https://cdn.dxomark.com/wp-content/uploads/medias/post-38226/OnePlus-7-pro_Main-Camera-1200%C3%979001.jpg",
             "image": "",
-            "summary": "With a responsive 90 Hz refresh rate and the latest HDR10+ technology, the OnePlus 7T’s Fluid Display is smooth, vivid, and incredibly immersive. If it sounds too good to be true, just wait until you see it.",
             "ratings": {}
         },
 
@@ -152,55 +134,46 @@
                         "size": "6.9 inches",
                         "type": "Dynamic AMOLED 2X"
                     },
-                    "touchscreen": "",
-                    "resolution": ""
+                    "touchscreen": true,
+                    "resolution": "1440 x 3088"
                 },
                 "camera": {
                     "main_camera": {
-                        "number_of_cams": "",
+                        "number_of_cams": "3",
                         "specs": {
-                            "camera_1": "",
-                            "camera_2": "",
-                            "camera_3": ""
+                            "camera_1": "108 MP, f/1.8, 26mm (wide)",
+                            "camera_2": "12 MP, f/3.0, 120mm (periscope telephoto)",
+                            "camera_3": "12 MP, f/2.2, 120˚, 13mm (ultrawide)"
                         },
-                        "video": ""
+                        "video": "8K@24fps, 4K@30/60fps, 1080p@30/60/240fps, 720p@960fps"
                     },
                     "selfie_camera": {
-                        "picture": "",
-                        "video": ""
+                        "picture": "10 MP, f/2.2, 26mm (wide)",
+                        "video": "4K@30/60fps, 1080p@30fps"
                     }
                 },
                 "memory": {
-                    "storage": "",
-                    "card_reader": "",
-                    "card_supported": ""
+                    "storage": "12GB RAM",
+                    "card_reader": true,
+                    "card_supported": "microSDXC"
                 },
-                "storage_cap": "",
-                "network": {
-                    "wireless": "",
-                    "bluetooth": "",
-                    "gps": "",
-                    "nfc": "",
-                    "radio": "",
-                    "usb": ""
-                },
+                "storage_cap": "256GB",
                 "built_in_devices": {
-                    "microphone": "",
-                    "fingerprint_reader": "",
-                    "speakers": "",
-                    "headphone_jack": "",
-                    "accelerometer": "",
-                    "gyro": "",
-                    "proximity": "",
-                    "compass": ""
+                    "microphone": true,
+                    "fingerprint_reader": true,
+                    "speakers": true,
+                    "headphone_jack": false,
+                    "accelerometer": true,
+                    "gyro": true,
+                    "proximity": true,
+                    "compass": true
                 },
-                "charging_port": "",
-                "battery": ""
+                "charging_port": "USB 3.0",
+                "battery": "Li-Ion 4500 mAh"
             },
-            "price": "",
-            "image_url": "",
-            "image": "",
-            "summary": "",
+            "price": "£978.99 / €939.99",
+            "image_url": "https://cdn.vodafone.co.uk/en/assets/images/desktop/Samsung_Galaxy_Note_20_Ultra_mystic_bronze-full-product-front-600.png",
+            "image": "/media/products/galaxy-note-20-5g.png",
             "ratings": {}
         },
     }
