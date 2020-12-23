@@ -5,18 +5,14 @@
         "fields": {
             "sku": "",
             "category": "",
+            "brand": "",
             "name": "",
             "release": "",
             "description": {
-                "weight": "",
                 "size": "",
                 "os": "",
                 "display": {
-                    "screen": {
-                        "size": "",
-                        "type": ""
-                    },
-                    "touchscreen": "",
+                    "screen-size": "",
                     "resolution": ""
                 },
                 "camera": {
@@ -42,20 +38,15 @@
                 "storage_cap": "",
                 "built_in_devices": {
                     "microphone": "",
-                    "fingerprint_reader": "",
                     "speakers": "",
-                    "headphone_jack": "",
-                    "accelerometer": "",
-                    "gyro": "",
-                    "proximity": "",
-                    "compass": ""
+                    "headphone_jack": ""
                 },
                 "charging_port": "",
                 "battery": ""
             },
             "price": "",
             "image_url": "",
-            "image": "",
+            "image": "/media/products/",
             "ratings": {}
         },
 
@@ -63,19 +54,15 @@
         "model": "products.product",
         "fields": {
             "sku": "onpl7t271019",
-            "category": "1",
-            "name": "OnePlus 7T",
+            "category": 1,
+            "brand": "OnePlus",
+            "name": "7T",
             "release": "27 September 2019",
             "description": {
-                "weight": "190g (6.7oz)",
                 "size": "160.9 x 74.4 x 8.1mm (6.33 x 2.93 x 0.32in)",
                 "os": "Android 10, OxygenOS 10.0.7",
                 "display": {
-                    "screen": {
-                        "size": "103.6cm Squared",
-                        "type": "Fluid AMOLED"
-                    },
-                    "touchscreen": true,
+                    "screen-size": "103.6cm Squared",
                     "resolution": "1080 x 2400"
                 },
                 "camera": {
@@ -101,20 +88,15 @@
                 "storage_cap": "128GB / 256GB",
                 "built_in_devices": {
                     "microphone": true,
-                    "fingerprint_reader": true,
                     "speakers": true,
-                    "headphone_jack": false,
-                    "accelerometer": true,
-                    "gyro": true,
-                    "proximity": true,
-                    "compass": true
+                    "headphone_jack": false
                 },
                 "charging_port": "Fast Charging",
                 "battery": "3800 mAh"
             },
-            "price": "£379, $399.99",
+            "price": "£379",
             "image_url": "https://cdn.dxomark.com/wp-content/uploads/medias/post-38226/OnePlus-7-pro_Main-Camera-1200%C3%979001.jpg",
-            "image": "",
+            "image": "/media/products/OnePlus-7-pro.png",
             "ratings": {}
         },
 
@@ -122,19 +104,15 @@
         "model": "products.product",
         "fields": {
             "sku": "sagsno20u5g",
-            "category": "1",
-            "name": "Samsung Galaxy Note20 Ultra",
+            "category": 1,
+            "brand": "Samsung",
+            "name": "Galaxy Note20 Ultra",
             "release": "August 21, 2020",
             "description": {
-                "weight": "208 g (7.34 oz)",
                 "size": "164.8 x 77.2 x 8.1 mm (6.49 x 3.04 x 0.32 in)",
                 "os": "Android 10, One UI 2.5",
                 "display": {
-                    "screen": {
-                        "size": "6.9 inches",
-                        "type": "Dynamic AMOLED 2X"
-                    },
-                    "touchscreen": true,
+                    "screen-size": "6.9 inches",
                     "resolution": "1440 x 3088"
                 },
                 "camera": {
@@ -160,20 +138,117 @@
                 "storage_cap": "256GB",
                 "built_in_devices": {
                     "microphone": true,
-                    "fingerprint_reader": true,
                     "speakers": true,
-                    "headphone_jack": false,
-                    "accelerometer": true,
-                    "gyro": true,
-                    "proximity": true,
-                    "compass": true
+                    "headphone_jack": false
                 },
                 "charging_port": "USB 3.0",
                 "battery": "Li-Ion 4500 mAh"
             },
-            "price": "£978.99 / €939.99",
+            "price": "£978.99",
             "image_url": "https://cdn.vodafone.co.uk/en/assets/images/desktop/Samsung_Galaxy_Note_20_Ultra_mystic_bronze-full-product-front-600.png",
             "image": "/media/products/galaxy-note-20-5g.png",
+            "ratings": {}
+        },
+
+        "pk": 3,
+        "model": "products.product",
+        "fields": {
+            "sku": "APP02WTHSE",
+            "category": 3,
+            "brand": "Apple",
+            "name": "Watch SE",
+            "release": "2020, September 18",
+            "description": {
+                "size": "44 x 38 x 10.4 mm (1.73 x 1.50 x 0.41 in)",
+                "os": "watchOS 7.0",
+                "display": {
+                    "screen-size": "1.78 inches",
+                    "resolution": "448 x 368 pixels"
+                },
+                "camera": {
+                    "main_camera": {
+                        "number_of_cams": 0,
+                        "specs": {
+                            "camera_1": false,
+                            "camera_2": false,
+                            "camera_3": false
+                        },
+                        "video": false
+                    },
+                    "selfie_camera": {
+                        "picture": false,
+                        "video": false
+                    }
+                },
+                "memory": {
+                    "storage": "2GB",
+                    "card_reader": false,
+                    "card_supported": false
+                },
+                "storage_cap": "32GB",
+                "built_in_devices": {
+                    "microphone": false,
+                    "speakers": true,
+                    "headphone_jack": false
+                },
+                "charging_port": false,
+                "wireless-charging": true,
+                "battery": "273 mAh"
+            },
+            "price": "£269",
+            "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtS7BiJMb5EaOmrfK81BqD_PwkJXuiczsxgA&usqp=CAU",
+            "image": "/media/products/AppleWatchSE.png",
+            "ratings": {}
+        },
+
+        "pk": 4,
+        "model": "products.product",
+        "fields": {
+            "sku": "APP01IPN11",
+            "category": 1,
+            "brand": "Apple",
+            "name": "iPhone 11",
+            "release": "2019, September 10",
+            "description": {
+                "size": "150.9 x 75.7 x 8.3 mm (5.94 x 2.98 x 0.33 in)",
+                "os": "iOS 13",
+                "display": {
+                    "screen-size": "6.1 inches",
+                    "resolution": "828 x 1792 pixels"
+                },
+                "camera": {
+                    "main_camera": {
+                        "number_of_cams": "2",
+                        "specs": {
+                            "camera_1": "12 MP, f/1.8, 26mm (wide)",
+                            "camera_2": "12 MP, f/2.4, 120˚, 13mm (ultrawide)",
+                            "camera_3": false
+                        },
+                        "video": "4K@24/30/60fps, 1080p@30/60/120/240fps"
+                    },
+                    "selfie_camera": {
+                        "picture": "12 MP, f/2.2, 23mm (wide)",
+                        "video": "4K@24/30/60fps, 1080p@30/60/120fps"
+                    }
+                },
+                "memory": {
+                    "storage": "4GB",
+                    "card_reader": false,
+                    "card_supported": false
+                },
+                "storage_cap": "64GB",
+                "built_in_devices": {
+                    "microphone": true,
+                    "speakers": true,
+                    "headphone_jack": false
+                },
+                "charging_port": "USB Power Delivery 2.0",
+                "wireless-charging": true,
+                "battery": "3110 mAh"
+            },
+            "price": "£530",
+            "image_url": "https://images.macrumors.com/t/XQggVnZ-YGdnXQcTrRsA38bYCBs=/1600x0/article-new/2020/10/iphone-11-vs-12.jpg",
+            "image": "/media/products/iphone-11.png",
             "ratings": {}
         },
     }
