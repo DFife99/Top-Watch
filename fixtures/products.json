@@ -251,5 +251,156 @@
             "image": "/media/products/iphone-11.png",
             "ratings": {}
         },
+
+        "pk": 5,
+        "model": "products.product",
+        "fields": {
+            "sku": "SAM01GAS20",
+            "category": 1,
+            "brand": "Samsung",
+            "name": "Galaxy",
+            "release": "2020, February 11",
+            "description": {
+                "size": "151.7 x 69.1 x 7.9 mm (5.97 x 2.72 x 0.31 in)",
+                "os": "Android 10",
+                "display": {
+                    "screen-size": "6.2 inches",
+                    "resolution": "1440 x 3200 pixels"
+                },
+                "camera": {
+                    "main_camera": {
+                        "number_of_cams": 3,
+                        "specs": {
+                            "camera_1": "12 MP, f/1.8, 26mm (wide)",
+                            "camera_2": "64 MP, f/2.0, 29mm (telephoto)",
+                            "camera_3": "12 MP, f/2.2, 13mm (ultrawide)"
+                        },
+                        "video": "8K@24fps, 4K@30/60fps, 1080p@30/60/240fps"
+                    },
+                    "selfie_camera": {
+                        "picture": "10 MP, f/2.2, 26mm (wide)",
+                        "video": "4K@30/60fps, 1080p@30fps"
+                    }
+                },
+                "memory": {
+                    "storage": "8GB",
+                    "card_reader": "shared SIM slot",
+                    "card_supported": "microSDXC"
+                },
+                "storage_cap": "128GB",
+                "built_in_devices": {
+                    "microphone": true,
+                    "speakers": true,
+                    "headphone_jack": false
+                },
+                "wireless-charging": true,
+                "charging_port": "USB Power Delivery 3.0",
+                "battery": "4000 mAh"
+            },
+            "price": "£630",
+            "image_url": "https://i5.walmartimages.com/asr/3967a22c-f45b-4ca7-9bb0-fe93585e1f09_1.f9f5ceb407618cb4cd2e6d1f7541e775.jpeg",
+            "image": "/media/products/SamsungGalaxys20.png",
+            "ratings": {}
+        },
+
+        "pk": 6,
+        "model": "products.product",
+        "fields": {
+            "sku": "SAM03GAWH3",
+            "category": 3,
+            "brand": "Samsung",
+            "name": "Galaxy Watch3",
+            "release": "2020, August 05",
+            "description": {
+                "size": "46.2 x 45 x 11.1 mm (1.82 x 1.77 x 0.44 in)",
+                "os": "Tizen-based wearable OS 5.5",
+                "display": {
+                    "screen-size": "1.4 inches",
+                    "resolution": "360 x 360 pixels"
+                },
+                "camera": {
+                    "main_camera": {
+                        "number_of_cams": 0,
+                        "specs": {
+                            "camera_1": false,
+                            "camera_2": false,
+                            "camera_3": false
+                        },
+                        "video": false
+                    },
+                    "selfie_camera": {
+                        "picture": false,
+                        "video": false
+                    }
+                },
+                "memory": {
+                    "storage": "1GB",
+                    "card_reader": false,
+                    "card_supported": false
+                },
+                "storage_cap": "8GB",
+                "built_in_devices": {
+                    "microphone": false,
+                    "speakers": true,
+                    "headphone_jack": false
+                },
+                "charging_port": "Qi wireless charging",
+                "battery": "340 mAh"
+            },
+            "price": "£360",
+            "image_url": "https://static.bhphoto.com/images/images500x500/samsung_sm_r840nzsaxar_galaxy_watch3_gps_smartwatch_1596630034_1577762.jpg",
+            "image": "/media/products/SamsungGalaxyWatch3.png",
+            "ratings": {}
+        },
+
+        "pk": 7,
+        "model": "products.product",
+        "fields": {
+            "sku": "APP01ARPDP",
+            "category": 4,
+            "brand": "Apple",
+            "name": "AirPods Pro",
+            "release": "",
+            "description": {
+                "size": "3.09cm x 2.18cm x 2.4cm ",
+                "os": "h1-Based",
+                "display": {
+                    "screen-size": false,
+                    "resolution": false
+                },
+                "camera": {
+                    "main_camera": {
+                        "number_of_cams": 0,
+                        "specs": {
+                            "camera_1": false,
+                            "camera_2": false,
+                            "camera_3": false
+                        },
+                        "video": false
+                    },
+                    "selfie_camera": {
+                        "picture": false,
+                        "video": false
+                    }
+                },
+                "memory": {
+                    "storage": false,
+                    "card_reader": false,
+                    "card_supported": false
+                },
+                "storage_cap": false,
+                "built_in_devices": {
+                    "microphone": true,
+                    "speakers": true,
+                    "headphone_jack": false
+                },
+                "charging_port": "Charging Case",
+                "battery": "4.5 Hours"
+            },
+            "price": "£220",
+            "image_url": "https://i.pinimg.com/originals/d7/46/c0/d746c0d24739dcd70da2d7adf57b3df7.jpg",
+            "image": "/media/products/d746c0d24739dcd70da2d7adf57b3df7.png",
+            "ratings": {}
+        },
     }
 }]
