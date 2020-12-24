@@ -1,0 +1,32 @@
+[{
+    "pk":1,
+    "model":"products.category",
+    "fields":{
+        "name":"phones",
+        "friendly_name":"Phones"
+    }
+},
+    {
+    "pk":2,
+    "model":"products.category",
+    "fields":{
+        "name":"tablets",
+        "friendly_name":"Tablets"
+    }
+},
+    {
+    "pk":3,
+    "model":"products.category",
+    "fields":{
+        "name":"smart_watches",
+        "friendly_name":"Smart Watches"
+    }
+},
+    {
+    "pk":4,
+    "model":"products.category",
+    "fields":{
+        "name":"wireless_headphones",
+        "friendly_name":"Wireless Headphones"
+    }
+}]
