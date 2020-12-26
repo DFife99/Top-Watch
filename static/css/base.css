@@ -25,6 +25,22 @@
     display: none;
 }
 
+/*FOOTER*/
+
+#footer {
+    display: inline-flex;
+}
+
+#footer ul {
+    display: inline-flex;
+    text-decoration: none;
+    list-style: none;
+}
+
+#footer ul li {
+    margin-right: 15px;
+}
+
 /* CALLOUT */
 
 #first_call,
