@@ -1,11 +1,37 @@
+/* GENERAL */
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+.row {
+    margin: 0;
+}
+
+.fas, .fab{
+    font-size: 24px;
+}
+
 /* NAVBAR */    
 
-.navbar {
+#logo {
+    height: 100%;
+    width: 100%;
+}
+
+.navbar,
+#footer {
     background-color: #092749;
 }
 
 .nav-link,
-.navbar-brand {
+.navbar-brand,
+#footer ul li a,
+#footer p {
     text-decoration: none;
     color: white;
 }
