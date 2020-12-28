@@ -16,6 +16,7 @@
             "camera_1":"48MP, 26mm ( wide )",
             "camera_2":"12MP, 51mm ( telephoto )",
             "camera_3":"16MP, 17mm ( ultrawide )",
+            "camera_4": false,
             "video":"4k@30/60 FPS - 1080p@30/60/240fps - 720p@960fps",
             "picture":"16MP 25mm wide",
             "selfie_video":"1080p@30fps",
@@ -29,7 +30,7 @@
             "wireless_charging":true,
             "charging_port":"Fast Charging",
             "battery":"3800 mAh",
-            "price":"£379",
+            "price":379,
             "image_url":"https://cdn.dxomark.com/wp-content/uploads/medias/post-38226/OnePlus-7-pro_Main-Camera-1200%C3%979001.jpg",
             "image":"/media/products/OnePlus-7-pro.png"
         }
@@ -52,6 +53,7 @@
             "camera_1":"108 MP, f/1.8, 26mm (wide)",
             "camera_2":"12 MP, f/3.0, 120mm (periscope telephoto)",
             "camera_3":"12 MP, f/2.2, 120˚, 13mm (ultrawide)",
+            "camera_4": false,
             "video":"8K@24fps, 4K@30/60fps, 1080p@30/60/240fps, 720p@960fps",
             "picture":"10 MP, f/2.2, 26mm (wide)",
             "selfie_video":"4K@30/60fps, 1080p@30fps",
@@ -65,7 +67,7 @@
             "wireless_charging":true,
             "charging_port":"USB 3.0",
             "battery":"Li-Ion 4500 mAh",
-            "price":"£978.99",
+            "price":978.99,
             "image_url":"https://cdn.vodafone.co.uk/en/assets/images/desktop/Samsung_Galaxy_Note_20_Ultra_mystic_bronze-full-product-front-600.png",
             "image":"/media/products/galaxy-note-20-5g.png"
         }
@@ -88,6 +90,7 @@
             "camera_1":false,
             "camera_2":false,
             "camera_3":false,
+            "camera_4": false,
             "video":false,
             "picture":false,
             "selfie_video":false,
@@ -101,7 +104,7 @@
             "charging_port":false,
             "wireless_charging":true,
             "battery":"273 mAh",
-            "price":"£269",
+            "price":269,
             "image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtS7BiJMb5EaOmrfK81BqD_PwkJXuiczsxgA&usqp=CAU",
             "image":"/media/products/AppleWatchSE.png"
         }
@@ -124,6 +127,7 @@
             "camera_1":"12 MP, f/1.8, 26mm (wide)",
             "camera_2":"12 MP, f/2.4, 120˚, 13mm (ultrawide)",
             "camera_3":false,
+            "camera_4": false,
             "video":"4K@24/30/60fps, 1080p@30/60/120/240fps",
             "picture":"12 MP, f/2.2, 23mm (wide)",
             "selfie_video":"4K@24/30/60fps, 1080p@30/60/120fps",
@@ -137,7 +141,7 @@
             "charging_port":"USB Power Delivery 2.0",
             "wireless_charging":true,
             "battery":"3110 mAh",
-            "price":"£530",
+            "price": 530,
             "image_url":"https://images.macrumors.com/t/XQggVnZ-YGdnXQcTrRsA38bYCBs=/1600x0/article-new/2020/10/iphone-11-vs-12.jpg",
             "image":"/media/products/iphone-11.png"
         }
@@ -160,6 +164,7 @@
             "camera_1":"12 MP, f/1.8, 26mm (wide)",
             "camera_2":"64 MP, f/2.0, 29mm (telephoto)",
             "camera_3":"12 MP, f/2.2, 13mm (ultrawide)",
+            "camera_4": false,
             "video":"8K@24fps, 4K@30/60fps, 1080p@30/60/240fps",
             "picture":"10 MP, f/2.2, 26mm (wide)",
             "selfie_video":"4K@30/60fps, 1080p@30fps",
@@ -173,7 +178,7 @@
             "wireless_charging":true,
             "charging_port":"USB Power Delivery 3.0",
             "battery":"4000 mAh",
-            "price":"£630",
+            "price":630,
             "image_url":"https://i5.walmartimages.com/asr/3967a22c-f45b-4ca7-9bb0-fe93585e1f09_1.f9f5ceb407618cb4cd2e6d1f7541e775.jpeg",
             "image":"/media/products/SamsungGalaxys20.png"
         }
@@ -196,6 +201,7 @@
             "camera_1":false,
             "camera_2":false,
             "camera_3":false,
+            "camera_4": false,
             "video":false,
             "picture":false,
             "selfie_video":false,
@@ -209,7 +215,7 @@
             "wireless_charging":true,
             "charging_port":"Qi wireless charging",
             "battery":"340 mAh",
-            "price":"£360",
+            "price":360,
             "image_url":"https://static.bhphoto.com/images/images500x500/samsung_sm_r840nzsaxar_galaxy_watch3_gps_smartwatch_1596630034_1577762.jpg",
             "image":"/media/products/SamsungGalaxyWatch3.png"
         }
@@ -232,6 +238,7 @@
             "camera_1":false,
             "camera_2":false,
             "camera_3":false,
+            "camera_4": false,
             "video":false,
             "picture":false,
             "selfie_video":false,
@@ -245,9 +252,47 @@
             "wireless_charging":true,
             "charging_port":"Charging Case",
             "battery":"4.5 Hours",
-            "price":"£219.99",
+            "price":219.99,
             "image_url":"https://i.pinimg.com/originals/d7/46/c0/d746c0d24739dcd70da2d7adf57b3df7.jpg",
             "image":"/media/products/d746c0d24739dcd70da2d7adf57b3df7.png"
+        }
+    
+    },
+    {
+        "pk":7,
+        "model":"products.product",
+        "fields":{
+            "sku":"OPP01RN5PR5",
+            "category":1,
+            "brand":"Oppo",
+            "name":"Reno5 Pro+ 5G",
+            "release_date":"December 24, 2020",
+            "release_year": 2020,
+            "size":"15.99 x 7.25 x 0.8 cm",
+            "os":"Android 11",
+            "screen_size":"6.55 inches",
+            "resolution":"1080 x 2400",
+            "number_of_cams":4,
+            "camera_1":"50 MP, f/1.8, (wide)",
+            "camera_2":"13 MP, f/2.4, (telephoto)",
+            "camera_3":"16 MP, f/2.2, (ultrawide)",
+            "camera_4":"2 MP, f/2.4, (macro)",
+            "video":"4K@30/60fps, 1080p@30/60/240fps",
+            "picture":"32 MP, f/2.4, 26mm (wide)",
+            "selfie_video":"1080p@30fps",
+            "ram":"8GB",
+            "card_reader":false,
+            "card_supported":false,
+            "storage_cap":"128GB",
+            "microphone":true,
+            "speakers":true,
+            "headphone_jack":false,
+            "wireless_charging":true,
+            "charging_port":"SuperVOOC 2.0",
+            "battery":"4500 mAh",
+            "price": 450.00,
+            "image_url":"https://fdn2.gsmarena.com/vv/bigpic/oppo-reno5-pro-5g-.jpg",
+            "image":"/media/products/Oppo-Reno5-Pro-5G.png"
         }
     }
 ]

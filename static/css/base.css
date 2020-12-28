@@ -31,9 +31,10 @@
 .nav-link,
 .navbar-brand,
 #footer ul li a,
-#footer p {
+#footer p a{
     text-decoration: none;
     color: white;
+    font-size: large;
 }
 
 .navbar-toggler {
