@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 
+
 class Category(models.Model):
 
     class Meta:
@@ -9,7 +10,7 @@ class Category(models.Model):
 
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(
-        max_length=254, null=True, blank=True)
+        max_length=254, blank=True)
 
     def __str__(self):
         return self.name
@@ -20,8 +21,10 @@ class Category(models.Model):
 
 class Product(models.Model):
 
-    category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
-    sku = models.CharField(max_length=254, null=True, blank=True)
+    category = models.ForeignKey(
+        'Category', null=True, blank=True, on_delete=models.SET_NULL)
+    sku = models.CharField(
+        max_length=254, blank=True)
     brand = models.CharField(max_length=254)
     name = models.CharField(max_length=254)
     release_date = models.CharField(max_length=254)
@@ -31,13 +34,20 @@ class Product(models.Model):
     screen_size = models.CharField(max_length=254)
     resolution = models.CharField(max_length=254)
     number_of_cams = models.IntegerField(blank=False, null=False)
-    camera_1 = models.CharField(max_length=254, default=False, blank=False, null=False)
-    camera_2 = models.CharField(max_length=254, default=False, blank=False, null=False)
-    camera_3 = models.CharField(max_length=254, default=False, blank=False, null=False)
-    camera_4 = models.CharField(max_length=254, default=False, blank=False, null=False)
-    video = models.CharField(max_length=254, default=False, blank=False, null=False)
-    picture = models.CharField(max_length=254, default=False, blank=False, null=False)
-    selfie_video = models.CharField(max_length=254, default=False, blank=False, null=False)
+    camera_1 = models.CharField(
+        max_length=254, default=False, blank=False, null=False)
+    camera_2 = models.CharField(
+        max_length=254, default=False, blank=False, null=False)
+    camera_3 = models.CharField(
+        max_length=254, default=False, blank=False, null=False)
+    camera_4 = models.CharField(
+        max_length=254, default=False, blank=False, null=False)
+    video = models.CharField(
+        max_length=254, default=False, blank=False, null=False)
+    picture = models.CharField(
+        max_length=254, default=False, blank=False, null=False)
+    selfie_video = models.CharField(
+        max_length=254, default=False, blank=False, null=False)
     ram = models.CharField(max_length=254)
     card_reader = models.CharField(max_length=254, blank=False, null=False)
     card_supported = models.CharField(max_length=254, blank=False, null=False)
@@ -45,13 +55,16 @@ class Product(models.Model):
     microphone = models.BooleanField(default=False, null=True, blank=True)
     speakers = models.BooleanField(default=False, null=True, blank=True)
     headphone_jack = models.BooleanField(default=False, null=True, blank=True)
-    wireless_charging = models.BooleanField(default=False, null=True, blank=True)
+    wireless_charging = models.BooleanField(default=False, blank=True)
     charging_port = models.CharField(max_length=254, blank=False, null=False)
     battery = models.CharField(max_length=254)
-    price = models.DecimalField(max_digits=7, decimal_places=2, null=True, blank=True)
-    rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
-    image_url = models.URLField(max_length=1024, null=True, blank=True)
-    image = models.ImageField(null=True, blank=True)
+    price = models.DecimalField(
+        max_digits=7, decimal_places=2, null=True, blank=True)
+    rating = models.DecimalField(
+        max_digits=6, decimal_places=2, null=True, blank=True)
+    image_url = models.URLField(
+        max_length=1024, blank=True)
+    image = models.ImageField(blank=True)
 
     def __str__(self):
         return self.name

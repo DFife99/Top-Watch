@@ -127,7 +127,9 @@
     #bundle-1,
     #bundle-3,
     #discounted-phone-1,
-    #tablet-1 {
+    #tablet-1,
+    #phone-1,
+    #accessory-1 {
         padding:0;
         padding-left: 3em;
         height: 250px;
@@ -147,7 +149,9 @@
     #bundle-1,
     #bundle-3,
     #discounted-phone-1,
-    #tablet-1 {
+    #tablet-1,
+    #phone-1,
+    #accessory-1 {
         padding:0;
         padding-left: 5em;
     }
@@ -158,7 +162,9 @@
     #bundle-2,
     #bundle-4,
     #discounted-phone-2,
-    #tablet-2 {
+    #tablet-2,
+    #phone-2,
+    #accessory-2 {
         display: flex !important;
         padding: 0;
         padding-left: 2em;
@@ -188,7 +194,9 @@
     #bundle-1,
     #bundle-3,
     #discounted-phone-1,
-    #tablet-1 {
+    #tablet-1,
+    #phone-1,
+    #accessory-1 {
         height: 400px;
     }
 }
