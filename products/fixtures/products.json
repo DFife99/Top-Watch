@@ -224,7 +224,7 @@
         "pk":7,
         "model":"products.product",
         "fields":{
-            "sku":"APP01ARPDP",
+            "sku":"APP04ARPDP",
             "category":4,
             "brand":"Apple",
             "name":"AirPods Pro",
@@ -256,10 +256,9 @@
             "image_url":"https://i.pinimg.com/originals/d7/46/c0/d746c0d24739dcd70da2d7adf57b3df7.jpg",
             "image":"/media/products/d746c0d24739dcd70da2d7adf57b3df7.png"
         }
-    
     },
     {
-        "pk":7,
+        "pk":8,
         "model":"products.product",
         "fields":{
             "sku":"OPP01RN5PR5",
@@ -293,6 +292,80 @@
             "price": 450.00,
             "image_url":"https://fdn2.gsmarena.com/vv/bigpic/oppo-reno5-pro-5g-.jpg",
             "image":"/media/products/Oppo-Reno5-Pro-5G.png"
+        }
+    },
+    {
+        "pk":9,
+        "model":"products.product",
+        "fields":{
+            "sku":"OPP01RN5PR5",
+            "category":1,
+            "brand":"Huawei",
+            "name":"Watch GT 5",
+            "release_date":"October, 2019",
+            "release_year": 2019,
+            "size":"4.59 x 4.59 x 1.07 cm ",
+            "os":"Android 11",
+            "screen_size":"6.55 inches",
+            "resolution":"Huawei Wearable Platform",
+            "number_of_cams":0,
+            "camera_1":false,
+            "camera_2":false,
+            "camera_3":false,
+            "camera_4":false,
+            "video":false,
+            "picture":false,
+            "selfie_video":false,
+            "ram":"32MB",
+            "card_reader":false,
+            "card_supported":false,
+            "storage_cap":"4GB",
+            "microphone":true,
+            "speakers":true,
+            "headphone_jack":false,
+            "wireless_charging":true,
+            "charging_port":"Wireless Charging",
+            "battery":"455 mAh",
+            "price": 110.00,
+            "image_url":"https://d11zer3aoz69xt.cloudfront.net/media/catalog/product/cache/1/image/1200x/9df78eab33525d08d6e5fb8d27136e95/h/u/huawei_watch_gt_2_leather_smartwatch_black_1_1_1.jpg",
+            "image":"/media/products/huawei-watch-gt-2.png"
+        }
+    },
+    {
+        "pk":10,
+        "model":"products.product",
+        "fields":{
+            "sku":"SAM04GALBD",
+            "category":4,
+            "brand":"Samsung",
+            "name":"Galaxy Buds",
+            "release_date":"August 21, 2020",
+            "release_year": 2020,
+            "size":"1.76 x 1.93 x 2.2 cm",
+            "os":"FreeRTOS",
+            "screen_size":false,
+            "resolution":false,
+            "number_of_cams":0,
+            "camera_1":false,
+            "camera_2":false,
+            "camera_3":false,
+            "camera_4": false,
+            "video":false,
+            "picture":false,
+            "selfie_video":false,
+            "ram":false,
+            "card_reader":false,
+            "card_supported":false,
+            "storage_cap":false,
+            "microphone":true,
+            "speakers":true,
+            "headphone_jack":false,
+            "wireless_charging":true,
+            "charging_port":"Charging Case",
+            "battery":"6 Hours",
+            "price":219.99,
+            "image_url":"https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRxONMC2X6k8lPal2TLEBqbYBA0eH4CcAvHN5p4bRASDkawCAQn&usqp=CAY",
+            "image":"/media/products/Galaxy-Buds.png"
         }
     }
 ]
