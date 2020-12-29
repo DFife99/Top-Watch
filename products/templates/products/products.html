@@ -3,6 +3,69 @@
     <div class="row">
         <div class="col-12">
             <h3>Testing</h3>
+            {% for product in products %}
+                {{ product.brand }} <br>
+                {{ product.category.friendly_name }} <br>
+                {{ product.name }} <br>
+                {{ product.sku }} <br>
+                <img src="{{ product.image }}" alt="{{ product.name }}" style="height:100px; width:100px;"> <br>
+                {{ product.image }} <br>
+                {{ product.release_date }} <br>
+                {{ product.release_year }} <br>
+                {{ product.size }} <br>
+                {{ product.os }} <br>
+                {{ product.screen_size }} <br>
+                {{ product.resolution }} <br>
+                {{ product.number_of_cams }} <br>
+                {% if product.camera_1 == false %}
+                    <p>Camera 1: N/A</p>
+                {% else %}
+                    <p>Camera 1: {{ product.camera_1 }}</p>
+                {% endif %}
+                {% if product.camera_2 == false %}
+                    <p>Camera 2: N/A</p>
+                {% else %}
+                    <p>Camera 2: {{ product.camera_2 }}</p>
+                {% endif %}
+                {% if product.camera_3 == false %}
+                    <p>Camera 3: N/A</p>
+                {% else %}
+                    <p>Camera 3: {{ product.camera_3 }}</p>
+                {% endif %}
+                {% if product.camera_4 == false %}
+                    <p>Camera 4: N/A</p>
+                {% else %}
+                    <p>Camera 4: {{ product.camera_4 }}</p>
+                {% endif %}
+                {% if product.video == false %}
+                    <p>Video: N/A</p>
+                {% else %}
+                    <p>Video: {{ product.video }}</p>
+                {% endif %}
+                {% if product.picture == false %}
+                    <p>Picture: N/A</p>
+                {% else %}
+                    <p>Picture: {{ product.picture}}</p>
+                {% endif %}
+                {% if product.selfie_video == false %}
+                    <p>Selfie Video: N/A</p>
+                {% else %}
+                    <p>Selfie Video: {{ product.selfie_video }}</p>
+                {% endif %}
+                {{ product.ram }} <br>
+                {{ product.card_reader }} <br>
+                {{ product.card_supported }} <br>
+                {{ product.storage_cap }} <br>
+                {{ product.microphone }} <br>
+                {{ product.speakers }} <br>
+                {{ product.headphone_jack }} <br>
+                {{ product.wireless_charging }} <br>
+                {{ product.charging_port }} <br>
+                {{ product.battery }} <br>
+                 £{{ product.price }} <br>
+                {{ product.image_if }} <br>
+                <hr>
+            {% endfor %}
         </div>
     </div>
 {% endblock %}
