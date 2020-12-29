@@ -254,7 +254,7 @@
             "battery":"4.5 Hours",
             "price":219.99,
             "image_url":"https://i.pinimg.com/originals/d7/46/c0/d746c0d24739dcd70da2d7adf57b3df7.jpg",
-            "image":"/media/products/d746c0d24739dcd70da2d7adf57b3df7.png"
+            "image":"/media/products/airpodspro.jpg"
         }
     },
     {
@@ -301,7 +301,7 @@
             "sku":"OPP01RN5PR5",
             "category":1,
             "brand":"Huawei",
-            "name":"Watch GT 5",
+            "name":"Watch GT 2",
             "release_date":"October, 2019",
             "release_year": 2019,
             "size":"4.59 x 4.59 x 1.07 cm ",
@@ -366,6 +366,80 @@
             "price":219.99,
             "image_url":"https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRxONMC2X6k8lPal2TLEBqbYBA0eH4CcAvHN5p4bRASDkawCAQn&usqp=CAY",
             "image":"/media/products/Galaxy-Buds.png"
+        }
+    },
+    {
+        "pk":11,
+        "model":"products.product",
+        "fields":{
+            "sku":"LG002GPAD5",
+            "category":2,
+            "brand":"LG",
+            "name":"G Pad 5",
+            "release_date":"November, 2019",
+            "release_year": 2019,
+            "size":"24.72 x 15.07 x 0.8 cm",
+            "os":"Android 9.0 ( Pie )",
+            "screen_size":"10.1 inches",
+            "resolution":"1200 x 1920 pixels",
+            "number_of_cams":1,
+            "camera_1":"8 MP",
+            "camera_2":false,
+            "camera_3":false,
+            "camera_4": false,
+            "video":"4K@30fps, 1080p@30fps",
+            "picture":"5 MP",
+            "selfie_video":"1080p@30fps",
+            "ram":"4GB",
+            "card_reader":true,
+            "card_supported":"microSDXC",
+            "storage_cap":"32GB",
+            "microphone":true,
+            "speakers":true,
+            "headphone_jack":true,
+            "wireless_charging":false,
+            "charging_port":"Fast Charging 1W",
+            "battery":"8200 mAh",
+            "price":300.00,
+            "image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVi6bADrZFIZqr01OyLLE24ZDMgPNBTLbTRw&usqp=CAU",
+            "image":"/media/products/Lg-Pad-5.png"
+        }
+    },
+    {
+        "pk":12,
+        "model":"products.product",
+        "fields":{
+            "sku":"APP02PDAR4",
+            "category":2,
+            "brand":"Apple",
+            "name":"iPad Air",
+            "release_date":"October 23, 2020",
+            "release_year": 2020,
+            "size":"24.76 x 17.85 x 0.61 cm",
+            "os":"iPadOS 14.1",
+            "screen_size":"10.9 inches",
+            "resolution":"1640 x 2360 pixels",
+            "number_of_cams":1,
+            "camera_1":"12 MP, f/1.8, (wide)",
+            "camera_2":false,
+            "camera_3":false,
+            "camera_4": false,
+            "video":"4K@24/30/60fps, 1080p@30/60/120/240fps",
+            "picture":"7 MP, f/2.0, 31mm (standard)",
+            "selfie_video":"1080p@30/60fps",
+            "ram":"3GB",
+            "card_reader":false,
+            "card_supported":false,
+            "storage_cap":"64GB",
+            "microphone":true,
+            "speakers":true,
+            "headphone_jack":false,
+            "wireless_charging":false,
+            "charging_port":"USB 3.0",
+            "battery":"8800 mAh",
+            "price":720.00,
+            "image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl6_qP8SeSReZjF33q1qi0adZXRYXGfrUHzg&usqp=CAU",
+            "image":"/media/products/Apple-iPad-Air.png"
         }
     }
 ]

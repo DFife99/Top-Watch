@@ -28,13 +28,21 @@
     background-color: #092749;
 }
 
-.nav-link,
+.navbar-dark .navbar-nav .nav-link,
 .navbar-brand,
 #footer ul li a,
 #footer p a{
     text-decoration: none;
     color: white;
     font-size: large;
+}
+
+.navbar-dark .navbar-nav .active {
+    border-bottom: solid 5px blue;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: grey;
 }
 
 .navbar-toggler {
@@ -175,9 +183,21 @@
     }
 }
 
+/* LAPTOPS */
+
+@media only screen and (min-width: 1000px) {
+    .nav-link {
+        font-size: large;
+    }
+}
+
 /* LARGE LAPTOPS */
 
 @media only screen and (min-width: 1200px) {
+    .nav-link {
+        font-size: x-large;
+    }
+
     #first_call,
     #second_call,
     #first_call_bg,
