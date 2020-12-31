@@ -1,5 +1,23 @@
 {% extends 'base.html' %}
 {% block content %}
+    <div id="products-display" class="row">
+        <div id="brands" class="col-1" style="border-right: solid 2px blue; text-align: center;">
+            <a href="{% url 'products' %}?brand=apple" class="text-muted brand-item" brand-item>Apple</a><br>
+            <a href="{% url 'products' %}?brand=samsung" class="text-muted brand-item">Samsung</a><br>
+            <a href="{% url 'products' %}?brand=huawei" class="text-muted brand-item">Huawei</a><br>
+            <a href="{% url 'products' %}?brand=lg" class="text-muted brand-item">LG</a><br>
+            <a href="{% url 'products' %}?brand=htc" class="text-muted brand-item">HTC</a><br>
+            <a href="{% url 'products' %}?brand=oppo" class="text-muted brand-item">Oppo</a><br>
+        </div>
+        <div class="col-11">
+            {% for product in products %}
+                <strong>{{ product.brand }}</strong>{{ product.name }} <br>
+            {% endfor %}
+        </div>
+    </div>
+
+
+
     <div class="row">
         <div class="col-12">
             <h3>Testing</h3>

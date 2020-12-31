@@ -129,6 +129,12 @@
     background-color: #000;
 }
 
+/* PRODUCT PAGE */
+
+.brand-item {
+    margin-top: 10em;
+}
+
 
 /* PHONES */
 @media only screen and (max-width: 600px) {
