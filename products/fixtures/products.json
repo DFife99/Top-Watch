@@ -552,5 +552,42 @@
             "image_url":"https://www.hiclipart.com/free-transparent-background-png-clipart-yybjx/download",
             "image":"/media/products/samsung_galaxy_s8.png"
         }
+    },
+    {
+        "pk":16,
+        "model":"products.product",
+        "fields":{
+            "sku":"HTC01DE20P",
+            "category":1,
+            "brand":"HTC",
+            "name":"Desire 20+",
+            "release_date":"October 22, 2020",
+            "release_year": 2020,
+            "size":"16.49 x 7.57 x 0.9 cm",
+            "os":"Android 10",
+            "screen_size":"6.5 inches",
+            "resolution":"720 x 1600 pixels",
+            "number_of_cams":4,
+            "camera_1":"48 MP, f/1.8, 26mm (wide)",
+            "camera_2":"5 MP, f/2.2, 115˚ (ultrawide)",
+            "camera_3":"2 MP, f/2.4, (macro)",
+            "camera_4":"5 MP, f/2.4, (depth)",
+            "video":"4K@30fps, 1080p@30fps",
+            "picture":"16 MP, f/2.0, (wide)",
+            "selfie_video":"1080p@30fps",
+            "ram":"6GB",
+            "card_reader":"microSDXC",
+            "card_supported":true,
+            "storage_cap":"128GB",
+            "microphone":true,
+            "speakers":true,
+            "headphone_jack":true,
+            "wireless_charging":false,
+            "charging_port":"Fast charging 15W",
+            "battery":"3000 mAh",
+            "price":200.00,
+            "image_url":"https://api.themrphone.com/mrphone/images/8954/1.jpg",
+            "image":"/media/products/htc_desire_20+.png"
+        }
     }
 ]

@@ -155,3 +155,9 @@ tablets, smart watches, bundles or deals to find their desired product of choice
             - https://www.hiclipart.com/free-transparent-background-png-clipart-yybjx/download
         = ( Device Specs )
             - https://www.gsmarena.com/samsung_galaxy_s8-8161.php
+
+    - HTC Desire 20+ 
+        = ( htc_desire_20+.png )
+            - https://api.themrphone.com/mrphone/images/8954/1.jpg
+        = ( Device Specs )
+            - https://www.gsmarena.com/htc_desire_20+-10529.php
