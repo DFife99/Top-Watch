@@ -1,89 +1,35 @@
 {% extends 'base.html' %}
 {% block content %}
-    <div id="products-display" class="row">
-        <div id="brands" class="col-1" style="border-right: solid 2px blue; text-align: center;">
-            <a href="{% url 'products' %}?brand=apple" class="text-muted brand-item" brand-item>Apple</a><br>
-            <a href="{% url 'products' %}?brand=samsung" class="text-muted brand-item">Samsung</a><br>
-            <a href="{% url 'products' %}?brand=huawei" class="text-muted brand-item">Huawei</a><br>
-            <a href="{% url 'products' %}?brand=lg" class="text-muted brand-item">LG</a><br>
-            <a href="{% url 'products' %}?brand=htc" class="text-muted brand-item">HTC</a><br>
-            <a href="{% url 'products' %}?brand=oppo" class="text-muted brand-item">Oppo</a><br>
-        </div>
-        <div class="col-11">
-            {% for product in products %}
-                    <strong>{{ product.brand }}</strong>{{ product.name }} <br>
-            {% endfor %}
-        </div>
-    </div>
-
-
-
     <div class="row">
-        <div class="col-12">
-            <h3>Testing</h3>
+        <div class="col"></div>
+    </div>
+    <div id="products-display" class="row">
+        <div id="brands" class="col-2" style="border-right: solid 2px blue; text-align: center;">
+            <a href="{% url 'products' %}" class="text-muted brand-item">All</a><br>
+            <a href="{% url 'products' %}?brand=Apple" class="text-muted brand-item">Apple</a><br>
+            <a href="{% url 'products' %}?brand=Samsung" class="text-muted brand-item">Samsung</a><br>
+            <a href="{% url 'products' %}?brand=Huawei" class="text-muted brand-item">Huawei</a><br>
+            <a href="{% url 'products' %}?brand=LG" class="text-muted brand-item">LG</a><br>
+            <a href="{% url 'products' %}?brand=HTC" class="text-muted brand-item">HTC</a><br>
+            <a href="{% url 'products' %}?brand=Oppo" class="text-muted brand-item">Oppo</a><br>
+            <a href="{% url 'products' %}?brand=OnePlus" class="text-muted brand-item">OnePlus</a><br>
+        </div>
+        <div class="col-10">
+            <div class="row">
             {% for product in products %}
-                {{ product.brand }} <br>
-                {{ product.category.friendly_name }} <br>
-                {{ product.name }} <br>
-                {{ product.sku }} <br>
-                <img src="{{ product.image }}" alt="{{ product.name }}" style="height:100px; width:100px;"> <br>
-                {{ product.image }} <br>
-                {{ product.release_date }} <br>
-                {{ product.release_year }} <br>
-                {{ product.size }} <br>
-                {{ product.os }} <br>
-                {{ product.screen_size }} <br>
-                {{ product.resolution }} <br>
-                {{ product.number_of_cams }} <br>
-                {% if product.camera_1 == false %}
-                    <p>Camera 1: N/A</p>
-                {% else %}
-                    <p>Camera 1: {{ product.camera_1 }}</p>
-                {% endif %}
-                {% if product.camera_2 == false %}
-                    <p>Camera 2: N/A</p>
-                {% else %}
-                    <p>Camera 2: {{ product.camera_2 }}</p>
-                {% endif %}
-                {% if product.camera_3 == false %}
-                    <p>Camera 3: N/A</p>
-                {% else %}
-                    <p>Camera 3: {{ product.camera_3 }}</p>
-                {% endif %}
-                {% if product.camera_4 == false %}
-                    <p>Camera 4: N/A</p>
-                {% else %}
-                    <p>Camera 4: {{ product.camera_4 }}</p>
-                {% endif %}
-                {% if product.video == false %}
-                    <p>Video: N/A</p>
-                {% else %}
-                    <p>Video: {{ product.video }}</p>
-                {% endif %}
-                {% if product.picture == false %}
-                    <p>Picture: N/A</p>
-                {% else %}
-                    <p>Picture: {{ product.picture}}</p>
-                {% endif %}
-                {% if product.selfie_video == false %}
-                    <p>Selfie Video: N/A</p>
-                {% else %}
-                    <p>Selfie Video: {{ product.selfie_video }}</p>
-                {% endif %}
-                {{ product.ram }} <br>
-                {{ product.card_reader }} <br>
-                {{ product.card_supported }} <br>
-                {{ product.storage_cap }} <br>
-                {{ product.microphone }} <br>
-                {{ product.speakers }} <br>
-                {{ product.headphone_jack }} <br>
-                {{ product.wireless_charging }} <br>
-                {{ product.charging_port }} <br>
-                {{ product.battery }} <br>
-                 £{{ product.price }} <br>
-                {{ product.image_if }} <br>
-                <hr>
+                <div class="col-3 d-inline product-display-box ml-5 mr-5 mt-5 mb-5">
+                    <img class="product-display-image" src="{{ product.image }}" alt="{{ product.brand }}{{ product.name }}">
+                    <p>
+                        <strong> {{ product.brand }} </strong><br>
+                        {{ product.name }}<br>
+                        {{ product.rating }}<br>
+                        £{{ product.price }}<br>
+                        <input type="checkbox" name="compare" id="{{ product.id }}_compare">
+                        <label for="comapre">Compare</label>
+                    </p>
+                </div>
             {% endfor %}
+            </div>
         </div>
     </div>
 {% endblock %}

@@ -135,6 +135,13 @@
     margin-top: 10em;
 }
 
+.product-display-image {
+    height: 258px;
+}
+
+.product-display-box {
+    border: 2px solid darkgrey;
+}
 
 /* PHONES */
 @media only screen and (max-width: 600px) {
