@@ -50,6 +50,12 @@ tablets, smart watches, bundles or deals to find their desired product of choice
 
 ### Sources
 
+#### Code
+
+    - CSS
+        - Double Sized Checkboxes
+        - https://stackoverflow.com/questions/306924/can-i-change-the-checkbox-size-using-css
+
 #### Design
 
     - Logo  

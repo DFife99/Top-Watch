@@ -131,17 +131,42 @@
 
 /* PRODUCT PAGE */
 
-.brand-item {
-    margin-top: 10em;
+.brands a {
+    padding: 2em;
 }
 
+.brand-item {
+    margin-top: 10em;
+    font-size: xx-large;
+}
+
+#page_description {
+    font-size: xx-large;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+}
 .product-display-image {
     height: 258px;
 }
 
 .product-display-box {
     border: 2px solid darkgrey;
+    font-size: x-large;
 }
+
+/* CODE TAKEN FROM https://stackoverflow.com/questions/306924/can-i-change-the-checkbox-size-using-css */
+input[type=checkbox]
+{
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(2); /* IE */
+  -moz-transform: scale(2); /* FF */
+  -webkit-transform: scale(2); /* Safari and Chrome */
+  -o-transform: scale(2); /* Opera */
+  transform: scale(2);
+  padding: 10px;
+}
+
+
 
 /* PHONES */
 @media only screen and (max-width: 600px) {
