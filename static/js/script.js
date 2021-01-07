@@ -1,7 +1,9 @@
-function ProductHover() {
-    $(this).removeClass( "ml-5 mr-5 mt-5 mb-5" ).addClass( "ml-2 mr-2 mt-2 mb-2 pl-3 pr-3 pt-3 pb-3 product-hover" );
-}
+// MAKING THE PRODUCT DISPLAY BOX BIGGER UPON HOVER
 
-function ProductUnhover() {
-    $(this).removeClass( "ml-2 mr-2 mt-2 mb-2 pl-3 pr-3 pt-3 pb-3 product-hover" ).addClass( "ml-5 mr-5 mt-5 mb-5" );
-}
+$( document ).ready(function() {
+    $(".product-display-box").hover( function() {
+        $(this).removeClass("col-3 ml-5 mr-4 mt-5 mb-5").addClass("col-4 ml-0 mr-0 mt-1 mb-1");
+    }, function () {
+        $(this).removeClass("col-4 ml-0 mr-0 mt-1 mb-1").addClass("col-3 ml-5 mr-4 mt-5 mb-5");
+    });
+});

@@ -18,7 +18,9 @@
         <div class="col-9">
             <div class="row">
             {% for product in products %}
-                <div class="col-3 d-inline product-display-box ml-4 mr-4 mt-4 mb-4">
+                <div class="col-3 d-inline product-display-box ml-5 mr-4 mt-5 mb-5">
+                        <!-- FOR HOVERING OVER SPECIFIC PRODUCT-->
+                        <!-- <div class="col-4 d-inline product-display-box ml-0 mr-0 mt-1 mb-1"> -->
                     <div class="d-flex justify-content-center">
                     <img class="product-display-image d-flex justify-content-center" src="{{ product.image }}" alt="{{ product.brand }}{{ product.name }}">
                     </div>
