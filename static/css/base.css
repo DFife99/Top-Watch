@@ -1,5 +1,9 @@
 /* GENERAL */
 
+.colour-blue {
+    color: #092749;
+}
+
 .float-right {
     float: right;
 }
@@ -152,7 +156,15 @@
 .product-display-box {
     border: 2px solid darkgrey;
     font-size: x-large;
+    height: 570px;
 }
+
+.product-display-box:hover {
+    border: none;
+    box-shadow: 1px 1px 3px 3px rgba(0,0,0,0.1);
+    height: 600px;
+}
+
 
 /* CODE TAKEN FROM https://stackoverflow.com/questions/306924/can-i-change-the-checkbox-size-using-css */
 input[type=checkbox]
