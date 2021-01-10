@@ -2,9 +2,9 @@
 
 $(document).ready(function() {
     $(".product-display-box").hover( function() {
-        $(this).removeClass("col-lg-3 product-margin").addClass("col-lg-4 product-margin-hover");
+        $(this).removeClass("col-md-5 col-lg-3 product-margin").addClass("col-md-6 col-lg-4 product-margin-hover");
     }, function () {
-        $(this).removeClass("col-lg-4 product-margin-hover").addClass("col-lg-3 product-margin");
+        $(this).removeClass("col-md-6 col-lg-4 product-margin-hover").addClass("col-md-5 col-lg-3 product-margin");
     });
     $('#brand-filter-icon').click(function() {
         $('#brand-filters').toggle();

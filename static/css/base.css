@@ -141,6 +141,12 @@
     padding-top: 1em;
 }
 
+#brand-filters,
+#brand-sort {
+    display: none;
+    z-index: 1;
+}
+
 .brand-item {
     margin-top: 10em;
     font-size: xx-large;
@@ -159,6 +165,7 @@
     border: 2px solid darkgrey;
     font-size: x-large;
     height: 570px;
+    z-index: -1;
 }
 
 .product-display-box:hover {
@@ -249,6 +256,21 @@ input[type=checkbox]
     }
 }
 
+@media only screen and (min-width: 320px) {
+    #brand-filters,
+    #brand-sort {
+        margin-left: 168%;
+    }
+}
+
+@media only screen and (min-width: 375px) {
+    #brand-filters,
+    #brand-sort {
+        width: 700% !important;
+        margin-left: 152%;
+    }
+}
+
 @media only screen and (min-width: 425px) and (max-width: 800px) {
     #bundle-1,
     #bundle-3,
@@ -259,6 +281,13 @@ input[type=checkbox]
         padding:0;
         padding-left: 5em;
     }
+
+    #brand-filters,
+    #brand-sort {
+        width: 560% !important;
+        margin-left: 140%;
+    }
+        
 }
 
 /* TABLETS */
@@ -277,6 +306,16 @@ input[type=checkbox]
     .bundle-text {
         font-size: 1rem;
     }
+
+    #brand-filters,
+    #brand-sort {
+        width: 200% !important;
+        margin-left: 116%;
+        background-color: white;
+        border: solid 2px #184d8a;
+        border-left: none;
+        z-index: 1;
+    }
 }
 
 /* LAPTOPS */
@@ -284,6 +323,15 @@ input[type=checkbox]
 @media only screen and (min-width: 1000px) {
     .nav-link {
         font-size: large;
+    }
+
+    .product-display-image {
+        height: 205px;
+    }
+
+    #brand-filters,
+    #brand-sort {
+        margin-left: 110%;
     }
 }
 
@@ -314,5 +362,10 @@ input[type=checkbox]
     #phone-1,
     #accessory-1 {
         height: 400px;
+    }
+
+    #brand-filters,
+    #brand-sort {
+        margin-left: 106%;
     }
 }
