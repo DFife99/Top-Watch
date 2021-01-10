@@ -1,9 +1,15 @@
 // MAKING THE PRODUCT DISPLAY BOX BIGGER UPON HOVER
 
-$( document ).ready(function() {
+$(document).ready(function() {
     $(".product-display-box").hover( function() {
-        $(this).removeClass("col-3 ml-5 mr-4 mt-5 mb-5").addClass("col-4 ml-0 mr-0 mt-4 mb-4");
+        $(this).removeClass("col-lg-3 product-margin").addClass("col-lg-4 product-margin-hover");
     }, function () {
-        $(this).removeClass("col-4 ml-0 mr-0 mt-4 mb-4").addClass("col-3 ml-5 mr-4 mt-5 mb-5");
+        $(this).removeClass("col-lg-4 product-margin-hover").addClass("col-lg-3 product-margin");
+    });
+    $('#brand-filter-icon').click(function() {
+        $('#brand-filters').toggle();
+    });
+    $('#brand-sort-icon').click(function() {
+        $('#brand-sort').toggle();
     });
 });

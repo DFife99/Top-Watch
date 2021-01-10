@@ -135,8 +135,10 @@
 
 /* PRODUCT PAGE */
 
-.brands a {
-    padding: 2em;
+#brands {
+    border-right: solid 2px #184d8a;
+    text-align: center;
+    padding-top: 1em;
 }
 
 .brand-item {
@@ -179,6 +181,14 @@ input[type=checkbox]
 }
 
 
+.product-margin {
+    margin: 3rem 1.5rem 3rem 1.5rem;
+}
+
+.product-margin-hover {
+    margin: 1.5rem 0rem 1.5rem 0rem;
+}
+
 
 /* PHONES */
 @media only screen and (max-width: 600px) {
@@ -200,6 +210,42 @@ input[type=checkbox]
     .bundle-text .btn {
         font-size: 12px;
         margin-top: 3em !important;
+    }
+
+    #brand-filters,
+    #brand-sort {
+        display: none;
+        width: 900% !important;
+        margin-left: 157%;
+        background-color: white;
+        border: solid 2px #184d8a;
+        border-left: none;
+    }
+
+    #brands {
+        z-index: 1;
+    }
+
+    #product-top {
+        height: 50px;
+    }
+
+    #page_description {
+        display: none;
+    }
+
+    .product-margin {
+        margin-top: 0rem;
+        margin-bottom: 2rem;
+    }
+    
+    .product-margin-hover {
+        margin: 0rem 1.5rem 2rem 1.5rem;
+    }
+
+    .product-display-image {
+        width: 188.5px;
+        height: auto;
     }
 }
 
