@@ -299,7 +299,7 @@
         "model":"products.product",
         "fields":{
             "sku":"OPP01RN5PR5",
-            "category":1,
+            "category":3,
             "brand":"Huawei",
             "name":"Watch GT 2",
             "release_date":"October, 2019",
