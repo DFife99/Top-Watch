@@ -135,10 +135,15 @@
 
 /* PRODUCT PAGE */
 
+#product-top {
+    height: 50px;
+}
+
 #brands {
     border-right: solid 2px #184d8a;
     text-align: center;
     padding-top: 1em;
+    z-index: 1;
 }
 
 #brand-filters,
@@ -291,6 +296,10 @@ input[type=checkbox]
 
 /* TABLETS */
 @media only screen and (min-width: 600px) {
+    #product-top {
+        height: 75px
+    }
+
     #bundle-2,
     #bundle-4,
     #discounted-phone-2,
@@ -324,6 +333,10 @@ input[type=checkbox]
 /* LAPTOPS */
 
 @media only screen and (min-width: 1000px) {
+    #product-top {
+        height: 100px;
+    }
+
     .nav-link {
         font-size: large;
     }
@@ -367,5 +380,11 @@ input[type=checkbox]
     #phone-1,
     #accessory-1 {
         height: 400px;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .product-margin {
+        margin: 3rem !important;
     }
 }

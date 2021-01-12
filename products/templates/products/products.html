@@ -8,14 +8,14 @@
             <i id="brand-filter-icon" class="fas fa-cogs d-sm-block d-md-block d-lg-none"></i><br class="d-sm-none d-md-block">
             <div id="brand-filters" class="d-sm-none d-md-none d-lg-block">
                 <div id="page_description" class="d-sm-none"><h3 class="colour-blue">ALL PRODUCTS</h3></div>
-                <a href="{% url 'products' %}" class="text-muted brand-item">All Brands</a><br>
-                <a href="{% url 'products' %}?brand=Apple" class="text-muted brand-item">Apple</a><br>
-                <a href="{% url 'products' %}?brand=Samsung" class="text-muted brand-item">Samsung</a><br>
-                <a href="{% url 'products' %}?brand=Huawei" class="text-muted brand-item">Huawei</a><br>
-                <a href="{% url 'products' %}?brand=LG" class="text-muted brand-item">LG</a><br>
-                <a href="{% url 'products' %}?brand=HTC" class="text-muted brand-item">HTC</a><br>
-                <a href="{% url 'products' %}?brand=Oppo" class="text-muted brand-item">Oppo</a><br>
-                <a href="{% url 'products' %}?brand=OnePlus" class="text-muted brand-item">OnePlus</a><br>
+                <a href="{% url 'products' %}?category={{ category }}" class="text-muted brand-item">All Brands</a><br>
+                <a href="{% url 'products' %}?brand=Apple&category={{ category }}" class="text-muted brand-item">Apple</a><br>
+                <a href="{% url 'products' %}?brand=Samsung&category={{ category }}" class="text-muted brand-item">Samsung</a><br>
+                <a href="{% url 'products' %}?brand=Huawei&category={{ category }}" class="text-muted brand-item">Huawei</a><br>
+                <a href="{% url 'products' %}?brand=LG&category={{ category }}" class="text-muted brand-item">LG</a><br>
+                <a href="{% url 'products' %}?brand=HTC&category={{ category }}" class="text-muted brand-item">HTC</a><br>
+                <a href="{% url 'products' %}?brand=Oppo&category={{ category }}" class="text-muted brand-item">Oppo</a><br>
+                <a href="{% url 'products' %}?brand=OnePlus&category={{ category }}" class="text-muted brand-item">OnePlus</a><br>
             </div>
             <i id="brand-sort-icon" class="fas fa-sort-amount-down-alt"></i>
             <div id="brand-sort">
@@ -31,21 +31,21 @@
         </div>
         <div class="col-10" style="z-index: -1;">
             <div class="row">
-            {% for product in products %}
-                <div class="col-11 col-md-5 col-lg-3 d-inline product-display-box product-margin">
-                    <div class="d-flex justify-content-center">
-                    <img class="product-display-image d-flex justify-content-center" src="{{ product.image }}" alt="{{ product.brand }}{{ product.name }}">
+                {% for product in products %}
+                    <div class="col-11 col-md-5 col-lg-3 d-inline product-display-box product-margin">
+                        <div class="d-flex justify-content-center">
+                            <img class="product-display-image d-flex justify-content-center" src="{{ product.image }}" alt="{{ product.brand }}{{ product.name }}">
+                        </div>
+                        <p>
+                            <strong> {{ product.brand }} </strong><br>
+                            <span class="product_name">{{ product.name }}</span><br><br>
+                            <span class="product_rating">{{ product.rating }}</span><br><br>
+                            <span class="product_price">£{{ product.price }}</span><br><br>
+                            <input class="product_compare" type="checkbox" name="compare" id="{{ product.id }}_compare">
+                            <label class="ml-2" for="comapre">Compare</label>
+                        </p>
                     </div>
-                    <p>
-                        <strong> {{ product.brand }} </strong><br>
-                        <span class="product_name">{{ product.name }}</span><br><br>
-                        <span class="product_rating">{{ product.rating }}</span><br><br>
-                        <span class="product_price">£{{ product.price }}</span><br><br>
-                        <input class="product_compare" type="checkbox" name="compare" id="{{ product.id }}_compare">
-                        <label class="ml-2" for="comapre">Compare</label>
-                    </p>
-                </div>
-            {% endfor %}
+                {% endfor %}
             </div>
         </div>
     </div>

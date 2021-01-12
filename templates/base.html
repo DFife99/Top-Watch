@@ -59,13 +59,13 @@
                         Accessories
                     </a>
                     <div class="dropdown-menu" aria-labelledby="watchesDropdown">
-                        <a class="dropdown-item" href="{% url 'products' %}?category=smart_watches">All Accessories</a>
+                        <a class="dropdown-item" href="{% url 'products' %}?category=smart_watches,wireless_headphones">All Accessories</a>
                         <a class="dropdown-item" href="{% url 'products' %}?category=smart_watches,wireless_headphones&sort=price&direction=asc">Sort By Lowest Price</a>
                         <a class="dropdown-item" href="{% url 'products' %}?category=smart_watches,wireless_headphones&sort=release_year&direction=desc">Sort By Newest Release</a>
                     </div>
                 </li>
             </ul>
-                <form method="GET" action="{% url 'products' %}">
+                <form class="mr-4" method="GET" action="{% url 'products' %}">
                     <input id="search-bar" class="form-control mr-sm-2" type="search" name="q" placeholder="Search our site!" aria-label="Search">
                 </form>
                 <i class="nav-link mr-sm-2 text-light fas fa-user-alt"></i><br>

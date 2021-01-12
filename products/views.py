@@ -15,6 +15,7 @@ def all_products(request):
     query = None
     sort = None
     direction = None
+    category = 'phones,tablets,smart_watches,wireless_headphones'
 
     if request.GET:
         if 'sort' in request.GET:
@@ -30,13 +31,12 @@ def all_products(request):
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
             products = products.order_by(sortkey)
-            print(sortkey)
 
     if 'category' in request.GET:
-            categories = request.GET['category'].split(',')
-            products = products.filter(category__name__in=categories)
-            categories = Category.objects.filter(name__in=categories)
-
+        category = request.GET['category']
+        categories = request.GET['category'].split(',')
+        products = products.filter(category__name__in=categories)
+        categories = Category.objects.filter(name__in=categories)
 
     if request.GET:
         if 'brand' in request.GET:
@@ -55,6 +55,7 @@ def all_products(request):
 
     context = {
         'products': products,
+        'category': category,
     }
 
     return render(request, 'products/products.html', context)
