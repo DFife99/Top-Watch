@@ -6,7 +6,7 @@
     <div id="products-display" class="row">
         <div id="brands" class="col-2">
             <i id="brand-filter-icon" class="fas fa-cogs d-sm-block d-md-block d-lg-none"></i><br class="d-sm-none d-md-block">
-            <div id="brand-filters" class="d-sm-none d-md-none d-lg-block">
+            <div id="brand-filters" class="d-lg-block" style="display: none;">
                 <div id="page_description" class="d-sm-none"><h3 class="colour-blue">ALL PRODUCTS</h3></div>
                 <a href="{% url 'products' %}?category={{ category }}" class="text-muted brand-item">All Brands</a><br>
                 <a href="{% url 'products' %}?brand=Apple&category={{ category }}" class="text-muted brand-item">Apple</a><br>
@@ -17,9 +17,8 @@
                 <a href="{% url 'products' %}?brand=Oppo&category={{ category }}" class="text-muted brand-item">Oppo</a><br>
                 <a href="{% url 'products' %}?brand=OnePlus&category={{ category }}" class="text-muted brand-item">OnePlus</a><br>
             </div>
-            <i id="brand-sort-icon" class="fas fa-sort-amount-down-alt d-lg-none"></i>
         </div>
-        <div class="col-10" style="z-index: -1;">
+        <div class="col-10">
             <div class="row">
                 <div id="category_name" class="col-6">
                     <h3>

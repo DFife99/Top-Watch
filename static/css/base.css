@@ -169,7 +169,6 @@
     border: 2px solid darkgrey;
     font-size: x-large;
     height: 570px;
-    z-index: -1;
 }
 
 .product-display-box:hover {
