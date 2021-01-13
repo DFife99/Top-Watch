@@ -17,21 +17,11 @@
                 <a href="{% url 'products' %}?brand=Oppo&category={{ category }}" class="text-muted brand-item">Oppo</a><br>
                 <a href="{% url 'products' %}?brand=OnePlus&category={{ category }}" class="text-muted brand-item">OnePlus</a><br>
             </div>
-            <i id="brand-sort-icon" class="fas fa-sort-amount-down-alt"></i>
-            <div id="brand-sort">
-                <a href="{% url 'products' %}" class="text-muted brand-item">All Brands SORT SECTION</a><br>
-                <a href="{% url 'products' %}?brand=Apple" class="text-muted brand-item">Apple SORT SECTION</a><br>
-                <a href="{% url 'products' %}?brand=Samsung" class="text-muted brand-item">Samsung SORT SECTION</a><br>
-                <a href="{% url 'products' %}?brand=Huawei" class="text-muted brand-item">Huawei SORT SECTION</a><br>
-                <a href="{% url 'products' %}?brand=LG" class="text-muted brand-item">LG SORT SECTION</a><br>
-                <a href="{% url 'products' %}?brand=HTC" class="text-muted brand-item">HTC SORT SECTION</a><br>
-                <a href="{% url 'products' %}?brand=Oppo" class="text-muted brand-item">Oppo SORT SECTION</a><br>
-                <a href="{% url 'products' %}?brand=OnePlus" class="text-muted brand-item">OnePlus SORT SECTION</a><br>
-            </div>
+            <i id="brand-sort-icon" class="fas fa-sort-amount-down-alt d-lg-none"></i>
         </div>
         <div class="col-10" style="z-index: -1;">
             <div class="row">
-                <div id="category_name" class="col-12">
+                <div id="category_name" class="col-6">
                     <h3>
                         {% if category == 'phones' %}
                             Phones
@@ -46,7 +36,22 @@
                             All Products
                         {% endif %}
                     </h3>
-                </div><br>
+                </div>
+                <div class="col-6">
+                    <div>
+                        <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                            <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+                            <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
+                            <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
+                            <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (low to high)</option>
+                            <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating (high to low)</option>
+                            <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
+                            <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
+                            <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
+                            <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
+                        </select>
+                    </div>
+                </div>
                 {% for product in products %}
                     <div class="col-11 col-md-5 col-lg-3 d-inline product-display-box product-margin">
                         <div class="d-flex justify-content-center">
@@ -65,4 +70,26 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+        $('#sort-selector').change(function() {
+            var selector = $(this);
+            var currentUrl = new URL(window.location);
+
+            var selectedValue = selector.val();
+            if(selectedValue != 'reset'){
+                var sort = selectedValue.split('_')[0];
+                var direction = selectedValue.split('_')[1];
+
+                currentUrl.searchParams.set('sort', sort);
+                currentUrl.searchParams.set('direction', direction);
+
+                window.location.replace(currentUrl);
+            } else {
+                currentUrl.searchParams.delete('sort');
+                currentUrl.searchParams.delete('direction');
+
+                window.location.replace(currentUrl)
+            }
+        })
+    </script>
 {% endblock %}

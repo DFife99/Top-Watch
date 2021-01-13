@@ -16,6 +16,7 @@ def all_products(request):
     sort = None
     direction = None
     category = 'phones,tablets,smart_watches,wireless_headphones'
+    current_brand = None
 
     if request.GET:
         if 'sort' in request.GET:
@@ -32,6 +33,8 @@ def all_products(request):
                     sortkey = f'-{sortkey}'
             products = products.order_by(sortkey)
 
+    current_sorting = f'{sort}_{direction}'
+
     if 'category' in request.GET:
         category = request.GET['category']
         categories = request.GET['category'].split(',')
@@ -42,6 +45,7 @@ def all_products(request):
         if 'brand' in request.GET:
             brands = request.GET['brand'].split(',')
             products = products.filter(brand__in=brands)
+            current_brand = request.GET['brand']
 
     if request.GET:
         if 'q' in request.GET:
@@ -56,6 +60,8 @@ def all_products(request):
     context = {
         'products': products,
         'category': category,
+        'current_sorting': current_sorting,
+        'current_brand': current_brand
     }
 
     return render(request, 'products/products.html', context)
