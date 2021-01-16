@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-6">
+            <img id="product-detail-image" src="{{ product.image }}" alt="{{ product.brand }}{{ product.name }}" style="height: 750px;">
+        </div>
+        <div id="product-detail-info" class="col-6">
+            {{ product.brand }} <br> 
+            {{ product.name }} <br>
+            {{ product.release_date }} <br>
+        </div>
+    </div>
+{% endblock %}
