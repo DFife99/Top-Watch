@@ -89,12 +89,12 @@
                 </div>
                 {% for product in products %}
                     <div class="col-11 col-md-5 col-lg-3 d-inline product-display-box product-margin">
-                        <a href="{% url 'product_detail' product.id %}">
+                        <a class="product-display-a-link" href="{% url 'product_detail' product.id %}">
                         <div class="d-flex justify-content-center">
                             <img class="product-display-image d-flex justify-content-center" src="{{ product.image }}" alt="{{ product.brand }}{{ product.name }}">
                         </div>
                         <p>
-                            <strong> {{ product.brand }} </strong><br>
+                            <strong class="product_brand"> {{ product.brand }} </strong><br>
                             <span class="product_name">{{ product.name }}</span><br><br>
                             <span class="product_rating">{{ product.rating }}</span><br><br>
                             <span class="product_price">£{{ product.price }}</span><br><br>

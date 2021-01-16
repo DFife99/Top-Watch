@@ -140,7 +140,7 @@
 }
 
 #brands {
-    border-right: solid 2px #184d8a;
+    border-right: solid 2px #007bff;
     text-align: center;
     padding-top: 1em;
     z-index: 1;
@@ -175,10 +175,25 @@
     height: 570px;
 }
 
+.product-display-a-link {
+    text-decoration: none;
+    color: black;
+}
+
+.product-display-a-link:hover {
+    text-decoration: none;
+    color: black;
+}
+
+
 .product-display-box:hover {
     border: none;
     box-shadow: 1px 1px 3px 3px rgba(0,0,0,0.1);
     height: 600px;
+}
+
+.product_brand {
+    color: #007bff;
 }
 
 
@@ -242,7 +257,7 @@ input[type=checkbox]
         width: 900% !important;
         margin-left: 157%;
         background-color: white;
-        border: solid 2px #184d8a;
+        border: solid 2px #007bff;
         border-left: none;
     }
 
@@ -333,7 +348,7 @@ input[type=checkbox]
         width: 200% !important;
         margin-left: 116%;
         background-color: white;
-        border: solid 2px #184d8a;
+        border: solid 2px #007bff;
         border-left: none;
         z-index: 1;
     }
