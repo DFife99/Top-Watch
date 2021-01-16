@@ -38,17 +38,15 @@
                                 <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
                                 {% if category == 'phones,tablets,smart_watches,wireless_headphones' %}
                                     {% if current_brand == None %}
-                                        <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}">All Products</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page">{{ product.brand }} {{ product.name }}</li>
+                                        <li class="breadcrumb-item active" aria-current="page">All Products</li>
                                     {% else %}
                                         <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}">All Products</a></li>
-                                        <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}?brand={{ current_brand }}">{{ current_brand }}</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page">{{ product.brand }} {{ product.name }}</li>
+                                        <li class="breadcrumb-item active" aria-current="page">{{ current_brand }}</li>
                                     {% endif %}
                                 {% else %}
                                     {% if current_brand == None %}
                                         <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}">All Products</a></li>
-                                        <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}?category={{ category }}">
+                                        <li class="breadcrumb-item active" aria-current="page">
                                             {% if category == 'phones' %}
                                                 Phones
                                             {% elif category == 'tablets' %}
@@ -56,8 +54,7 @@
                                             {% elif category == 'smart_watches,wireless_headphones' %}
                                                 Accessories
                                             {% endif %}
-                                        </a></li>
-                                        <li class="breadcrumb-item active" aria-current="page">{{ product.brand }} {{ product.name }}</li>
+                                        </li>
                                     {% else %}
                                         <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}">All Products</a></li>
                                         <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}?category={{ category }}">
@@ -68,8 +65,7 @@
                                             {% elif category == 'smart_watches,wireless_headphones' %}
                                                 Accessories
                                             {% endif %}</a></li>
-                                        <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}?category={{ category }}&brand={{ current_brand }}">{{ current_brand }}</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page">{{ product.brand }} {{ product.name }}</li>
+                                        <li class="breadcrumb-item active" aria-current="page">{{ current_brand }}</li>
                                     {% endif %}
                                 {% endif %}
                             </ol>
@@ -108,6 +104,16 @@
                         </a>
                     </div>
                 {% endfor %}
+                {% if not products %}
+                    <div class="col-3"></div>
+                    <div class="col-6" style="height: 900px">
+                        <img src="/media/sad_face.png" alt="Sad Face" class="product-display-image d-flex justify-content-center" style="margin-top: 50%; margin-right: auto; margin-left: auto;">
+                        <h3 style="text-align: center;">
+                            Sorry, We Couldn't Find Any Products That Matched Your Search!
+                        </h3>
+                    </div>
+                    <div class="col-3"></div>
+                {% endif %}
             </div>
         </div>
     </div>
