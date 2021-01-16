@@ -61,19 +61,28 @@ def all_products(request):
     context = {
         'products': products,
         'category': category,
-        'current_sorting': current_sorting,
         'current_brand': current_brand
     }
 
+    request.session['current_brand'] = current_brand
+    request.session['current_sorting'] = current_sorting
+    request.session['category'] = category
+
     return render(request, 'products/products.html', context)
+
 
 def product_detail(request, product_id):
     """ a view to return a specific product details """
 
     products = get_object_or_404(Product, pk=product_id)
 
+    current_brand = request.session.get('current_brand')
+    category = request.session.get('category')
+
     context = {
         'product': products,
+        'current_brand': current_brand,
+        'category': category,
     }
 
     return render(request, 'products/product_detail.html', context)

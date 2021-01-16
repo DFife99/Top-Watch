@@ -36,39 +36,40 @@
                         <nav aria-label="breadcrumb" class="d-none d-md-block">
                             <ol class="breadcrumb pt-0">
                                 <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
-                                {% if category == 'phones' %}
+                                {% if category == 'phones,tablets,smart_watches,wireless_headphones' %}
                                     {% if current_brand == None %}
                                         <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}">All Products</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page">Phones</li>
+                                        <li class="breadcrumb-item active" aria-current="page">{{ product.brand }} {{ product.name }}</li>
                                     {% else %}
                                         <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}">All Products</a></li>
-                                        <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}?category=phones">Phones</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page">{{ current_brand }}</li>
-                                    {% endif %}
-                                {% elif category == 'tablets' %}
-                                    {% if current_brand == None %}
-                                        <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}">All Products</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page">Tablets</li>
-                                    {% else %}
-                                        <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}">All Products</a></li>
-                                        <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}?category=phones">Tablets</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page">{{ current_brand }}</li>
-                                    {% endif %}
-                                {% elif category == 'smart_watches,wireless_headphones' %}
-                                    {% if current_brand == None %}
-                                        <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}">All Products</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page">Accessories</li>
-                                    {% else %}
-                                        <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}">All Products</a></li>
-                                        <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}?category=phones">Accessories</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page">{{ current_brand }}</li>
+                                        <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}?brand={{ current_brand }}">{{ current_brand }}</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">{{ product.brand }} {{ product.name }}</li>
                                     {% endif %}
                                 {% else %}
                                     {% if current_brand == None %}
-                                        <li class="breadcrumb-item active" aria-current="page">All Products</li>
+                                        <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}">All Products</a></li>
+                                        <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}?category={{ category }}">
+                                            {% if category == 'phones' %}
+                                                Phones
+                                            {% elif category == 'tablets' %}
+                                                Tablets
+                                            {% elif category == 'smart_watches,wireless_headphones' %}
+                                                Accessories
+                                            {% endif %}
+                                        </a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">{{ product.brand }} {{ product.name }}</li>
                                     {% else %}
                                         <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}">All Products</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page">{{ current_brand }}</li>
+                                        <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}?category={{ category }}">
+                                            {% if category == 'phones' %}
+                                                Phones
+                                            {% elif category == 'tablets' %}
+                                                Tablets
+                                            {% elif category == 'smart_watches,wireless_headphones' %}
+                                                Accessories
+                                            {% endif %}</a></li>
+                                        <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}?category={{ category }}&brand={{ current_brand }}">{{ current_brand }}</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">{{ product.brand }} {{ product.name }}</li>
                                     {% endif %}
                                 {% endif %}
                             </ol>
