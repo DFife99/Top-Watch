@@ -61,7 +61,8 @@ def all_products(request):
     context = {
         'products': products,
         'category': category,
-        'current_brand': current_brand
+        'current_brand': current_brand,
+        'query': query,
     }
 
     request.session['current_brand'] = current_brand

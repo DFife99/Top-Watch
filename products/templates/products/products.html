@@ -29,7 +29,11 @@
                             {% elif category == 'smart_watches,wireless_headphones' %}
                                 Accessories
                             {% else %}
-                                All Products
+                                {% if query == None %}
+                                    All Products
+                                {% else %}
+                                    Results For "{{ query }}":
+                                {% endif %}
                             {% endif %}
                     </div>
                     <div aria-label="breadcrumb" class="d-none d-md-block">
@@ -37,7 +41,12 @@
                             <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
                             {% if category == 'phones,tablets,smart_watches,wireless_headphones' %}
                                 {% if current_brand == None %}
-                                    <li class="breadcrumb-item active" aria-current="page">All Products</li>
+                                    {% if query == None %}
+                                        <li class="breadcrumb-item active" aria-current="page">All Products</li>
+                                    {% else %}
+                                        <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}">All Products</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Results For "{{ query }}":</li>
+                                    {% endif %}
                                 {% else %}
                                     <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}">All Products</a></li>
                                     <li class="breadcrumb-item active" aria-current="page">{{ current_brand }}</li>
