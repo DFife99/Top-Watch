@@ -296,6 +296,12 @@ input[type=checkbox]
     #brand-sort {
         margin-left: 168%;
     }
+
+    /* PRODUCT DETAIL */
+
+    #product-detail-info {
+        font-size: medium;
+    }
 }
 
 @media only screen and (min-width: 375px) {
@@ -396,6 +402,16 @@ input[type=checkbox]
         margin: 0;
         border: none;
     }
+
+    /* PRODUCT DETAILS */
+
+    #product-detail-image {
+        margin-top: 2.2rem;
+    }
+
+    #product-detail-info {
+        font-size: xx-large;
+    }
 }
 
 /* LARGE LAPTOPS */
@@ -425,6 +441,16 @@ input[type=checkbox]
     #phone-1,
     #accessory-1 {
         height: 400px;
+    }
+
+    /* PRODUCT DETAILS */
+
+    #product-detail-image {
+        margin-top: 0.3rem;
+    }
+
+    #product-detail-info {
+        margin-top: 5rem;
     }
 }
 
