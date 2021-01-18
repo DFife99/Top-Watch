@@ -116,7 +116,14 @@
             {% endif %}
             <hr class="product-detail-divider">
             <h3>Memory</h3>
-            <button type="button" class="btn btn-outline-dark">{{ product.storage_cap }}</button><button type="button" class="btn btn-outline-dark">{{ product.storage_cap }}</button>
+            {% if storage_1 == "False" %}
+                <span>No Storage On This Device!</span>
+            {% else %}
+                <button type="button" class="btn btn-outline-dark">{{ storage_1 }}</button>
+            {% endif %}
+            {% if storage_2 != None %}
+                <button type="button" class="btn btn-outline-dark">{{ storage_2 }}</button>
+            {% endif %}
             <hr class="product-detail-divider">
             <h3>Colour</h3>
             <form><input type="radio" name="colour" value="colour1" id="colour1"><input type="radio" value="colour2" name="colour" id="colour2"><input type="radio" value="colour3" name="colour" id="colour3"></form>

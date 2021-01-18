@@ -77,6 +77,15 @@ def product_detail(request, product_id):
     """ a view to return a specific product details """
 
     products = get_object_or_404(Product, pk=product_id)
+    storage_1 = None
+    storage_2 = None
+
+    storage_cap = products.storage_cap.split('/')
+
+    storage_1 = storage_cap[0]
+
+    if "/" in storage_cap:
+        storage_2 = storage_cap[1]
 
     current_brand = request.session.get('current_brand')
     category = request.session.get('category')
@@ -87,6 +96,8 @@ def product_detail(request, product_id):
         'current_brand': current_brand,
         'category': category,
         'query': query,
+        'storage_1': storage_1,
+        'storage_2': storage_2,
     }
 
     return render(request, 'products/product_detail.html', context)
