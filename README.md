@@ -7,7 +7,7 @@ tablets, smart watches, bundles or deals to find their desired product of choice
 
 ---
 
-# Version 0.3.1
+# Version 0.3.3
 
 ---
 
@@ -48,15 +48,22 @@ tablets, smart watches, bundles or deals to find their desired product of choice
 
 ---
 
-### Sources
+## Bugs 
 
-#### Code
+    - HTML Validator 
+        - So when checking the source code for products.html, it does return errors such as input tags inside a tags.
+        - Im aware this is flagged as an issue, but i think its best to leave it how it is for UX.
+
+
+## Sources
+
+### Code
 
     - CSS
         - Double Sized Checkboxes
         - https://stackoverflow.com/questions/306924/can-i-change-the-checkbox-size-using-css
 
-#### Design
+### Design
 
     - Logo  
         - Graphic Designer
@@ -70,7 +77,7 @@ tablets, smart watches, bundles or deals to find their desired product of choice
         - ( gettyimages-1217216982-170667a.jpg )
         - sent over from Graphic Designer
 
-#### Products 
+### Products 
 
     - OnePlus 7T
         = ( OnePlus-7-pro.png )

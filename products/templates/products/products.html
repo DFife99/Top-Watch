@@ -20,9 +20,8 @@
         </div>
         <div class="col-10">
             <div class="row">
-                <div id="category_name" class="col-6 col-md-8">
-                    <h3>
-                        <div id="small-device-page-header" class="d-md-none">
+                <div id="category_name" class="col-12 col-md-8">
+                    <div id="small-device-page-header" class="d-md-none">
                             {% if category == 'phones' %}
                                 Phones
                             {% elif category == 'tablets' %}
@@ -32,47 +31,46 @@
                             {% else %}
                                 All Products
                             {% endif %}
-                        </div>
-                        <nav aria-label="breadcrumb" class="d-none d-md-block">
-                            <ol class="breadcrumb pt-0">
-                                <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
-                                {% if category == 'phones,tablets,smart_watches,wireless_headphones' %}
-                                    {% if current_brand == None %}
-                                        <li class="breadcrumb-item active" aria-current="page">All Products</li>
-                                    {% else %}
-                                        <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}">All Products</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page">{{ current_brand }}</li>
-                                    {% endif %}
+                    </div>
+                    <div aria-label="breadcrumb" class="d-none d-md-block">
+                        <ol class="breadcrumb pt-0">
+                            <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                            {% if category == 'phones,tablets,smart_watches,wireless_headphones' %}
+                                {% if current_brand == None %}
+                                    <li class="breadcrumb-item active" aria-current="page">All Products</li>
                                 {% else %}
-                                    {% if current_brand == None %}
-                                        <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}">All Products</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page">
-                                            {% if category == 'phones' %}
-                                                Phones
-                                            {% elif category == 'tablets' %}
-                                                Tablets
-                                            {% elif category == 'smart_watches,wireless_headphones' %}
-                                                Accessories
-                                            {% endif %}
-                                        </li>
-                                    {% else %}
-                                        <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}">All Products</a></li>
-                                        <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}?category={{ category }}">
-                                            {% if category == 'phones' %}
-                                                Phones
-                                            {% elif category == 'tablets' %}
-                                                Tablets
-                                            {% elif category == 'smart_watches,wireless_headphones' %}
-                                                Accessories
-                                            {% endif %}</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page">{{ current_brand }}</li>
-                                    {% endif %}
+                                    <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}">All Products</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">{{ current_brand }}</li>
                                 {% endif %}
-                            </ol>
-                        </nav>
-                    </h3>
+                            {% else %}
+                                {% if current_brand == None %}
+                                    <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}">All Products</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">
+                                        {% if category == 'phones' %}
+                                            Phones
+                                        {% elif category == 'tablets' %}
+                                            Tablets
+                                        {% elif category == 'smart_watches,wireless_headphones' %}
+                                            Accessories
+                                        {% endif %}
+                                    </li>
+                                {% else %}
+                                    <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}">All Products</a></li>
+                                    <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}?category={{ category }}">
+                                        {% if category == 'phones' %}
+                                            Phones
+                                        {% elif category == 'tablets' %}
+                                            Tablets
+                                        {% elif category == 'smart_watches,wireless_headphones' %}
+                                            Accessories
+                                        {% endif %}</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">{{ current_brand }}</li>
+                                {% endif %}
+                            {% endif %}
+                        </ol>
+                    </div>
                 </div>
-                <div class="col-6 col-md-4">
+                <div class="col-12 col-md-4 mb-3">
                     <div>
                         <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
                             <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
@@ -88,7 +86,7 @@
                     </div>
                 </div>
                 {% for product in products %}
-                    <div class="col-11 col-md-5 col-lg-3 d-inline product-display-box product-margin">
+                    <div class="col-12 col-md-5 col-lg-3 d-inline product-display-box product-margin">
                         <a class="product-display-a-link" href="{% url 'product_detail' product.id %}">
                         <div class="d-flex justify-content-center">
                             <img class="product-display-image d-flex justify-content-center" src="{{ product.image }}" alt="{{ product.brand }}{{ product.name }}">
@@ -98,26 +96,23 @@
                             <span class="product_name">{{ product.name }}</span><br><br>
                             <span class="product_rating">{{ product.rating }}</span><br><br>
                             <span class="product_price">£{{ product.price }}</span><br><br>
-                            <input class="product_compare" type="checkbox" name="compare" id="{{ product.id }}_compare">
-                            <label class="ml-2" for="comapre">Compare</label>
+                            <input class="product_compare" type="checkbox" name="{{ product.id }}_compare" id="{{ product.id }}_compare">
+                            <label class="ml-2" for="{{ product.id }}_compare">Compare</label>
                         </p>
                         </a>
                     </div>
                 {% endfor %}
                 {% if not products %}
-                    <div class="col-3"></div>
-                    <div class="col-6" style="height: 900px">
+                    <div class="col-3 d-none d-md-block"></div>
+                    <div class="col-12 col-md-6" style="height: 900px">
                         <img src="/media/sad_face.png" alt="Sad Face" class="product-display-image d-flex justify-content-center" style="margin-top: 50%; margin-right: auto; margin-left: auto;">
                         <h3 style="text-align: center;">
                             Sorry, We Couldn't Find Any Products That Matched Your Search!
                         </h3>
                     </div>
-                    <div class="col-3"></div>
+                    <div class="col-3 d-none d-md-block"></div>
                 {% endif %}
             </div>
         </div>
     </div>
-    <script type="text/javascript">
-    
-    </script>
 {% endblock %}

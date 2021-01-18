@@ -11,7 +11,7 @@
 
 {% block content %}
     <div class="row">
-        <div id="category_name" class="col-12">
+        <div id="category_name" class="col-12 mt-5">
             <h3>
                 <div id="small-device-page-header" class="d-md-none">
                     {% if category == 'phones' %}
@@ -70,10 +70,19 @@
         <div class="col-6">
             <img id="product-detail-image" src="{{ product.image }}" alt="{{ product.brand }}{{ product.name }}" style="height: 750px;">
         </div>
-        <div id="product-detail-info" class="col-6">
-            {{ product.brand }} <br> 
-            {{ product.name }} <br>
-            {{ product.release_date }} <br>
+        <div id="product-detail-info" class="col-6 mt-5">
+            <h2 class="mt-5"><strong>{{ product.brand }}</strong></h2>
+            <h3>{{ product.name }}</h3> <br>
+            {{ product.rating }} <br>
+            <hr class="product-detail-divider">
+            <h3>Memory</h3>
+            <button type="button" class="btn btn-outline-dark">{{ product.storage_cap }}</button><button type="button" class="btn btn-outline-dark">{{ product.storage_cap }}</button>
+            <hr class="product-detail-divider">
+            <h3>Colour</h3>
+            <form><input type="radio" name="Colour" id="colour"><input type="radio" name="Colour" id="colour"><input type="radio" name="Colour" id="colour"></form>
+            <hr class="product-detail-divider">
+            <h2>£{{ product.price }}</h2>
+            <button> ADD TO CART </button>
         </div>
     </div>
 {% endblock %}
