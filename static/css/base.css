@@ -232,6 +232,14 @@ input[type=checkbox]
     width: 100%;
 }
 
+.fas, .fab {
+    font-size: unset;
+}
+
+.fas, .fab, .far {
+    color: #007bff;
+}
+
 
 /* PHONES */
 @media only screen and (max-width: 600px) {

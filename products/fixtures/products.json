@@ -30,6 +30,7 @@
             "wireless_charging":true,
             "charging_port":"Fast Charging",
             "battery":"3800 mAh",
+            "rating": 4.5,
             "price":379,
             "image_url":"https://cdn.dxomark.com/wp-content/uploads/medias/post-38226/OnePlus-7-pro_Main-Camera-1200%C3%979001.jpg",
             "image":"/media/products/OnePlus-7-pro.png"
@@ -67,6 +68,7 @@
             "wireless_charging":true,
             "charging_port":"USB 3.0",
             "battery":"Li-Ion 4500 mAh",
+            "rating": 5,
             "price":978.99,
             "image_url":"https://cdn.vodafone.co.uk/en/assets/images/desktop/Samsung_Galaxy_Note_20_Ultra_mystic_bronze-full-product-front-600.png",
             "image":"/media/products/galaxy-note-20-5g.png"
@@ -104,6 +106,7 @@
             "charging_port":false,
             "wireless_charging":true,
             "battery":"273 mAh",
+            "rating": 3,
             "price":269,
             "image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtS7BiJMb5EaOmrfK81BqD_PwkJXuiczsxgA&usqp=CAU",
             "image":"/media/products/AppleWatchSE.png"
@@ -142,6 +145,7 @@
             "wireless_charging":true,
             "battery":"3110 mAh",
             "price": 530,
+            "rating": 3.5,
             "image_url":"https://images.macrumors.com/t/XQggVnZ-YGdnXQcTrRsA38bYCBs=/1600x0/article-new/2020/10/iphone-11-vs-12.jpg",
             "image":"/media/products/iphone-11.png"
         }
@@ -178,6 +182,7 @@
             "wireless_charging":true,
             "charging_port":"USB Power Delivery 3.0",
             "battery":"4000 mAh",
+            "rating": 4.5,
             "price":630,
             "image_url":"https://i5.walmartimages.com/asr/3967a22c-f45b-4ca7-9bb0-fe93585e1f09_1.f9f5ceb407618cb4cd2e6d1f7541e775.jpeg",
             "image":"/media/products/SamsungGalaxys20.png"
@@ -215,6 +220,7 @@
             "wireless_charging":true,
             "charging_port":"Qi wireless charging",
             "battery":"340 mAh",
+            "rating": 3,
             "price":360,
             "image_url":"https://static.bhphoto.com/images/images500x500/samsung_sm_r840nzsaxar_galaxy_watch3_gps_smartwatch_1596630034_1577762.jpg",
             "image":"/media/products/SamsungGalaxyWatch3.png"
@@ -252,6 +258,7 @@
             "wireless_charging":true,
             "charging_port":"Charging Case",
             "battery":"4.5 Hours",
+            "rating": 3,
             "price":219.99,
             "image_url":"https://i.pinimg.com/originals/d7/46/c0/d746c0d24739dcd70da2d7adf57b3df7.jpg",
             "image":"/media/products/airpodspro.jpg"
@@ -289,6 +296,7 @@
             "wireless_charging":true,
             "charging_port":"SuperVOOC 2.0",
             "battery":"4500 mAh",
+            "rating": 4.5,
             "price": 450.00,
             "image_url":"https://fdn2.gsmarena.com/vv/bigpic/oppo-reno5-pro-5g-.jpg",
             "image":"/media/products/Oppo-Reno5-Pro-5G.png"
@@ -327,6 +335,7 @@
             "charging_port":"Wireless Charging",
             "battery":"455 mAh",
             "price": 110.00,
+            "rating": 1,
             "image_url":"https://d11zer3aoz69xt.cloudfront.net/media/catalog/product/cache/1/image/1200x/9df78eab33525d08d6e5fb8d27136e95/h/u/huawei_watch_gt_2_leather_smartwatch_black_1_1_1.jpg",
             "image":"/media/products/huawei-watch-gt-2.png"
         }
@@ -363,6 +372,7 @@
             "wireless_charging":true,
             "charging_port":"Charging Case",
             "battery":"6 Hours",
+            "rating": 2.5,
             "price":219.99,
             "image_url":"https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRxONMC2X6k8lPal2TLEBqbYBA0eH4CcAvHN5p4bRASDkawCAQn&usqp=CAY",
             "image":"/media/products/Galaxy-Buds.png"
@@ -401,6 +411,7 @@
             "charging_port":"Fast Charging 1W",
             "battery":"8200 mAh",
             "price":300.00,
+            "rating": 1,
             "image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVi6bADrZFIZqr01OyLLE24ZDMgPNBTLbTRw&usqp=CAU",
             "image":"/media/products/Lg-Pad-5.png"
         }
@@ -438,6 +449,7 @@
             "charging_port":"USB 3.0",
             "battery":"8800 mAh",
             "price":720.00,
+            "rating": 4,
             "image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl6_qP8SeSReZjF33q1qi0adZXRYXGfrUHzg&usqp=CAU",
             "image":"/media/products/Apple-iPad-Air.png"
         }
@@ -475,6 +487,7 @@
             "charging_port":"Charging Case",
             "battery":"6 Hours",
             "price":120.00,
+            "rating": 4.5,
             "image_url":"https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQfHmhr69Xnxn0RZu9NR1IOZWSW3zZfdCySklxOMQUmefrPhKYajV3bM49nCqDixQpoQA34OM8&usqp=CAc",
             "image":"/media/products/Galaxy_Buds_Live.png"
         }
@@ -511,6 +524,7 @@
             "wireless_charging":false,
             "charging_port":"Fast charging 18W",
             "battery":"4000 mAh",
+            "rating": 5,
             "price":260.00,
             "image_url":"https://favpng.com/png_view/huawei-smartphone-feature-phone-huawei-honor-8-pro-png/XcreMQkZ",
             "image":"/media/products/huawei-honor-8-pro.png"
@@ -548,6 +562,7 @@
             "wireless_charging":false,
             "charging_port":"Fast charging 15W",
             "battery":"3000 mAh",
+            "rating": 3.5,
             "price":230.00,
             "image_url":"https://www.hiclipart.com/free-transparent-background-png-clipart-yybjx/download",
             "image":"/media/products/samsung_galaxy_s8.png"
@@ -585,6 +600,7 @@
             "wireless_charging":false,
             "charging_port":"Fast charging 15W",
             "battery":"3000 mAh",
+            "rating": 4.5,
             "price":200.00,
             "image_url":"https://api.themrphone.com/mrphone/images/8954/1.jpg",
             "image":"/media/products/htc_desire_20+.png"
