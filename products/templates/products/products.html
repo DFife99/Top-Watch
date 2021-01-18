@@ -8,14 +8,14 @@
             <i id="brand-filter-icon" class="fas fa-cogs d-sm-block d-md-block d-lg-none"></i><br class="d-sm-none d-md-block">
             <div id="brand-filters" class="d-lg-block" style="display: none;">
                 <div id="page_description" class="d-sm-none"><h3 class="colour-blue">ALL PRODUCTS</h3></div>
-                <a href="{% url 'products' %}?category={{ category }}" class="text-muted brand-item">All Brands</a><br>
-                <a href="{% url 'products' %}?brand=Apple&category={{ category }}" class="text-muted brand-item">Apple</a><br>
-                <a href="{% url 'products' %}?brand=Samsung&category={{ category }}" class="text-muted brand-item">Samsung</a><br>
-                <a href="{% url 'products' %}?brand=Huawei&category={{ category }}" class="text-muted brand-item">Huawei</a><br>
-                <a href="{% url 'products' %}?brand=LG&category={{ category }}" class="text-muted brand-item">LG</a><br>
-                <a href="{% url 'products' %}?brand=HTC&category={{ category }}" class="text-muted brand-item">HTC</a><br>
-                <a href="{% url 'products' %}?brand=Oppo&category={{ category }}" class="text-muted brand-item">Oppo</a><br>
-                <a href="{% url 'products' %}?brand=OnePlus&category={{ category }}" class="text-muted brand-item">OnePlus</a><br>
+                <a href="{% url 'products' %}?category={{ category }}{% if query != None %}&q={{ query }}{% endif %}" class="text-muted brand-item">All Brands</a><br>
+                <a href="{% url 'products' %}?brand=Apple&category={{ category }}{% if query != None %}&q={{ query }}{% endif %}" class="text-muted brand-item">Apple</a><br>
+                <a href="{% url 'products' %}?brand=Samsung&category={{ category }}{% if query != None %}&q={{ query }}{% endif %}" class="text-muted brand-item">Samsung</a><br>
+                <a href="{% url 'products' %}?brand=Huawei&category={{ category }}{% if query != None %}&q={{ query }}{% endif %}" class="text-muted brand-item">Huawei</a><br>
+                <a href="{% url 'products' %}?brand=LG&category={{ category }}{% if query != None %}&q={{ query }}{% endif %}" class="text-muted brand-item">LG</a><br>
+                <a href="{% url 'products' %}?brand=HTC&category={{ category }}{% if query != None %}&q={{ query }}{% endif %}" class="text-muted brand-item">HTC</a><br>
+                <a href="{% url 'products' %}?brand=Oppo&category={{ category }}{% if query != None %}&q={{ query }}{% endif %}" class="text-muted brand-item">Oppo</a><br>
+                <a href="{% url 'products' %}?brand=OnePlus&category={{ category }}{% if query != None %}&q={{ query }}{% endif %}" class="text-muted brand-item">OnePlus</a><br>
             </div>
         </div>
         <div class="col-10">
@@ -48,8 +48,14 @@
                                         <li class="breadcrumb-item active" aria-current="page">Results For "{{ query }}":</li>
                                     {% endif %}
                                 {% else %}
-                                    <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}">All Products</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">{{ current_brand }}</li>
+                                    {% if query == None %}
+                                        <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}">All Products</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">{{ current_brand }}</li>
+                                    {% else %} 
+                                        <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}">All Products</a></li>
+                                        <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}?q={{ query }}">"{{ query }}"</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">{{ current_brand }}</li>
+                                    {% endif %}
                                 {% endif %}
                             {% else %}
                                 {% if current_brand == None %}

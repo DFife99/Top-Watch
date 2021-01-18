@@ -68,6 +68,7 @@ def all_products(request):
     request.session['current_brand'] = current_brand
     request.session['current_sorting'] = current_sorting
     request.session['category'] = category
+    request.session['query'] = query
 
     return render(request, 'products/products.html', context)
 
@@ -79,11 +80,13 @@ def product_detail(request, product_id):
 
     current_brand = request.session.get('current_brand')
     category = request.session.get('category')
+    query = request.session.get('query')
 
     context = {
         'product': products,
         'current_brand': current_brand,
         'category': category,
+        'query': query,
     }
 
     return render(request, 'products/product_detail.html', context)
