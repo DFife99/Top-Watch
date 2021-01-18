@@ -12,8 +12,8 @@
 {% block content %}
     <div class="row">
         <div id="category_name" class="col-12 mt-5">
-            <h3>
-                <div id="small-device-page-header" class="d-md-none">
+            <div id="small-device-page-header" class="d-md-none">
+                <h3>
                     {% if category == 'phones' %}
                         <a href="{% url 'products' %}?category={{ category }}{% if current_brand != None %}&brand={{ current_brand }}{% endif %}">Back To Phones</a>
                     {% elif category == 'tablets' %}
@@ -23,49 +23,49 @@
                     {% else %}
                         <a href="{% url 'products' %}{% if current_brand != None %}?brand={{ current_brand }}{% endif %}">Back To All Products</a>
                     {% endif %}
-                </div>
-                <nav aria-label="breadcrumb" class="d-none d-md-block">
-                    <ol class="breadcrumb pt-0">
-                        <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
-                        {% if category == 'phones,tablets,smart_watches,wireless_headphones' %}
-                            {% if current_brand == None %}
-                                <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}">All Products</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">{{ product.brand }} {{ product.name }}</li>
-                            {% else %}
-                                <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}">All Products</a></li>
-                                <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}?brand={{ current_brand }}">{{ current_brand }}</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">{{ product.brand }} {{ product.name }}</li>
-                            {% endif %}
+                </h3>
+            </div>
+            <div aria-label="breadcrumb" class="d-none d-md-block">
+                <ol class="breadcrumb pt-0">
+                    <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                    {% if category == 'phones,tablets,smart_watches,wireless_headphones' %}
+                        {% if current_brand == None %}
+                            <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}">All Products</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">{{ product.brand }} {{ product.name }}</li>
                         {% else %}
-                            {% if current_brand == None %}
-                                <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}">All Products</a></li>
-                                <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}?category={{ category }}">
-                                    {% if category == 'phones' %}
-                                        Phones
-                                    {% elif category == 'tablets' %}
-                                        Tablets
-                                    {% elif category == 'smart_watches,wireless_headphones' %}
-                                        Accessories
-                                    {% endif %}
-                                </a></li>
-                                <li class="breadcrumb-item active" aria-current="page">{{ product.brand }} {{ product.name }}</li>
-                            {% else %}
-                                <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}">All Products</a></li>
-                                <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}?category={{ category }}">
-                                    {% if category == 'phones' %}
-                                        Phones
-                                    {% elif category == 'tablets' %}
-                                        Tablets
-                                    {% elif category == 'smart_watches,wireless_headphones' %}
-                                        Accessories
-                                    {% endif %}</a></li>
-                                <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}?category={{ category }}&brand={{ current_brand }}">{{ current_brand }}</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">{{ product.brand }} {{ product.name }}</li>
-                            {% endif %}
+                            <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}">All Products</a></li>
+                            <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}?brand={{ current_brand }}">{{ current_brand }}</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">{{ product.brand }} {{ product.name }}</li>
                         {% endif %}
-                    </ol>
-                </nav>
-            </h3>
+                    {% else %}
+                        {% if current_brand == None %}
+                            <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}">All Products</a></li>
+                            <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}?category={{ category }}">
+                                {% if category == 'phones' %}
+                                    Phones
+                                {% elif category == 'tablets' %}
+                                    Tablets
+                                {% elif category == 'smart_watches,wireless_headphones' %}
+                                    Accessories
+                                {% endif %}
+                            </a></li>
+                            <li class="breadcrumb-item active" aria-current="page">{{ product.brand }} {{ product.name }}</li>
+                        {% else %}
+                            <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}">All Products</a></li>
+                            <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}?category={{ category }}">
+                                {% if category == 'phones' %}
+                                    Phones
+                                {% elif category == 'tablets' %}
+                                    Tablets
+                                {% elif category == 'smart_watches,wireless_headphones' %}
+                                    Accessories
+                                {% endif %}</a></li>
+                            <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}?category={{ category }}&brand={{ current_brand }}">{{ current_brand }}</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">{{ product.brand }} {{ product.name }}</li>
+                        {% endif %}
+                    {% endif %}
+                </ol>
+            </div>
         </div>
         <div class="col-12 col-md-7 product-detail-margin">
             <img id="product-detail-image" src="{{ product.image }}" alt="{{ product.brand }}{{ product.name }}">
@@ -79,7 +79,7 @@
             <button type="button" class="btn btn-outline-dark">{{ product.storage_cap }}</button><button type="button" class="btn btn-outline-dark">{{ product.storage_cap }}</button>
             <hr class="product-detail-divider">
             <h3>Colour</h3>
-            <form><input type="radio" name="Colour" id="colour"><input type="radio" name="Colour" id="colour"><input type="radio" name="Colour" id="colour"></form>
+            <form><input type="radio" name="colour1" id="colour1"><input type="radio" name="colour2" id="colour2"><input type="radio" name="colour3" id="colour3"></form>
             <hr class="product-detail-divider">
             <h2>£{{ product.price }}</h2>
             <button> ADD TO CART </button>
