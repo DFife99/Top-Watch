@@ -229,7 +229,7 @@ input[type=checkbox]
 }
 
 #product-detail-image {
-    height: 750px;
+    width: 100%;
 }
 
 
@@ -358,6 +358,20 @@ input[type=checkbox]
     
     #brand-sort {
         display: none;
+    }
+
+    /* PRODUCT DETAIL */
+
+    #product-detail-image {
+        margin-top: 4rem;
+    }
+
+    #product-detail-info {
+        font-size: large;
+    }
+
+    .product-detail-margin {
+        margin: 1rem 0rem 1rem 0rem;
     }
 }
 

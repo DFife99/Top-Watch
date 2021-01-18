@@ -15,13 +15,13 @@
             <h3>
                 <div id="small-device-page-header" class="d-md-none">
                     {% if category == 'phones' %}
-                        Phones
+                        <a href="{% url 'products' %}?category={{ category }}{% if current_brand != None %}&brand={{ current_brand }}{% endif %}">Back To Phones</a>
                     {% elif category == 'tablets' %}
-                        Tablets
+                        <a href="{% url 'products' %}?category={{ category }}{% if current_brand != None %}&brand={{ current_brand }}{% endif %}">Back To Tablets</a>
                     {% elif category == 'smart_watches,wireless_headphones' %}
-                        Accessories
+                        <a href="{% url 'products' %}?category={{ category }}{% if current_brand != None %}&brand={{ current_brand }}{% endif %}">Back To Accessories</a>
                     {% else %}
-                        All Products
+                        <a href="{% url 'products' %}{% if current_brand != None %}?brand={{ current_brand }}{% endif %}">Back To All Products</a>
                     {% endif %}
                 </div>
                 <nav aria-label="breadcrumb" class="d-none d-md-block">
@@ -67,10 +67,10 @@
                 </nav>
             </h3>
         </div>
-        <div class="col-6">
-            <img id="product-detail-image" src="{{ product.image }}" alt="{{ product.brand }}{{ product.name }}" style="height: 750px;">
+        <div class="col-12 col-md-7 product-detail-margin">
+            <img id="product-detail-image" src="{{ product.image }}" alt="{{ product.brand }}{{ product.name }}">
         </div>
-        <div id="product-detail-info" class="col-6 mt-5">
+        <div id="product-detail-info" class="col-12 col-md-5 product-detail-margin">
             <h2 class="mt-5"><strong>{{ product.brand }}</strong></h2>
             <h3>{{ product.name }}</h3> <br>
             {{ product.rating }} <br>
