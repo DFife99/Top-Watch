@@ -115,21 +115,46 @@
                 <h3>No Rating Available!</h3>
             {% endif %}
             <hr class="product-detail-divider">
-            <h3>Memory</h3>
-            {% if storage_1 == "False" %}
-                <span>No Storage On This Device!</span>
-            {% else %}
-                <button type="button" class="btn btn-outline-dark">{{ storage_1 }}</button>
-            {% endif %}
-            {% if storage_2 != None %}
-                <button type="button" class="btn btn-outline-dark">{{ storage_2 }}</button>
-            {% endif %}
-            <hr class="product-detail-divider">
-            <h3>Colour</h3>
-            <form><input type="radio" name="colour" value="colour1" id="colour1"><input type="radio" value="colour2" name="colour" id="colour2"><input type="radio" value="colour3" name="colour" id="colour3"></form>
-            <hr class="product-detail-divider">
-            <h2>£{{ product.price }}</h2>
-            <button> ADD TO CART </button>
+            <form action="" method="POST">
+                <h3>Memory</h3>
+                {% if storage_1 == "False" %}
+                    <span>No Storage On This Device!</span>
+                {% else %}
+                    <button type="button" id="storage_1" class="btn btn-outline-dark">{{ storage_1 }}</button>
+                {% endif %}
+                    <input id="storage_cap" class="d-none" type="radio" name="storage_cap" value="{{ storage_1 }}" selected>
+                {% if storage_2 != None %}
+                    <button type="button" id="storage_2" class="btn btn-outline-dark">{{ storage_2 }}</button>
+                {% endif %}
+                <hr class="product-detail-divider">
+                <h3>Colour</h3>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                </div>
+                <hr class="product-detail-divider">
+                <h2>£{{ product.price }}</h2>
+                <button type="submit"> ADD TO CART </button>
+            </form>
         </div>
     </div>
+{% endblock %}
+
+{% block js %}
+<script>
+    $('#storage_1').click(function() {
+        $('#storage_cap').val('{{ storage_1 }}');
+    });
+    $('#storage_2').click(function() {
+        $('#storage_cap').val('{{ storage_2 }}');
+    });
+    $('#storage_3').click(function() {
+        $('#storage_cap').val('{{ storage_3 }}');
+    });
+</script>
 {% endblock %}
