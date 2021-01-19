@@ -54,6 +54,9 @@ tablets, smart watches, bundles or deals to find their desired product of choice
         - So when checking the source code for products.html, it does return errors such as input tags inside a tags.
         - Im aware this is flagged as an issue, but i think its best to leave it how it is for UX.
 
+    - Radio Inputs
+        - Not so much a bug, but i found out you cant change the colour of a radio button as its set and overridden by browser.
+
 
 ## Sources
 

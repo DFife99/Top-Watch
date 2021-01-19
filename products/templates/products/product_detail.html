@@ -31,7 +31,7 @@
                     {% if category == 'phones,tablets,smart_watches,wireless_headphones' %}
                         {% if current_brand == None %}
                             {% if query == None %}
-                                <li class="breadcrumb-item active" aria-current="page">All Products</li>
+                                <li class="breadcrumb-item active" aria-current="page"><a href="{% url 'products' %}">All Products</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">{{ product.brand }} {{ product.name }}</li>
                             {% else %}
                                 <li class="breadcrumb-item" aria-current="page"><a href="{% url 'products' %}">All Products</a></li>
@@ -120,22 +120,25 @@
                 {% if storage_1 == "False" %}
                     <span>No Storage On This Device!</span>
                 {% else %}
-                    <button type="button" id="storage_1" class="btn btn-outline-dark">{{ storage_1 }}</button>
+                    <button type="button" id="storage_1" class="stg_btn btn btn-outline-dark">{{ storage_1 }}</button>
                 {% endif %}
                     <input id="storage_cap" class="d-none" type="radio" name="storage_cap" value="{{ storage_1 }}" selected>
                 {% if storage_2 != None %}
-                    <button type="button" id="storage_2" class="btn btn-outline-dark">{{ storage_2 }}</button>
+                    <button type="button" id="storage_2" class="stg_btn btn btn-outline-dark">{{ storage_2 }}</button>
+                {% endif %}
+                {% if storage_3 != None %}
+                    <button type="button" id="storage_3" class="stg_btn btn btn-outline-dark">{{ storage_3 }}</button>
                 {% endif %}
                 <hr class="product-detail-divider">
                 <h3>Colour</h3>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                    <input class="radio-btn form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                    <input class="radio-btn form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                    <input class="radio-btn form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
                 </div>
                 <hr class="product-detail-divider">
                 <h2>£{{ product.price }}</h2>
@@ -149,12 +152,18 @@
 <script>
     $('#storage_1').click(function() {
         $('#storage_cap').val('{{ storage_1 }}');
+        $('.stg_btn').removeClass('stg-active');
+        $(this).addClass('stg-active');
     });
     $('#storage_2').click(function() {
         $('#storage_cap').val('{{ storage_2 }}');
+        $('.stg_btn').removeClass('stg-active');
+        $(this).addClass('stg-active');
     });
     $('#storage_3').click(function() {
         $('#storage_cap').val('{{ storage_3 }}');
+        $('.stg_btn').removeClass('stg-active');
+        $(this).addClass('stg-active');
     });
 </script>
 {% endblock %}

@@ -1,5 +1,4 @@
-from django.shortcuts import render, get_object_or_404, redirect, reverse
-from django.contrib import messages
+from django.shortcuts import render, get_object_or_404
 from django.db.models import Q
 from django.db.models.functions import Lower
 
@@ -50,10 +49,6 @@ def all_products(request):
     if request.GET:
         if 'q' in request.GET:
             query = request.GET['q']
-            if not query:
-                messages.error(request, "You didn't enter any search criteria!")
-                return redirect(reverse('products'))
-
             queries = Q(name__icontains=query) | Q(brand__icontains=query) | Q(
                 category__name__icontains=query)
             products = products.filter(queries)
@@ -79,6 +74,7 @@ def product_detail(request, product_id):
     products = get_object_or_404(Product, pk=product_id)
     storage_1 = None
     storage_2 = None
+    storage_3 = None
 
     storage_cap = products.storage_cap
 
@@ -88,6 +84,8 @@ def product_detail(request, product_id):
         storage_split = storage_cap.split('/')
         storage_1 = storage_split[0]
         storage_2 = storage_split[1]
+        if len(storage_split) == 3:
+            storage_3 = storage_split[2]
 
     current_brand = request.session.get('current_brand')
     category = request.session.get('category')
@@ -100,6 +98,7 @@ def product_detail(request, product_id):
         'query': query,
         'storage_1': storage_1,
         'storage_2': storage_2,
+        'storage_3': storage_3,
     }
 
     return render(request, 'products/product_detail.html', context)

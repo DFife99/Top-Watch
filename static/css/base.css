@@ -202,7 +202,8 @@
 
 
 /* CODE TAKEN FROM https://stackoverflow.com/questions/306924/can-i-change-the-checkbox-size-using-css */
-input[type=checkbox]
+input[type=checkbox],
+input[type=radio]
 {
   /* Double-sized Checkboxes */
   -ms-transform: scale(2); /* IE */
@@ -212,7 +213,6 @@ input[type=checkbox]
   transform: scale(2);
   padding: 10px;
 }
-
 
 .product-margin {
     margin: 3rem 1.5rem 3rem 1.5rem;
@@ -238,6 +238,12 @@ input[type=checkbox]
 
 .fas, .fab, .far {
     color: #007bff;
+}
+
+.stg-active {
+    background-color: #007bff !important;
+    color: white;
+    border: none;
 }
 
 
