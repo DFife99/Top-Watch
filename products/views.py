@@ -75,6 +75,12 @@ def product_detail(request, product_id):
     storage_1 = None
     storage_2 = None
     storage_3 = None
+    hex_1 = None 
+    hex_2 = None
+    hex_3 = None
+    hex_4 = None
+    hex_5 = None
+    hex_6 = None
 
     storage_cap = products.storage_cap
 
@@ -86,6 +92,28 @@ def product_detail(request, product_id):
         storage_2 = storage_split[1]
         if len(storage_split) == 3:
             storage_3 = storage_split[2]
+
+    colour_hex = product.colour_hex
+
+    hex_1 = colour_hex
+    
+    if "/" in colour_hex:
+        hex_split = colour_hex.split('/')
+        hex_1 = hex_split[0]
+        hex_2 = hex_split[1]
+
+        if len(hex_split) == 3:
+            hex_3 = hex_split[2]
+        
+        if len(hex_split) == 4:
+            hex_4 = hex_split[3]
+        
+        if len(hex_split) == 5:
+            hex_5 = hex_split[4]
+            
+        if len(hex_split) == 6:
+            hex_6 = hex_split[5]
+
 
     current_brand = request.session.get('current_brand')
     category = request.session.get('category')

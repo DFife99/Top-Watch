@@ -132,16 +132,22 @@
                 <hr class="product-detail-divider">
                 <h3>Colour</h3>
                 <div class="form-check form-check-inline">
-                    <div style="height: 26px; border-radius: 50%; background-color: white; border:solid 2px blue; width: 26px;">
-                        <div style="height: 22px; border-radius: 50%; background-color: blue; width: 22px; margin: 2px;"></div>
+                    <div class="custom-radio-outer">
+                        <div class="custom-radio-inner d-none" style="background-color:{{ product.hex_1 }};"></div>
                     </div>
-                    <input class="radio-btn form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                    <input class="form-check-input d-none" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="radio-btn form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                    <div class="custom-radio-outer">
+                        <div class="custom-radio-inner d-none" style="background-color: blue;"></div>
+                    </div>
+                    <input class="radio-btn form-check-input d-none" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="radio-btn form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                    <div class="custom-radio-outer">
+                        <div class="custom-radio-inner d-none" style="background-color: blue;"></div>
+                    </div>
+                    <input class="radio-btn form-check-input d-none" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
                 </div>
                 <hr class="product-detail-divider">
                 <h2>£{{ product.price }}</h2>
@@ -167,6 +173,11 @@
         $('#storage_cap').val('{{ storage_3 }}');
         $('.stg_btn').removeClass('stg-active');
         $(this).addClass('stg-active');
+    });
+
+    $('.custom-radio-outer').click(function() {
+        $('.custom-radio-inner').addClass('d-none');
+        $(this).children().removeClass('d-none');
     });
 </script>
 {% endblock %}

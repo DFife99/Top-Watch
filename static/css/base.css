@@ -246,6 +246,19 @@ input[type=radio]
     border: none;
 }
 
+.custom-radio-outer {
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+    border:solid 2px grey;
+    width: 30px;
+}
+
+.custom-radio-inner {
+    height: 20px;
+    border-radius: 50%;
+    width: 20px; margin: 3px;
+}
 
 /* PHONES */
 @media only screen and (max-width: 600px) {
