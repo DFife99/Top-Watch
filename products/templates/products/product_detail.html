@@ -137,18 +137,46 @@
                     </div>
                     <input class="form-check-input d-none" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
                 </div>
+                {% if colour_2 != None %}
                 <div class="form-check form-check-inline">
                     <div class="custom-radio-outer">
                         <div class="custom-radio-inner d-none" style="background-color: {{ hex_2 }}"></div>
                     </div>
                     <input class="radio-btn form-check-input d-none" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
                 </div>
+                {% endif %}
+                {% if colour_3 != None %}
                 <div class="form-check form-check-inline">
                     <div class="custom-radio-outer">
                         <div class="custom-radio-inner d-none" style="background-color: {{ hex_3 }}"></div>
                     </div>
                     <input class="radio-btn form-check-input d-none" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
                 </div>
+                {% endif %}
+                {% if colour_4 != None %}
+                <div class="form-check form-check-inline">
+                    <div class="custom-radio-outer">
+                        <div class="custom-radio-inner d-none" style="background-color: {{ hex_4 }}"></div>
+                    </div>
+                    <input class="radio-btn form-check-input d-none" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option3">
+                </div>
+                {% endif %}
+                {% if colour_5 != None %}
+                <div class="form-check form-check-inline">
+                    <div class="custom-radio-outer">
+                        <div class="custom-radio-inner d-none" style="background-color: {{ hex_5 }}"></div>
+                    </div>
+                    <input class="radio-btn form-check-input d-none" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option3">
+                </div>
+                {% endif %}
+                {% if colour_6 != None %}
+                <div class="form-check form-check-inline">
+                    <div class="custom-radio-outer">
+                        <div class="custom-radio-inner d-none" style="background-color: {{ hex_6 }}"></div>
+                    </div>
+                    <input class="radio-btn form-check-input d-none" type="radio" name="inlineRadioOptions" id="inlineRadio6" value="option3">
+                </div>
+                {% endif %}
                 <hr class="product-detail-divider">
                 <h2>£{{ product.price }}</h2>
                 <button type="submit"> ADD TO CART </button>

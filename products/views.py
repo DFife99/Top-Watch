@@ -81,6 +81,12 @@ def product_detail(request, product_id):
     hex_4 = None
     hex_5 = None
     hex_6 = None
+    colour_1 = None
+    colour_2 = None
+    colour_3 = None
+    colour_4 = None
+    colour_5 = None
+    colour_6 = None
 
     storage_cap = products.storage_cap
 
@@ -102,18 +108,38 @@ def product_detail(request, product_id):
         hex_1 = hex_split[0]
         hex_2 = hex_split[1]
 
-        if len(hex_split) == 3:
+        if len(hex_split) >= 3:
             hex_3 = hex_split[2]
 
-        if len(hex_split) == 4:
+        if len(hex_split) >= 4:
             hex_4 = hex_split[3]
 
-        if len(hex_split) == 5:
+        if len(hex_split) >= 5:
             hex_5 = hex_split[4]
 
-        if len(hex_split) == 6:
+        if len(hex_split) >= 6:
             hex_6 = hex_split[5]
 
+    colour = products.colour
+
+    hex_1 = colour
+
+    if "/" in colour:
+        colour_split = colour.split('/')
+        colour_1 = colour_split[0]
+        colour_2 = colour_split[1]
+
+        if len(colour_split) >= 3:
+            colour_3 = colour_split[2]
+
+        if len(colour_split) >= 4:
+            colour_4 = colour_split[3]
+
+        if len(colour_split) >= 5:
+            colour_5 = colour_split[4]
+
+        if len(colour_split) >= 6:
+            colour_6 = colour_split[5]
 
     current_brand = request.session.get('current_brand')
     category = request.session.get('category')
@@ -133,6 +159,12 @@ def product_detail(request, product_id):
         'hex_4': hex_4,
         'hex_5': hex_5,
         'hex_6': hex_6,
+        'colour_1': colour_1,
+        'colour_2': colour_2,
+        'colour_3': colour_3,
+        'colour_4': colour_4,
+        'colour_5': colour_5,
+        'colour_6': colour_6,
     }
 
     return render(request, 'products/product_detail.html', context)
