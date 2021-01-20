@@ -7,7 +7,7 @@ tablets, smart watches, bundles or deals to find their desired product of choice
 
 ---
 
-# Version 0.3.3
+# Version 0.3.4
 
 ---
 
@@ -56,6 +56,7 @@ tablets, smart watches, bundles or deals to find their desired product of choice
 
     - Radio Inputs
         - Not so much a bug, but i found out you cant change the colour of a radio button as its set and overridden by browser.
+        - To counter this ive made my own radio button, which works out better as it changes based on the colour the user wants for the phone
 
 
 ## Sources

@@ -122,7 +122,7 @@ def product_detail(request, product_id):
 
     colour = products.colour
 
-    hex_1 = colour
+    colour_1 = colour
 
     if "/" in colour:
         colour_split = colour.split('/')
