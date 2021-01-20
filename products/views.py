@@ -75,7 +75,7 @@ def product_detail(request, product_id):
     storage_1 = None
     storage_2 = None
     storage_3 = None
-    hex_1 = None 
+    hex_1 = None
     hex_2 = None
     hex_3 = None
     hex_4 = None
@@ -93,24 +93,24 @@ def product_detail(request, product_id):
         if len(storage_split) == 3:
             storage_3 = storage_split[2]
 
-    colour_hex = product.colour_hex
+    hex_colour = products.hex_colour
 
-    hex_1 = colour_hex
-    
-    if "/" in colour_hex:
-        hex_split = colour_hex.split('/')
+    hex_1 = hex_colour
+
+    if "/" in hex_colour:
+        hex_split = hex_colour.split('/')
         hex_1 = hex_split[0]
         hex_2 = hex_split[1]
 
         if len(hex_split) == 3:
             hex_3 = hex_split[2]
-        
+
         if len(hex_split) == 4:
             hex_4 = hex_split[3]
-        
+
         if len(hex_split) == 5:
             hex_5 = hex_split[4]
-            
+
         if len(hex_split) == 6:
             hex_6 = hex_split[5]
 
@@ -127,6 +127,12 @@ def product_detail(request, product_id):
         'storage_1': storage_1,
         'storage_2': storage_2,
         'storage_3': storage_3,
+        'hex_1': hex_1,
+        'hex_2': hex_2,
+        'hex_3': hex_3,
+        'hex_4': hex_4,
+        'hex_5': hex_5,
+        'hex_6': hex_6,
     }
 
     return render(request, 'products/product_detail.html', context)
