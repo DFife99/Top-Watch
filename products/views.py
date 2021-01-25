@@ -71,6 +71,10 @@ def all_products(request):
 def product_detail(request, product_id):
     """ a view to return a specific product details """
 
+    if request.POST:
+        print("REQUEST SENT")
+        print(request.POST)
+
     products = get_object_or_404(Product, pk=product_id)
     storage_1 = None
     storage_2 = None
