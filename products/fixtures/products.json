@@ -69,7 +69,7 @@
             "storage_cap":"128GB/256GB/512GB",
             "microphone":true,
             "speakers":true,
-            "headphone_jack":false,
+            "headphone_jack": false,
             "wireless_charging":true,
             "charging_port":"USB 3.0",
             "battery":"Li-Ion 4500 mAh",
