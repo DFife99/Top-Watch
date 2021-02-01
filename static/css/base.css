@@ -274,6 +274,36 @@ input[type=radio]
     border-bottom: solid 3px #007bff;
 }
 
+.table tbody th {
+    width: 50%;
+}
+
+.table tbody tr {
+    border-bottom: solid 2px #000;
+}
+
+.table tbody td {
+    float: right;
+}
+
+.table .border-none,
+.table td,
+.table th {
+    border: none;
+}
+
+.spec-sub-headers {
+    text-align: end;
+    font-size: x-large;
+    position: sticky;
+    left: 20%;
+    border: none;
+}
+
+.fa-times {
+    font-size: larger;
+}
+
 /* PHONES */
 @media only screen and (max-width: 600px) {
     #bundle-1,
