@@ -27,6 +27,7 @@ class Product(models.Model):
         max_length=254, blank=True)
     brand = models.CharField(max_length=254)
     name = models.CharField(max_length=254)
+    unfriendly_name = models.CharField(max_length=254, default=False)
     colour = models.CharField(max_length=100, default="Black")
     hex_colour = models.CharField(max_length=100, default="#000000")
     release_date = models.CharField(max_length=254)
@@ -46,11 +47,13 @@ class Product(models.Model):
         max_length=254, default=False, blank=False, null=False)
     video = models.CharField(
         max_length=254, default=False, blank=False, null=False)
+    selfie_camera = models.BooleanField(default=False, null=True, blank=True)
     picture = models.CharField(
         max_length=254, default=False, blank=False, null=False)
     selfie_video = models.CharField(
         max_length=254, default=False, blank=False, null=False)
     ram = models.CharField(max_length=254)
+    card = models.BooleanField(default=False, null=True, blank=True)
     card_reader = models.CharField(max_length=254, blank=False, null=False)
     card_supported = models.CharField(max_length=254, blank=False, null=False)
     storage_cap = models.CharField(max_length=254)
