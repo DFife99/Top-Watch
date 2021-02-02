@@ -316,6 +316,19 @@ input[type=radio]
         padding-left: 3em;
         height: 250px;
     }
+
+    #carousel_product_details,
+    #carouselExampleIndicators3 {
+        height: 350px;
+    }
+
+    #carouselExampleIndicators3 .carousel-inner {
+        height: unset;
+    }
+
+    .details-image {
+        height: 300px;
+    }
     
     .bundle-text {
         font-size: 12px;
@@ -450,6 +463,14 @@ input[type=radio]
     .product-detail-margin {
         margin: 1rem 0rem 1rem 0rem;
     }
+    
+    #carouselExampleIndicators3 .carousel-inner {
+        height: 550px;
+    }
+
+    .details-image {
+        height: 500px;
+    }
 }
 
 /* LAPTOPS */
@@ -483,6 +504,14 @@ input[type=radio]
     #product-detail-info {
         font-size: xx-large;
     }
+
+    #carouselExampleIndicators3 .carousel-inner {
+        height: 600px;
+    }
+
+    .details-image {
+        height: 550px;
+    }
 }
 
 /* LARGE LAPTOPS */
@@ -497,21 +526,18 @@ input[type=radio]
     #first_call_bg,
     #second_call_bg,
     #carouselExampleIndicators,
-    .carousel-inner {
-    height: 400px;
-    }
-
-    .bundle-image {
-    height: 350px;
-    }
-
+    .carousel-inner,
     #bundle-1,
     #bundle-3,
     #discounted-phone-1,
     #tablet-1,
     #phone-1,
     #accessory-1 {
-        height: 400px;
+    height: 400px;
+    }
+
+    .bundle-image {
+    height: 350px;
     }
 
     /* PRODUCT DETAILS */
@@ -522,6 +548,14 @@ input[type=radio]
 
     #product-detail-info {
         margin-top: 5rem;
+    }
+
+    #carouselExampleIndicators3 .carousel-inner {
+        height: 700px;
+    }
+
+    .details-image {
+        height: 650px;
     }
 }
 
