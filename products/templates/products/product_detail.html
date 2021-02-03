@@ -213,12 +213,15 @@
             </form>
         </div>
     </div>
-    <div class="container">
+    <div class="container mt-5">
         <div class="row justify-content-md-center">
             <h3 class="col-12 text-center">
-                <strong id="spec-header" class="colour-light-blue" style="padding-left: 6%;">Specifications</strong>
+                <strong id="spec-header" class="colour-light-blue">Specifications</strong>
             </h3>
             <div class="col">
+                <h4 class="col-12 text-center mb-3 mt-4">
+                    <strong class="spec-sub-header colour-light-blue">General</strong>
+                </h4>
                 <table class="table">
                     <tbody>
                         <tr>
@@ -245,12 +248,14 @@
                                 {{ product.size }}
                             </td>
                         </tr>
-                        {% if product.screen_size %}
-                            <tr class="border-none">
-                                <th scope="row" class="spec-sub-headers" style="left: 17.5%;">
-                                    Display
-                                </th>
-                            </tr>
+                    </tbody>
+                </table>
+                {% if product.screen_size %}
+                    <h4 class="col-12 text-center mb-3 mt-4">
+                        <strong class="spec-sub-header colour-light-blue">Display</strong>
+                    </h4>
+                    <table class="table">
+                        <tbody>
                             <tr>
                                 <th scope="row">
                                     Screen Size:
@@ -267,13 +272,15 @@
                                     {{ product.resolution }}
                                 </td>
                             </tr>
-                        {% endif %}
-                        {% if product.selfie_camera %}
-                            <tr class="border-none">
-                                <th scope="row" class="spec-sub-headers">
-                                    Front Camera
-                                </th>
-                            </tr>
+                        </tbody>
+                    </table>
+                {% endif %}
+                {% if product.selfie_camera %}
+                    <h4 class="col-12 text-center mb-3 mt-4">
+                        <strong class="spec-sub-header colour-light-blue">Front Cameras</strong>
+                    </h4>
+                    <table class="table">
+                        <tbody>
                             <tr>
                                 <th scope="row">
                                     Picture:
@@ -290,191 +297,178 @@
                                     {{ product.selfie_video }}
                                 </td>
                             </tr>
-                        {% endif %}
-                        {% if product.number_of_cams > 0 %}
-                            <tr class="border-none">
-                                <th scope="row" class="spec-sub-headers">
-                                    Rear Cameras
-                                </th>
-                            </tr>
-                            <tr>
-                                <th>Number Of Cameras:</th>
-                                <td>
-                                    {{ product.number_of_cams }}
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">
-                                    Camera 1:
-                                </th>
-                                <td>
-                                    {{ product.camera_1 }}
-                                </td>
-                            </tr>
-                            {% if product.number_of_cams == 2 %}
-                                <tr>
-                                    <th scope="row">
-                                        Camera 2:
-                                    </th>
-                                    <td>
-                                        {{ product.camera_2 }}
-                                    </td>
-                                </tr>
-                            {% elif product.number_of_cams == 3 %}
-                                <tr>
-                                    <th scope="row">
-                                        Camera 2:
-                                    </th>
-                                    <td>
-                                        {{ product.camera_2 }}
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        Camera 3:
-                                    </th>
-                                    <td>
-                                        {{ product.camera_3 }}
-                                    </td>
-                                </tr>
-                            {% elif product.number_of_cams == 4 %}
-                                <tr>
-                                    <th scope="row">
-                                        Camera 2:
-                                    </th>
-                                    <td>
-                                        {{ product.camera_2 }}
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        Camera 3:
-                                    </th>
-                                    <td>
-                                        {{ product.camera_3 }}
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        Camera 4:
-                                    </th>
-                                    <td>
-                                        {{ product.camera_4 }}
-                                    </td>
-                                </tr>
-                            {% endif %}
-                            {% if video %}
-                                <tr>
-                                    <th scope="row">
-                                        Video:
-                                    </th>
-                                    <td>
-                                        {{ product.video }}
-                                    </td>
-                                </tr>
-                            {% endif %}
-                        {% endif %}
-                        {% if product.ram %}
-                            <tr class="border-none">
-                                <th scope="row" class="spec-sub-headers" style="left: 18%;">
-                                    Memory
-                                </th>
-                            </tr>
-                            <tr>
-                                <th scope="row">
-                                    Ram:
-                                </th>
-                                <td>
-                                    {{ product.ram }}
-                                </td>
-                            </tr>
-                        {% endif %}
-                        {% if product.card %}
-                            <tr>
-                                <th scope="row">
-                                    Card Reader:
-                                </th>
-                                <td>
-                                    {{ product.card_reader }}
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">
-                                    Card Supported:
-                                </th>
-                                <td>
-                                    {{ product.card_supported }}
-                                </td>
-                            </tr>
-                        {% endif %}
-                        {% if product.storage_cap %}
-                            <tr>
-                                <th scope="row">
-                                    Storage Cap:
-                                </th>
-                                <td>
-                                    {{ product.storage_cap }}
-                                </td>
-                            </tr>
-                        {% endif %}
-                            <tr class="border-none">
-                                <th scope="row" class="spec-sub-headers" style="left: 17%;">
-                                    Extras
-                                </th>
-                            </tr>
-                            <tr>
-                                <th scope="row">
-                                    Microphone:
-                                </th>
-                                <td>
-                                    {% if product.microphone == True %}
-                                    <i class="fas fa-check"></i>
-                                    {% else %}
-                                    <i class="fas fa-times"></i>
-                                    {% endif %}
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">
-                                    Speakers:
-                                </th>
-                                <td>
-                                    {% if product.speakers == True %}
-                                    <i class="fas fa-check"></i>
-                                    {% else %}
-                                    <i class="fas fa-times"></i>
-                                    {% endif %}
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">
-                                    Headphone Jack:
-                                </th>
-                                <td>
-                                    {% if product.headphone_jack == True %}
-                                    <i class="fas fa-check"></i>
-                                    {% else %}
-                                    <i class="fas fa-times"></i>
-                                    {% endif %}
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">
-                                    Wireless Charging:
-                                </th>
-                                <td>
-                                    {% if product.wireless_charging == True %}
-                                    <i class="fas fa-check"></i>
-                                    {% else %}
-                                    <i class="fas fa-times"></i>
-                                    {% endif %}
-                                </td>
-                            </tr>
-                            <tr class="border-none">
-                                <th scope="row" class="spec-sub-headers" style="left: 17.5%;">
-                                    Battery
-                                </th>
-                            </tr>
+                        </tbody>
+                    </table>
+                {% endif %}
+                {% if product.number_of_cams > 0 %}
+                    <h4 class="col-12 text-center mb-3 mt-4">
+                        <strong class="spec-sub-header colour-light-blue">Rear Cameras</strong>
+                    </h4>
+                    <table class="table">
+                        <tbody>
+                    <tr>
+                        <th>Number Of Cameras:</th>
+                        <td>
+                            {{ product.number_of_cams }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            Camera 1:
+                        </th>
+                        <td>
+                            {{ product.camera_1 }}
+                        </td>
+                    </tr>
+                    {% if product.number_of_cams >= 2 %}
+                        <tr>
+                            <th scope="row">
+                                Camera 2:
+                            </th>
+                            <td>
+                                {{ product.camera_2 }}
+                            </td>
+                        </tr>
+                    
+                    {% endif %}
+                    {% if product.number_of_cams >= 3 %}
+                        <tr>
+                            <th scope="row">
+                                Camera 3:
+                            </th>
+                            <td>
+                                {{ product.camera_3 }}
+                            </td>
+                        </tr>
+                    {% endif %}
+                    {% if product.number_of_cams >= 4 %}
+                        <tr>
+                            <th scope="row">
+                                Camera 4:
+                            </th>
+                            <td>
+                                {{ product.camera_4 }}
+                            </td>
+                        </tr>
+                    {% endif %}
+                    {% if product.video %}
+                        <tr>
+                            <th scope="row">
+                                Video:
+                            </th>
+                            <td>
+                                {{ product.video }}
+                            </td>
+                        </tr>
+                    {% endif %}
+                    </tbody>
+                    </table>
+                {% endif %}
+                {% if product.ram %}
+                    <h4 class="col-12 text-center mb-3 mt-4">
+                        <strong class="spec-sub-header colour-light-blue">Memory</strong>
+                    </h4>
+                    <table class="table">
+                        <tbody>
+                    <tr>
+                        <th scope="row">
+                            Ram:
+                        </th>
+                        <td>
+                            {{ product.ram }}
+                        </td>
+                    </tr>
+                {% endif %}
+                {% if product.card %}
+                    <tr>
+                        <th scope="row">
+                            Card Reader:
+                        </th>
+                        <td>
+                            {{ product.card_reader }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            Card Supported:
+                        </th>
+                        <td>
+                            {{ product.card_supported }}
+                        </td>
+                    </tr>
+                {% endif %}
+                {% if product.storage_cap %}
+                    <tr>
+                        <th scope="row">
+                            Storage Cap:
+                        </th>
+                        <td>
+                            {{ product.storage_cap }}
+                        </td>
+                    </tr>
+                        </tbody>
+                    </table>
+                {% endif %}
+                <h4 class="col-12 text-center mb-3 mt-4">
+                    <strong class="spec-sub-header colour-light-blue">Extras</strong>
+                </h4>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th scope="row">
+                                Microphone:
+                            </th>
+                            <td>
+                                {% if product.microphone == True %}
+                                <i class="fas fa-check"></i>
+                                {% else %}
+                                <i class="fas fa-times"></i>
+                                {% endif %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                Speakers:
+                            </th>
+                            <td>
+                                {% if product.speakers == True %}
+                                <i class="fas fa-check"></i>
+                                {% else %}
+                                <i class="fas fa-times"></i>
+                                {% endif %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                Headphone Jack:
+                            </th>
+                            <td>
+                                {% if product.headphone_jack == True %}
+                                <i class="fas fa-check"></i>
+                                {% else %}
+                                <i class="fas fa-times"></i>
+                                {% endif %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                Wireless Charging:
+                            </th>
+                            <td>
+                                {% if product.wireless_charging == True %}
+                                <i class="fas fa-check"></i>
+                                {% else %}
+                                <i class="fas fa-times"></i>
+                                {% endif %}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h4 class="col-12 text-center mb-3 mt-4">
+                    <strong class="spec-sub-header colour-light-blue">Battery</strong>
+                </h4>
+                <table class="table">
+                    <tbody>
                         <tr>
                             <th scope="row">
                                 Charging Port:
