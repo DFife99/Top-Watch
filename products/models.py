@@ -71,6 +71,8 @@ class Product(models.Model):
     image_url = models.URLField(
         max_length=1024, blank=True)
     image = models.ImageField(blank=True)
+    image_front = models.ImageField(blank=True)
+    image_rear = models.ImageField(blank=True)
 
     def __str__(self):
         return self.name
