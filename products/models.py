@@ -70,7 +70,7 @@ class Product(models.Model):
         max_digits=6, decimal_places=2, null=True, blank=True)
     image_url = models.URLField(
         max_length=1024, blank=True)
-    image = models.ImageField(blank=True)
+    image_rear_check = models.BooleanField(default=False, blank=True)
     image_front = models.ImageField(blank=True)
     image_rear = models.ImageField(blank=True)
 

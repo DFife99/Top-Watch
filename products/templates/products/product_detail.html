@@ -80,6 +80,7 @@
                 </ol>
             </div>
         </div>
+        {% if product.image_rear_check %}
         <div class="col-12 col-md-7 product-detail-margin">
             <div id="carouselExampleIndicators3" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
@@ -106,6 +107,11 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
+        {% else %}
+            <div class="col-12 col-md-7 product-detail-margin">
+                <img class="d-block carousel-image-1 details-image" src="{{ product.image_front }}colour_1.png" alt="{{ product.brand }}{{ product.name }}">
+            </div>
+        {% endif %}
         </div>
         <div id="product-detail-info" class="col-12 col-md-5 product-detail-margin">
             <h2 class="mt-5 colour-light-blue"><strong>{{ product.brand }}</strong></h2>
