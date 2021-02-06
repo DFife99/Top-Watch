@@ -83,7 +83,7 @@ tablets, smart watches, bundles or deals to find their desired product of choice
 
 ### Products 
 
-- OnePlus 7T
+#### OnePlus 7T
     = ( oneplus_7_display.png )
         - https://cdn.dxomark.com/wp-content/uploads/medias/post-38226/OnePlus-7-pro_Main-Camera-1200%C3%979001.jpg
 
@@ -100,7 +100,7 @@ tablets, smart watches, bundles or deals to find their desired product of choice
     = ( Device Specs )
         - https://www.gsmarena.com/oneplus_7t-9816.php
 
-- Samsung Galaxy Note20 Ultra
+#### Samsung Galaxy Note20 Ultra
     = ( samsung_galaxy_note20_ultra_display.png )
         - https://med.csmobiles.com/146146-large_default/samsung-galaxy-note-20-n980-256gb-dual-sim-gris.jpg
 
@@ -119,7 +119,7 @@ tablets, smart watches, bundles or deals to find their desired product of choice
     = ( Device Specs )
         - https://www.gsmarena.com/samsung_galaxy_note20_ultra_5g-10261.php
 
-- Apple Watch SE 
+#### Apple Watch SE 
     = ( apple_watch_se_display.png )
         - https://cdn.vox-cdn.com/thumbor/4J9X7FWBmF5_KROb-B4dim9R2Ek=/0x0:2040x1360/1200x800/filters:focal(857x517:1183x843)/cdn.vox-cdn.com/uploads/chorus_image/image/67430664/applewatchsefamily.0.jpg
 
@@ -138,7 +138,7 @@ tablets, smart watches, bundles or deals to find their desired product of choice
     = ( Device Specs )
         - https://www.gsmarena.com/apple_watch_se-10446.php
 
-- Apple iPhone 11
+#### Apple iPhone 11
     = ( apple_iphone_11_display.png )
         - https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone11-select-2019-family_GEO_EMEA?wid=882&amp;hei=1058&amp;fmt=jpeg&amp;qlt=80&amp;op_usm=0.5,0.5&amp;.v=1567022219953
     
@@ -168,7 +168,7 @@ tablets, smart watches, bundles or deals to find their desired product of choice
     = ( Device Specs )
         - https://www.gsmarena.com/apple_iphone_11-9848.php
 
-- Samsung Galaxy S20 
+#### Samsung Galaxy S20 
     = ( samsung_galaxy_note20_ultra_display.png )
         - https://www.esdorado.com/2437-large_default/samsung-galaxy-s20-8-gb-128-gb-cosmic-grey.jpg 
 
@@ -191,67 +191,67 @@ tablets, smart watches, bundles or deals to find their desired product of choice
     = ( Device Specs )
         - https://www.gsmarena.com/samsung_galaxy_s20-10081.php
 
-- Samsung Galaxy Watch3
+#### Samsung Galaxy Watch3
     = ( SamsungGalaxyWatch3.png )
         - https://static.bhphoto.com/images/images500x500/samsung_sm_r840nzsaxar_galaxy_watch3_gps_smartwatch_1596630034_1577762.jpg
     = ( Device Specs )
         - https://www.gsmarena.com/samsung_galaxy_watch3-10315.php
 
-- Apple AirPods Pro
+#### Apple AirPods Pro
     = ( airpodspro.jpg )
         - https://i.pinimg.com/originals/d7/46/c0/d746c0d24739dcd70da2d7adf57b3df7.jpg
     = ( Device Specs )
         - https://www.apple.com/uk/airpods-pro/specs/
 
-- Oppo Reno5 Pro+ 5G
+#### Oppo Reno5 Pro+ 5G
     = ( Oppo-Reno5-Pro-5G.png )
         - https://fdn2.gsmarena.com/vv/bigpic/oppo-reno5-pro-5g-.jpg
     = ( Device Specs )
         - https://www.gsmarena.com/oppo_reno5_pro+_5g-10632.php
 
-- Huawei Watch GT 2
+#### Huawei Watch GT 2
     = ( huawei-watch-gt-2.png)
         - https://d11zer3aoz69xt.cloudfront.net/media/catalog/product/cache/1/image/1200x/9df78eab33525d08d6e5fb8d27136e95/h/u/huawei_watch_gt_2_leather_smartwatch_black_1_1_1.jpg
     = ( Device Specs )
         - https://www.gsmarena.com/huawei_watch_gt_2-9888.php
 
-- Samsung Galaxy Buds 
+#### Samsung Galaxy Buds 
     = ( Galaxy-Buds.png )
         - https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRxONMC2X6k8lPal2TLEBqbYBA0eH4CcAvHN5p4bRASDkawCAQn&usqp=CAY
     = ( Device Specs )
         - https://www.samsung.com/global/galaxy/galaxy-buds/specs/
 
-- LG G Pad 5
+#### LG G Pad 5
     = ( Lg-Pad-5.png )
         - https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVi6bADrZFIZqr01OyLLE24ZDMgPNBTLbTRw&usqp=CAU
     = ( Device Specs )
         - https://www.gsmarena.com/lg_g_pad_5_10_1-9952.php
 
-- Apple iPad Air ( 2020 )
+#### Apple iPad Air ( 2020 )
     = ( Apple-iPad-Air.png )
         - https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl6_qP8SeSReZjF33q1qi0adZXRYXGfrUHzg&usqp=CAU
     = ( Device Specs )
         - https://www.gsmarena.com/apple_ipad_air_(2020)-10444.php
 
-- Galaxy Buds Live
+#### Galaxy Buds Live
     = ( Galaxy_Buds_Live.png )
         - https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQfHmhr69Xnxn0RZu9NR1IOZWSW3zZfdCySklxOMQUmefrPhKYajV3bM49nCqDixQpoQA34OM8&usqp=CAc
     = ( Device Specs )
         - https://www.samsung.com/global/galaxy/galaxy-buds-live/specs/
 
-- Huawei Honor 8 Pro
+#### Huawei Honor 8 Pro
     = ( huawei-honor-8-pro.png )
         - https://favpng.com/png_view/huawei-smartphone-feature-phone-huawei-honor-8-pro-png/XcreMQkZ
     = ( Device Specs )
         - https://www.gsmarena.com/honor_8_pro-8568.php
     
-- Galaxy S8 
+#### Galaxy S8 
     = ( samsung_galaxy_s8.png )
         - https://www.hiclipart.com/free-transparent-background-png-clipart-yybjx/download
     = ( Device Specs )
         - https://www.gsmarena.com/samsung_galaxy_s8-8161.php
 
-- HTC Desire 20+ 
+#### HTC Desire 20+ 
     = ( htc_desire_20+.png )
         - https://api.themrphone.com/mrphone/images/8954/1.jpg
     = ( Device Specs )
