@@ -192,8 +192,15 @@ tablets, smart watches, bundles or deals to find their desired product of choice
         - https://www.gsmarena.com/samsung_galaxy_s20-10081.php
 
 #### Samsung Galaxy Watch3
-    = ( SamsungGalaxyWatch3.png )
-        - https://static.bhphoto.com/images/images500x500/samsung_sm_r840nzsaxar_galaxy_watch3_gps_smartwatch_1596630034_1577762.jpg
+    = ( galaxy_watch_3_display.png )
+        - https://specials-images.forbesimg.com/dam/imageserve/5ed3cdb4dc72730006b73992/960x0.png?cropX1=-1&cropY1=-1&cropX2=-1&cropY2=-1&quality=75&fit=scale&background=000000&uri=
+
+    = ( galaxy_watch_3_colour_1.png )
+        - https://www.etoren.com/upload/images/0.16223500_1610607971_samsung-galaxy-watch-3-bluetooth-r840-45mm-titanium-black.jpg
+
+    = ( galaxy_watch_3_colour_2.png )
+        - https://images-na.ssl-images-amazon.com/images/I/61nEpnvIXqL._AC_SL1200_.jpg
+
     = ( Device Specs )
         - https://www.gsmarena.com/samsung_galaxy_watch3-10315.php
 
