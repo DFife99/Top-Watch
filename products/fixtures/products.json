@@ -38,6 +38,7 @@
             "rating": 4.5,
             "price":379,
             "image_url":"https://cdn.dxomark.com/wp-content/uploads/medias/post-38226/OnePlus-7-pro_Main-Camera-1200%C3%979001.jpg",
+            "image_display": "/media/products/oneplus_7_display.png",
             "image_rear_check":true,
             "image_front":"/media/products/oneplus_7_front_",
             "image_rear":"/media/products/oneplus_7_rear_"
@@ -83,6 +84,7 @@
             "rating": 5,
             "price":978.99,
             "image_url":"https://cdn.vodafone.co.uk/en/assets/images/desktop/Samsung_Galaxy_Note_20_Ultra_mystic_bronze-full-product-front-600.png",
+            "image_display": "/media/products/galaxy_note20_ultra_display.png",
             "image_rear_check":true,
             "image_front":"/media/products/galaxy_note20_ultra_front_",
             "image_rear":"/media/products/galaxy_note20_ultra_rear_"
@@ -128,6 +130,7 @@
             "rating": 3,
             "price":269,
             "image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtS7BiJMb5EaOmrfK81BqD_PwkJXuiczsxgA&usqp=CAU",
+            "image_display": "/media/products/apple_watch_se_display.png",
             "image_rear_check":false,
             "image_front":"/media/products/apple_watch_se_",
             "image_rear":"N/A"
@@ -173,6 +176,7 @@
             "price": 530,
             "rating": 3.5,
             "image_url":"https://images.macrumors.com/t/XQggVnZ-YGdnXQcTrRsA38bYCBs=/1600x0/article-new/2020/10/iphone-11-vs-12.jpg",
+            "image_display": "/media/products/apple_iphone_11_display.png",
             "image_rear_check":true,
             "image_front":"/media/products/apple_iphone_11_front_",
             "image_rear":"/media/products/apple_iphone_11_rear_"
@@ -218,9 +222,10 @@
             "rating": 4.5,
             "price":630,
             "image_url":"https://i5.walmartimages.com/asr/3967a22c-f45b-4ca7-9bb0-fe93585e1f09_1.f9f5ceb407618cb4cd2e6d1f7541e775.jpeg",
+            "image_display": "/media/products/samsung_galaxy_s20_display.png",
             "image_rear_check":true,
-            "image_front":"/media/products/oneplus_7_front_",
-            "image_rear":"/media/products/oneplus_7_rear_"
+            "image_front":"/media/products/samsung_galaxy_s20_front_",
+            "image_rear":"/media/products/samsung_galaxy_s20_rear_"
         }
     },
     {
@@ -263,6 +268,7 @@
             "rating": 3,
             "price":360,
             "image_url":"https://static.bhphoto.com/images/images500x500/samsung_sm_r840nzsaxar_galaxy_watch3_gps_smartwatch_1596630034_1577762.jpg",
+            "image_display": "/media/products/oneplus_7_display.png",
             "image_rear_check":false,
             "image_front":"/media/products/oneplus_7_front_",
             "image_rear":"/media/products/oneplus_7_rear_"
@@ -308,6 +314,7 @@
             "rating": 3,
             "price":219.99,
             "image_url":"https://i.pinimg.com/originals/d7/46/c0/d746c0d24739dcd70da2d7adf57b3df7.jpg",
+            "image_display": "/media/products/oneplus_7_display.png",
             "image_rear_check":false,
             "image_front":"/media/products/oneplus_7_front_",
             "image_rear":"/media/products/oneplus_7_rear_"
@@ -353,6 +360,7 @@
             "rating": 4.5,
             "price": 450.00,
             "image_url":"https://fdn2.gsmarena.com/vv/bigpic/oppo-reno5-pro-5g-.jpg",
+            "image_display": "/media/products/oneplus_7_display.png",
             "image_rear_check":true,
             "image_front":"/media/products/oneplus_7_front_",
             "image_rear":"/media/products/oneplus_7_rear_"
@@ -398,6 +406,7 @@
             "price": 110.00,
             "rating": 1,
             "image_url":"https://d11zer3aoz69xt.cloudfront.net/media/catalog/product/cache/1/image/1200x/9df78eab33525d08d6e5fb8d27136e95/h/u/huawei_watch_gt_2_leather_smartwatch_black_1_1_1.jpg",
+            "image_display": "/media/products/oneplus_7_display.png",
             "image_rear_check":false,
             "image_front":"/media/products/oneplus_7_front_",
             "image_rear":"/media/products/oneplus_7_rear_"
@@ -443,6 +452,7 @@
             "rating": 2.5,
             "price":219.99,
             "image_url":"https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRxONMC2X6k8lPal2TLEBqbYBA0eH4CcAvHN5p4bRASDkawCAQn&usqp=CAY",
+            "image_display": "/media/products/oneplus_7_display.png",
             "image_rear_check":false,
             "image_front":"/media/products/oneplus_7_front_",
             "image_rear":"/media/products/oneplus_7_rear_"
@@ -488,6 +498,7 @@
             "price":300.00,
             "rating": 1,
             "image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVi6bADrZFIZqr01OyLLE24ZDMgPNBTLbTRw&usqp=CAU",
+            "image_display": "/media/products/oneplus_7_display.png",
             "image_rear_check":true,
             "image_front":"/media/products/oneplus_7_front_",
             "image_rear":"/media/products/oneplus_7_rear_"
@@ -533,6 +544,7 @@
             "price":720.00,
             "rating": 4,
             "image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl6_qP8SeSReZjF33q1qi0adZXRYXGfrUHzg&usqp=CAU",
+            "image_display": "/media/products/oneplus_7_display.png",
             "image_rear_check":true,
             "image_front":"/media/products/oneplus_7_front_",
             "image_rear":"/media/products/oneplus_7_rear_"
@@ -578,6 +590,7 @@
             "price":120.00,
             "rating": 4.5,
             "image_url":"https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQfHmhr69Xnxn0RZu9NR1IOZWSW3zZfdCySklxOMQUmefrPhKYajV3bM49nCqDixQpoQA34OM8&usqp=CAc",
+            "image_display": "/media/products/oneplus_7_display.png",
             "image_rear_check":false,
             "image_front":"/media/products/oneplus_7_front_",
             "image_rear":"/media/products/oneplus_7_rear_"
@@ -623,6 +636,7 @@
             "rating": 5,
             "price":260.00,
             "image_url":"https://favpng.com/png_view/huawei-smartphone-feature-phone-huawei-honor-8-pro-png/XcreMQkZ",
+            "image_display": "/media/products/oneplus_7_display.png",
             "image_rear_check":true,
             "image_front":"/media/products/oneplus_7_front_",
             "image_rear":"/media/products/oneplus_7_rear_"
@@ -668,6 +682,7 @@
             "rating": 3.5,
             "price":230.00,
             "image_url":"https://www.hiclipart.com/free-transparent-background-png-clipart-yybjx/download",
+            "image_display": "/media/products/oneplus_7_display.png",
             "image_rear_check":true,
             "image_front":"/media/products/oneplus_7_front_",
             "image_rear":"/media/products/oneplus_7_rear_"
@@ -713,6 +728,7 @@
             "rating": 4.5,
             "price":200.00,
             "image_url":"https://api.themrphone.com/mrphone/images/8954/1.jpg",
+            "image_display": "/media/products/oneplus_7_display.png",
             "image_rear_check":true,
             "image_front":"/media/products/oneplus_7_front_",
             "image_rear":"/media/products/oneplus_7_rear_"

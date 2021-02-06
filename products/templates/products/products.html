@@ -104,7 +104,7 @@
                     <div class="col-12 col-md-5 col-lg-3 d-inline product-display-box product-margin">
                         <a class="product-display-a-link" href="{% url 'product_detail' product.id %}">
                         <div class="d-flex justify-content-center">
-                            <img class="product-display-image d-flex justify-content-center" src="{{ product.image_front }}colour_1.png" alt="{{ product.brand }}{{ product.name }}">
+                            <img class="product-display-image d-flex justify-content-center" src="{{ product.image_display }}" alt="{{ product.brand }}{{ product.name }}">
                         </div>
                         <p>
                             <strong class="product_brand"> {{ product.brand }} </strong><br>

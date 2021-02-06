@@ -7,7 +7,7 @@ tablets, smart watches, bundles or deals to find their desired product of choice
 
 ---
 
-# Version 0.3.5
+# Version 0.3.8
 
 ---
 
@@ -84,32 +84,74 @@ tablets, smart watches, bundles or deals to find their desired product of choice
 ### Products 
 
     - OnePlus 7T
-        = ( OnePlus-7-pro.png )
+        = ( oneplus_7_display.png )
             - https://cdn.dxomark.com/wp-content/uploads/medias/post-38226/OnePlus-7-pro_Main-Camera-1200%C3%979001.jpg
         = ( Device Specs )
             - https://www.gsmarena.com/oneplus_7t-9816.php
 
     - Samsung Galaxy Note20 Ultra
-        = ( galaxy-note-20-5g.png )
-            - https://cdn.vodafone.co.uk/en/assets/images/desktop/Samsung_Galaxy_Note_20_Ultra_mystic_bronze-full-product-front-600.png
+        = ( samsung_galaxy_note20_ultra_display.png )
+            - https://med.csmobiles.com/146146-large_default/samsung-galaxy-note-20-n980-256gb-dual-sim-gris.jpg
         = ( Device Specs )
             - https://www.gsmarena.com/samsung_galaxy_note20_ultra_5g-10261.php
 
     - Apple Watch SE 
-        = ( AppleWatchSE.png )
-            - https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtS7BiJMb5EaOmrfK81BqD_PwkJXuiczsxgA&usqp=CAU
+        = ( apple_watch_se_display.png )
+            - https://cdn.vox-cdn.com/thumbor/4J9X7FWBmF5_KROb-B4dim9R2Ek=/0x0:2040x1360/1200x800/filters:focal(857x517:1183x843)/cdn.vox-cdn.com/uploads/chorus_image/image/67430664/applewatchsefamily.0.jpg
         = ( Device Specs )
             - https://www.gsmarena.com/apple_watch_se-10446.php
 
     - Apple iPhone 11
-        = ( iphone-11.png )
-            - https://images.macrumors.com/t/XQggVnZ-YGdnXQcTrRsA38bYCBs=/1600x0/article-new/2020/10/iphone-11-vs-12.jpg
+        = ( apple_iphone_11_display.png )
+            - https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone11-select-2019-family_GEO_EMEA?wid=882&amp;hei=1058&amp;fmt=jpeg&amp;qlt=80&amp;op_usm=0.5,0.5&amp;.v=1567022219953
+        
+        = ( apple_iphone_11_colour_1 )
+            - ( Front ) - https://eshop.lycamobile.co.uk/pub/media/catalog/product/i/p/iphone11-black-front.jpg
+            - ( Rear ) - https://cdn.shopify.com/s/files/1/1374/6193/products/IPHONE_11_BLACK_BACK_3b5a3413-8688-4e8b-8b19-bd34a50b7da1_800x.jpg?v=1586272468
+            
+        = ( apple_iphone_11_colour_2 )
+            - ( Front ) - https://eshop.lycamobile.co.uk/pub/media/catalog/product/i/p/iphone11-white-front.jpg
+            - ( Rear ) - https://mobileplanetcare.com/wp-content/uploads/2020/07/2.jpg
+
+        = ( apple_iphone_11_colour_3 )
+            - ( Front ) - https://www.macysdigital.com/wp-content/uploads/apple-iphone-xr-yellow-front-400x400.jpg
+            - ( Rear ) - https://www.renderhub.com/rzo/apple-iphone-11-yellow/apple-iphone-11-yellow-06.jpg
+
+        = ( apple_iphone_11_colour_4 )
+            - ( Front ) - https://d11fuji4mn7bm2.cloudfront.net/media/cache/data/Apple/Apple-iPhone-11/Red/Iphone-11-Red-Front-800x800.jpg
+            - ( Rear ) - https://uswitch-mobiles-contentful.imgix.net/kf81nsuntxeb/5V8HKeagJlTbK0awpz7O7h/6c2295ed0df48666e7a12b32947207ae/iphone-11-red-back.png
+
+        = ( apple_iphone_11_colour_5 )
+            - ( Front ) - https://cdn.alzashop.com/Foto/f3/RI/RI028b5.jpg
+            - ( Rear ) - https://s1.poorvikamobile.com/image/data/AAAAA/Apple/iPhone%2011/New/Green/Apple-iPhone-11-back_ios.jpeg
+
+        = ( apple_iphone_11_colour_6 ) 
+            - ( Front + Rear ) - https://u7d6h8g4.stackpathcdn.com/wp-content/uploads/2020/09/iphone-11-purple-min.jpg
+
         = ( Device Specs )
             - https://www.gsmarena.com/apple_iphone_11-9848.php
 
+
     - Samsung Galaxy S20 
-        = ( SamsungGalaxys20.png )
-            - https://i5.walmartimages.com/asr/3967a22c-f45b-4ca7-9bb0-fe93585e1f09_1.f9f5ceb407618cb4cd2e6d1f7541e775.jpeg
+        = ( samsung_galaxy_note20_ultra_display.png )
+            - https://www.esdorado.com/2437-large_default/samsung-galaxy-s20-8-gb-128-gb-cosmic-grey.jpg 
+
+        = ( samsung_galaxy_note20_ultra_colour_1 )
+            - ( Front ) - https://www.esdorado.com/2437-large_default/samsung-galaxy-s20-8-gb-128-gb-cosmic-grey.jpg
+            - ( Rear ) - http://www.three.co.uk/static/images/device_pages/MobileVersion/Samsung/Galaxy_S20_5G/Cosmic_Grey/carousel/2.jpg
+
+        = ( samsung_galaxy_note20_ultra_colour_2 ) ( both Front and Rear )
+            - https://www.renderhub.com/rzo/samsung-galaxy-s20-cloud-blue/samsung-galaxy-s20-cloud-blue-01.jpg
+
+        = ( samsung_galaxy_note20_ultra_colour_3 ) ( both Front and Rear )
+            - https://cdn.alloallo.media/catalog/product/samsung/galaxy-s/galaxy-s20/galaxy-s20-cloud-pink.jpg
+
+        = (samsung_galaxy_note20_ultra_colour_4 ) ( both Front and Rear )
+            - https://d10wc7q7re41fz.cloudfront.net/wp-content/uploads/2020/06/TB-S20White-UI.jpg
+
+        = ( samsung_galaxy_note20_ultra_colour_5) ( both Front and Rear )
+            - https://www.sammobile.com/wp-content/uploads/2020/02/EQqZiMjUUAAPezO.jpg
+
         = ( Device Specs )
             - https://www.gsmarena.com/samsung_galaxy_s20-10081.php
 
