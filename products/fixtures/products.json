@@ -268,7 +268,7 @@
             "rating": 3,
             "price":360,
             "image_url":"https://static.bhphoto.com/images/images500x500/samsung_sm_r840nzsaxar_galaxy_watch3_gps_smartwatch_1596630034_1577762.jpg",
-            "image_display": "/media/products/oneplus_7_display.png",
+            "image_display": "/media/products/galaxy_watch_3_display.png",
             "image_rear_check":false,
             "image_front":"/media/products/galaxy_watch_3_",
             "image_rear":"N/A"
@@ -314,10 +314,10 @@
             "rating": 3,
             "price":219.99,
             "image_url":"https://i.pinimg.com/originals/d7/46/c0/d746c0d24739dcd70da2d7adf57b3df7.jpg",
-            "image_display": "/media/products/oneplus_7_display.png",
+            "image_display": "/media/products/apple_air_pods_pro_colour_1.png",
             "image_rear_check":false,
-            "image_front":"/media/products/oneplus_7_front_",
-            "image_rear":"/media/products/oneplus_7_rear_"
+            "image_front":"/media/products/apple_air_pods_pro_",
+            "image_rear":"N/A"
         }
     },
     {
@@ -360,10 +360,10 @@
             "rating": 4.5,
             "price": 450.00,
             "image_url":"https://fdn2.gsmarena.com/vv/bigpic/oppo-reno5-pro-5g-.jpg",
-            "image_display": "/media/products/oneplus_7_display.png",
+            "image_display": "/media/products/oppo_reno5_pro_5g_display.png",
             "image_rear_check":true,
-            "image_front":"/media/products/oneplus_7_front_",
-            "image_rear":"/media/products/oneplus_7_rear_"
+            "image_front":"/media/products/oppo_reno5_pro_5g_front_",
+            "image_rear":"/media/products/oppo_reno5_pro_5g_rear_"
         }
     },
     {
@@ -406,10 +406,10 @@
             "price": 110.00,
             "rating": 1,
             "image_url":"https://d11zer3aoz69xt.cloudfront.net/media/catalog/product/cache/1/image/1200x/9df78eab33525d08d6e5fb8d27136e95/h/u/huawei_watch_gt_2_leather_smartwatch_black_1_1_1.jpg",
-            "image_display": "/media/products/oneplus_7_display.png",
+            "image_display": "/media/products/huawei_watch_gt_2_display.png",
             "image_rear_check":false,
-            "image_front":"/media/products/oneplus_7_front_",
-            "image_rear":"/media/products/oneplus_7_rear_"
+            "image_front":"/media/products/huawei_watch_gt_2_",
+            "image_rear":"N/A"
         }
     },
     {

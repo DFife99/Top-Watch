@@ -7,7 +7,7 @@ tablets, smart watches, bundles or deals to find their desired product of choice
 
 ---
 
-# Version 0.3.8
+# Version 0.3.85
 
 ---
 
@@ -205,20 +205,45 @@ tablets, smart watches, bundles or deals to find their desired product of choice
         - https://www.gsmarena.com/samsung_galaxy_watch3-10315.php
 
 #### Apple AirPods Pro
-    = ( airpodspro.jpg )
-        - https://i.pinimg.com/originals/d7/46/c0/d746c0d24739dcd70da2d7adf57b3df7.jpg
+    = ( apple_air_pods_pro_colour_1.png )
+        - https://thegoodguys.sirv.com/products/50068689/50068689_661373.PNG?scale.height=505&scale.width=773&canvas.height=505&canvas.width=773&canvas.opacity=0&q=90
+        
     = ( Device Specs )
         - https://www.apple.com/uk/airpods-pro/specs/
 
 #### Oppo Reno5 Pro+ 5G
-    = ( Oppo-Reno5-Pro-5G.png )
-        - https://fdn2.gsmarena.com/vv/bigpic/oppo-reno5-pro-5g-.jpg
+    = ( oppo_reno5_pro_5g_display.png )
+        - https://cdn.androidbeat.com/wp-content/uploads/2020/12/oppo-reno-5-pro-1024x925.jpg
+    
+    = ( oppo_reno5_pro_5g_colour_1 )
+        - ( Front + Rear) - https://mightygadget.co.uk/wp-content/uploads/2020/05/chrome_FivcNEHRAa-1024x777.jpg
+
+    = ( oppo_reno5_pro_5g_colour_2 )
+        - ( Front ) - https://cdn1.smartprix.com/rx-iskuPoBj3-w1200-h1200/oppo-reno-5-pro-5g.jpg
+        - ( Rear ) - https://www.giztop.com/media/catalog/product/cache/dc206057cdd42d7e34b9d36e347785ca/r/e/reno_5_pro-.png
+
     = ( Device Specs )
         - https://www.gsmarena.com/oppo_reno5_pro+_5g-10632.php
 
 #### Huawei Watch GT 2
-    = ( huawei-watch-gt-2.png)
-        - https://d11zer3aoz69xt.cloudfront.net/media/catalog/product/cache/1/image/1200x/9df78eab33525d08d6e5fb8d27136e95/h/u/huawei_watch_gt_2_leather_smartwatch_black_1_1_1.jpg
+    = ( huawei_watch_gt_2_display.png )
+        - https://i1.wp.com/techweez.com/wp-content/uploads/2020/06/huawei-watches.png?fit=1080%2C665&ssl=1
+    
+    = ( huawei_watch_gt_2_colour_1.png )
+        - https://assets.products-live.ao.com/Images/96a3f3a3-b559-49d1-a051-2ca634cbfdaf/1280x1280/55024506_huawei_smartwatch_02.png
+        
+    = ( huawei_watch_gt_2_colour_2.png )
+        - https://media.very.co.uk/i/very/PKGJN_SQ2_0000002161_CYAN_SLb?$300x400_retinamobilex2$
+        
+    = ( huawei_watch_gt_2_colour_3.png )
+        - https://brain-images-ssl.cdn.dixons.com/3/1/10213613/u_10213613.jpg
+        
+    = ( huawei_watch_gt_2_colour_4.png )
+        - https://cdn.tgdd.vn/Products/Images/7077/212195/huawei-watch-gt2-42mm-day-da-be-2-org.jpg
+        
+    = ( huawei_watch_gt_2_colour_5.png )
+        - https://www.powerplanetonline.com/cdnassets/huawei_watch_gt_2_sport_46mm_naranja_sunset_01_l.jpg
+        
     = ( Device Specs )
         - https://www.gsmarena.com/huawei_watch_gt_2-9888.php
 

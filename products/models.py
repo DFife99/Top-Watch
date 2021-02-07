@@ -63,7 +63,8 @@ class Product(models.Model):
     wireless_charging = models.BooleanField(default=False, blank=True)
     charging_port = models.CharField(max_length=254, blank=False, null=False)
     battery = models.CharField(max_length=254)
-    rating = models.DecimalField(max_digits=3, decimal_places=1, null=True, blank=True)
+    rating = models.DecimalField(
+        max_digits=3, decimal_places=1, null=True, blank=True)
     price = models.DecimalField(
         max_digits=7, decimal_places=2, null=True, blank=True)
     rating = models.DecimalField(
