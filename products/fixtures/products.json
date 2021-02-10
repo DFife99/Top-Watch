@@ -452,10 +452,10 @@
             "rating": 2.5,
             "price":219.99,
             "image_url":"https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRxONMC2X6k8lPal2TLEBqbYBA0eH4CcAvHN5p4bRASDkawCAQn&usqp=CAY",
-            "image_display": "/media/products/oneplus_7_display.png",
+            "image_display": "/media/products/samsung_galaxy_buds_colour_1.png",
             "image_rear_check":false,
-            "image_front":"/media/products/oneplus_7_front_",
-            "image_rear":"/media/products/oneplus_7_rear_"
+            "image_front":"/media/products/samsung_galaxy_buds_",
+            "image_rear":"N/A"
         }
     },
     {
@@ -498,10 +498,10 @@
             "price":300.00,
             "rating": 1,
             "image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVi6bADrZFIZqr01OyLLE24ZDMgPNBTLbTRw&usqp=CAU",
-            "image_display": "/media/products/oneplus_7_display.png",
+            "image_display": "/media/products/lg_g_pad5_front_colour_1.png",
             "image_rear_check":true,
-            "image_front":"/media/products/oneplus_7_front_",
-            "image_rear":"/media/products/oneplus_7_rear_"
+            "image_front":"/media/products/lg_g_pad5_front_",
+            "image_rear":"/media/products/lg_g_pad5_rear_"
         }
     },
     {
@@ -544,10 +544,10 @@
             "price":720.00,
             "rating": 4,
             "image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl6_qP8SeSReZjF33q1qi0adZXRYXGfrUHzg&usqp=CAU",
-            "image_display": "/media/products/oneplus_7_display.png",
+            "image_display": "/media/products/ipad_air_front_colour_1.png",
             "image_rear_check":true,
-            "image_front":"/media/products/oneplus_7_front_",
-            "image_rear":"/media/products/oneplus_7_rear_"
+            "image_front":"/media/products/ipad_air_front_",
+            "image_rear":"/media/products/ipad_air_rear_"
         }
     },
     {
@@ -590,10 +590,10 @@
             "price":120.00,
             "rating": 4.5,
             "image_url":"https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQfHmhr69Xnxn0RZu9NR1IOZWSW3zZfdCySklxOMQUmefrPhKYajV3bM49nCqDixQpoQA34OM8&usqp=CAc",
-            "image_display": "/media/products/oneplus_7_display.png",
+            "image_display": "/media/products/galaxy_buds_live_colour_1.png",
             "image_rear_check":false,
-            "image_front":"/media/products/oneplus_7_front_",
-            "image_rear":"/media/products/oneplus_7_rear_"
+            "image_front":"/media/products/galaxy_buds_live_",
+            "image_rear":"/media/products/galaxy_buds_live_"
         }
     },
     {
