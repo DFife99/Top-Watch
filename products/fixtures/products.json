@@ -605,8 +605,8 @@
             "brand":"Huawei",
             "name":"Honor 8 Pro",
             "unfriendly_name": "honor_8_pro",
-            "colour": "Blue/Black/White",
-            "hex_colour": "#3399FF/#000000/#cfceca",
+            "colour": "Blue/Black",
+            "hex_colour": "#3399FF/#000000",
             "release_date":"April, 2017",
             "release_year": 2017,
             "size":"15.7 x 7.75 x 0.7 cm",
@@ -636,10 +636,10 @@
             "rating": 5,
             "price":260.00,
             "image_url":"https://favpng.com/png_view/huawei-smartphone-feature-phone-huawei-honor-8-pro-png/XcreMQkZ",
-            "image_display": "/media/products/oneplus_7_display.png",
+            "image_display": "/media/products/huawei_honor_8_display.png",
             "image_rear_check":true,
-            "image_front":"/media/products/oneplus_7_front_",
-            "image_rear":"/media/products/oneplus_7_rear_"
+            "image_front":"/media/products/huawei_honor_8_front_",
+            "image_rear":"/media/products/huawei_honor_8_rear_"
         }
     },
     {
