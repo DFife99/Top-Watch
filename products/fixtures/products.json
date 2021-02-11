@@ -651,7 +651,7 @@
             "brand":"Samsung",
             "name":"Galaxy S8",
             "unfriendly_name": "galaxy_s8",
-            "colour": "Midnight Black/Orchid Grey/Artic Silver",
+            "colour": "Midnight Black/Orchid Grey/Arctic Silver",
             "hex_colour": "#000000/#474747/#7b8487",
             "release_date":"April 24, 2017",
             "release_year": 2017,
@@ -682,10 +682,10 @@
             "rating": 3.5,
             "price":230.00,
             "image_url":"https://www.hiclipart.com/free-transparent-background-png-clipart-yybjx/download",
-            "image_display": "/media/products/oneplus_7_display.png",
+            "image_display": "/media/products/samsung_galaxy_s8_display.png",
             "image_rear_check":true,
-            "image_front":"/media/products/oneplus_7_front_",
-            "image_rear":"/media/products/oneplus_7_rear_"
+            "image_front":"/media/products/samsung_galaxy_s8_front_",
+            "image_rear":"/media/products/samsung_galaxy_s8_rear_"
         }
     },
     {
