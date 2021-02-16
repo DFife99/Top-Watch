@@ -144,7 +144,7 @@
                 <h3>No Rating Available!</h3>
             {% endif %}
             <hr class="product-detail-divider">
-            <form action="" method="POST">
+            <form action="{% url 'cart' %}" method="POST">
                 {% csrf_token %}
                 <input id="product-id" class="d-none" type="text" name="product-id" value="{{ product.pk }}" selected>
                 <h3>Memory</h3>
@@ -167,14 +167,14 @@
                     <div class="custom-radio-outer colour_1">
                         <div class="custom-radio-inner" style="background-color: {{ hex_1 }}"></div>
                     </div>
-                    <input class="radio-btn form-check-input d-none" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="{{ colour_1 }}" checked>
+                    <input class="radio-btn form-check-input d-none" type="radio" name="product_colour" id="colour_1" value="{{ colour_1 }}" checked>
                 </div>
                 {% if colour_2 != None %}
                 <div class="form-check form-check-inline">
                     <div class="custom-radio-outer colour_2">
                         <div class="custom-radio-inner d-none" style="background-color: {{ hex_2 }}"></div>
                     </div>
-                    <input class="radio-btn form-check-input d-none" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="{{ colour_2 }}">
+                    <input class="radio-btn form-check-input d-none" type="radio" name="product_colour" id="colour_2" value="{{ colour_2 }}">
                 </div>
                 {% endif %}
                 {% if colour_3 != None %}
@@ -182,7 +182,7 @@
                     <div class="custom-radio-outer colour_3">
                         <div class="custom-radio-inner d-none" style="background-color: {{ hex_3 }}"></div>
                     </div>
-                    <input class="radio-btn form-check-input d-none" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="{{ colour_3 }}">
+                    <input class="radio-btn form-check-input d-none" type="radio" name="product_colour" id="colour_3" value="{{ colour_3 }}">
                 </div>
                 {% endif %}
                 {% if colour_4 != None %}
@@ -190,7 +190,7 @@
                     <div class="custom-radio-outer colour_4">
                         <div class="custom-radio-inner d-none" style="background-color: {{ hex_4 }}"></div>
                     </div>
-                    <input class="radio-btn form-check-input d-none" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="{{ colour_4 }}">
+                    <input class="radio-btn form-check-input d-none" type="radio" name="product_colour" id="colour_4" value="{{ colour_4 }}">
                 </div>
                 {% endif %}
                 {% if colour_5 != None %}
@@ -198,7 +198,7 @@
                     <div class="custom-radio-outer colour_5">
                         <div class="custom-radio-inner d-none" style="background-color: {{ hex_5 }}"></div>
                     </div>
-                    <input class="radio-btn form-check-input d-none" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="{{ colour_5 }}">
+                    <input class="radio-btn form-check-input d-none" type="radio" name="product_colour" id="colour_5" value="{{ colour_5 }}">
                 </div>
                 {% endif %}
                 {% if colour_6 != None %}
@@ -206,7 +206,7 @@
                     <div class="custom-radio-outer colour_6">
                         <div class="custom-radio-inner d-none" style="background-color: {{ hex_6 }}"></div>
                     </div>
-                    <input class="radio-btn form-check-input d-none" type="radio" name="inlineRadioOptions" id="inlineRadio6" value="{{ colour_6 }}">
+                    <input class="radio-btn form-check-input d-none" type="radio" name="product_colour" id="colour_6" value="{{ colour_6 }}">
                 </div>
                 {% endif %}
                 <hr class="product-detail-divider">

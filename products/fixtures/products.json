@@ -697,8 +697,8 @@
             "brand":"HTC",
             "name":"Desire 20+",
             "unfriendly_name": "desire_20+",
-            "colour": "Silver/Dark Grey/Crystal Green",
-            "hex_colour": "#7b8487/#474747/#24491F",
+            "colour": "Dark Grey/Blue",
+            "hex_colour": "#474747/#57bfda",
             "release_date":"October 22, 2020",
             "release_year": 2020,
             "size":"16.49 x 7.57 x 0.9 cm",
@@ -728,10 +728,10 @@
             "rating": 4.5,
             "price":200.00,
             "image_url":"https://api.themrphone.com/mrphone/images/8954/1.jpg",
-            "image_display": "/media/products/oneplus_7_display.png",
+            "image_display": "/media/products/htc_desire_20_pro_display.png",
             "image_rear_check":true,
-            "image_front":"/media/products/oneplus_7_front_",
-            "image_rear":"/media/products/oneplus_7_rear_"
+            "image_front":"/media/products/htc_desire_20_pro_front_",
+            "image_rear":"/media/products/htc_desire_20_pro_rear_"
         }
     }
 ]
