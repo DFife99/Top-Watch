@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 # Create your views here.
 
@@ -7,26 +7,46 @@ def view_cart(request):
     context = {
         'cart': 'active'
     }
+    print(request.session['cart'])
 
-    item_id = request.session.get['cart_product_id']
+    return render(request, 'cart/cart.html', context)
 
-    if 'cart_product_colour' in request.POST:
+
+def add_to_cart(request, item_id):
+    redirect_url = request.POST.get('redirect_url')
+    quantity = int(request.POST.get('quantity'))
+
+    colour = None
+    storage = None
+
+    if 'product_colour' in request.POST:
         colour = request.POST['product_colour']
+
+    if 'storage_cap' in request.POST:
+        storage = request.POST['storage_cap']
 
     cart = request.session.get('cart', {})
 
+    print(cart)
+    print(request.POST)
+    print(storage)
+    print(colour)
+
     if colour:
         if item_id in list(cart.keys()):
-            if colour in cart[item_id]['items_by_colour'].keys():
-                cart[item_id]['items_by_colour'][colour]
+            if item_id in cart:
+                cart[item_id][colour][storage] += quantity
+            else:
+                cart[item_id][colour][storage] = quantity
         else:
             cart[item_id] = {
-                'items_by_colour': {
-                    'storage': request.session.get['cart_product_storage']
+                colour: {
+                    storage: quantity
                     }
             }
 
     request.session['cart'] = cart
+
     print(request.session['cart'])
 
-    return render(request, 'cart/cart.html', context)
+    return redirect(redirect_url)

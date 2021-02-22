@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.db.models import Q
 from django.db.models.functions import Lower
 
@@ -75,10 +75,6 @@ def product_detail(request, product_id):
         cart_product_id = request.POST['product-id']
         cart_product_storage = request.POST['storage_cap']
         cart_product_colour = request.POST['product_colour']
-
-        request.session['{}-{}-{}'.format(
-            cart_product_id, cart_product_storage, cart_product_colour)] = request.POST
-        print(request.POST)
 
     products = get_object_or_404(Product, pk=product_id)
     storage_1 = None

@@ -28,7 +28,7 @@ class Product(models.Model):
     brand = models.CharField(max_length=254)
     name = models.CharField(max_length=254)
     unfriendly_name = models.CharField(max_length=254, default=False)
-    colour = models.CharField(max_length=100, default="Black")
+    colour = models.TextField(max_length=100, default="Black")
     hex_colour = models.CharField(max_length=100, default="#000000")
     release_date = models.CharField(max_length=254)
     release_year = models.IntegerField(default=False, blank=False, null=False)
