@@ -69,7 +69,9 @@
                     <input id="search-bar" class="form-control mr-sm-2" type="search" name="q" placeholder="Search our site!" aria-label="Search">
                 </form>
                 <i class="nav-link mr-sm-2 text-light fas fa-user-alt"></i><br>
-                <i class="nav-link mr-sm-2 text-light fas fa-shopping-cart"></i>
+                <a href="{% url 'cart' %}">
+                    <i class="nav-link mr-sm-2 text-light fas fa-shopping-cart"></i>
+                </a>
         </div>
     </nav>
     <!-- end of bootstrap nav -->

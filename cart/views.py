@@ -5,8 +5,10 @@ from django.shortcuts import render, redirect
 
 def view_cart(request):
     context = {
-        'cart': 'active'
+        'cart': 'active',
+        'cart_items': request.session['cart'],
     }
+
     print(request.session['cart'])
 
     return render(request, 'cart/cart.html', context)
@@ -33,17 +35,15 @@ def add_to_cart(request, item_id):
     print(colour)
 
     if colour:
-        if item_id in list(cart.keys()):
-            if item_id in cart:
-                cart[item_id][colour][storage] += quantity
+        if item_id in list(cart):
+            print('testing:' + cart[item_id][0])
+            if list(cart[item_id][0]) == colour:
+                print('testing:' + colour)
+                cart[item_id][2] + 1
             else:
-                cart[item_id][colour][storage] = quantity
+                cart[item_id][colour, storage, quantity]
         else:
-            cart[item_id] = {
-                colour: {
-                    storage: quantity
-                    }
-            }
+            cart[item_id][colour, storage, quantity]
 
     request.session['cart'] = cart
 
