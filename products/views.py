@@ -71,11 +71,6 @@ def all_products(request):
 def product_detail(request, product_id):
     """ a view to return a specific product details """
 
-    if request.POST:
-        cart_product_id = request.POST['product-id']
-        cart_product_storage = request.POST['storage_cap']
-        cart_product_colour = request.POST['product_colour']
-
     products = get_object_or_404(Product, pk=product_id)
     storage_1 = None
     storage_2 = None
