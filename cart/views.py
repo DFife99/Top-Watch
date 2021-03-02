@@ -8,7 +8,6 @@ def view_cart(request):
     context = {
         'cart': 'active'
     }
-    print(request.session['cart'])
 
     return render(request, 'cart/cart.html', context)
 

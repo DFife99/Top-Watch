@@ -14,6 +14,8 @@ def cart_contents(request):
             'item_id': item_id,
             'colour': colour,
         })
+        print(item_id)
+        print(colour)
 
     context = {
         'cart_items': cart_items,
@@ -21,4 +23,5 @@ def cart_contents(request):
         'product_count': product_count
     }
 
+    print(cart_items)
     return context
