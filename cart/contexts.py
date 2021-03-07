@@ -10,9 +10,11 @@ def cart_contents(request):
     cart = request.session.get('cart', {})
 
     for item_id, colour in cart.items():
+        product = get_object_or_404(Product, pk=item_id)
         cart_items.append({
             'item_id': item_id,
             'colour': colour,
+            'product': product
         })
         print(item_id)
         print(colour)
@@ -23,5 +25,6 @@ def cart_contents(request):
         'product_count': product_count
     }
 
-    print(cart_items)
+    print("Context:")
+    print(context)
     return context

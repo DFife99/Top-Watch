@@ -13,8 +13,9 @@
     <div>
         <p>Test</p>
         {% for item in cart_items %}
+            {{ item.item_id }}
+            {{ item.colour }}
             {{ item.product.name }}
-            {{ item.product.price }}
         {% endfor %}
     </div>
 {% endblock %}
