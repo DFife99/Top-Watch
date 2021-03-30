@@ -13,9 +13,11 @@
     <div>
         <p>Test</p>
         {% for item in cart_items %}
-            {{ item.item_id }}
-            {{ item.colour }}
-            {{ item.product.name }}
+            {{ item.product.name }}<br>
+            {{ item.colour }}<br>
+            {{ item.storage }}<br>
+            {{ item.quantity }}<br>
+            <br>
         {% endfor %}
     </div>
 {% endblock %}

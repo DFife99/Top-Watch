@@ -1,4 +1,6 @@
+import json
 from django.shortcuts import render, redirect
+
 
 # Create your views here.
 
@@ -15,7 +17,7 @@ def view_cart(request):
 def add_to_cart(request, item_id):
     # Taking variables from the html form
     redirect_url = request.POST.get('redirect_url')
-    quantity = int(request.POST.get('quantity'))
+    quantity = (request.POST.get('quantity'))
 
     colour = request.POST['product_colour']
     storage = request.POST['storage_cap']
@@ -51,23 +53,27 @@ def add_to_cart(request, item_id):
             # it will create another colour key and include the storage
             # and the quantity of 1
             cart[item_id].update(
-                {colour: {'products_by_size': {storage: quantity}}})
+                {'products_by_colour': {colour: {'products_by_size': {storage: quantity}}}})
     else:
 
         # If the item id isnt in the cart at all, it will create a new
         # Dictionary for the new item
         cart[item_id] = {
+                'products_by_colour': {
                     colour: {
                         'products_by_size': {
                             storage: quantity
                         }
                     }
                 }
+            }
 
     # This will change the cart to refelct the added items
     request.session['cart'] = cart
 
-    print('tesing:')
+    print('Cart:')
     print(request.session['cart'])
+
+    print("For Loop:")
 
     return redirect(redirect_url)

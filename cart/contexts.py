@@ -9,15 +9,29 @@ def cart_contents(request):
     product_count = 0
     cart = request.session.get('cart', {})
 
-    for item_id, colour in cart.items():
-        product = get_object_or_404(Product, pk=item_id)
-        cart_items.append({
-            'item_id': item_id,
-            'colour': colour,
-            'product': product
-        })
-        print(item_id)
-        print(colour)
+    for key, value in cart.items():
+        i = int(1)
+        pk = key
+        product = get_object_or_404(Product, pk=pk)
+        for key, value in value.items():
+            colour_str = str(value.keys()).split("'")
+            colour = colour_str[1]
+            for key, value in value.items():
+                storage_str = str(
+                    value['products_by_size'].keys()).split("'")
+                storage = storage_str[1]
+                quantity_str = str(
+                    value['products_by_size'].values()).split("'")
+                quantity = quantity_str[1]
+
+                cart_item = {
+                    'product': product,
+                    'colour': colour,
+                    'storage': storage,
+                    'quantity': quantity
+                }
+
+                cart_items.append(cart_item)
 
     context = {
         'cart_items': cart_items,
@@ -25,6 +39,4 @@ def cart_contents(request):
         'product_count': product_count
     }
 
-    print("Context:")
-    print(context)
     return context
