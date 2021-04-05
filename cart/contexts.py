@@ -10,7 +10,6 @@ def cart_contents(request):
     cart = request.session.get('cart', {})
 
     for key, value in cart.items():
-        i = int(1)
         pk = key
         product = get_object_or_404(Product, pk=pk)
         for colour, value in value['products_by_colour'].items():
@@ -23,7 +22,6 @@ def cart_contents(request):
                 }
 
                 cart_items.append(cart_item)
-                print(cart_items)
 
     context = {
         'cart_items': cart_items,
