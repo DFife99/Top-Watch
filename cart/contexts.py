@@ -13,17 +13,8 @@ def cart_contents(request):
         i = int(1)
         pk = key
         product = get_object_or_404(Product, pk=pk)
-        for key, value in value.items():
-            colour_str = str(value.keys()).split("'")
-            colour = colour_str[1]
-            for key, value in value.items():
-                storage_str = str(
-                    value['products_by_size'].keys()).split("'")
-                storage = storage_str[1]
-                quantity_str = str(
-                    value['products_by_size'].values()).split("'")
-                quantity = quantity_str[1]
-
+        for colour, value in value['products_by_colour'].items():
+            for storage, quantity in value['products_by_size'].items():
                 cart_item = {
                     'product': product,
                     'colour': colour,
@@ -32,6 +23,7 @@ def cart_contents(request):
                 }
 
                 cart_items.append(cart_item)
+                print(cart_items)
 
     context = {
         'cart_items': cart_items,

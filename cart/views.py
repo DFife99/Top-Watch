@@ -19,6 +19,8 @@ def add_to_cart(request, item_id):
     redirect_url = request.POST.get('redirect_url')
     quantity = (request.POST.get('quantity'))
 
+    item_id = request.POST.get('product-id')
+
     colour = request.POST['product_colour']
     storage = request.POST['storage_cap']
 
@@ -34,17 +36,17 @@ def add_to_cart(request, item_id):
 
             # Checking to see if the STROAGE is already in the cart
             # under a product with the same ID and COLOUR
-            if storage in list(cart[item_id][colour]['products_by_size']):
+            if storage in list(cart[item_id]['products_by_colour'][colour]['products_by_size']):
 
                 # If everything being added to the cart is already there
                 # the QUANTITY for that ITEM will be increased
-                cart[item_id][colour]['products_by_size'].update(
+                cart[item_id]['products_by_colour'][colour]['products_by_size'].update(
                     {storage: quantity+1})
             else:
 
                 # If the storage is different to those already in the cart
                 # it will create a second storage key with the quantity of 1
-                cart[item_id][colour]['products_by_size'].update(
+                cart[item_id]['products_by_colour'][colour]['products_by_size'].update(
                     {storage: quantity})
 
         else:
@@ -52,8 +54,8 @@ def add_to_cart(request, item_id):
             # If the colour is different to those already in the cart
             # it will create another colour key and include the storage
             # and the quantity of 1
-            cart[item_id].update(
-                {'products_by_colour': {colour: {'products_by_size': {storage: quantity}}}})
+            cart[item_id]['products_by_colour'].update(
+                {colour: {'products_by_size': {storage: quantity}}})
     else:
 
         # If the item id isnt in the cart at all, it will create a new
