@@ -22,6 +22,7 @@ def add_to_cart(request, item_id):
     item_id = request.POST.get('product-id')
 
     colour = request.POST['product_colour']
+
     storage = request.POST['storage_cap']
 
     # Creating a new cart or retrieving the current one
@@ -36,7 +37,8 @@ def add_to_cart(request, item_id):
 
             # Checking to see if the STROAGE is already in the cart
             # under a product with the same ID and COLOUR
-            if storage in list(cart[item_id]['products_by_colour'][colour]['products_by_size']):
+            if storage in list(
+                cart[item_id]['products_by_colour'][colour]['products_by_size']):
 
                 # If everything being added to the cart is already there
                 # the QUANTITY for that ITEM will be increased

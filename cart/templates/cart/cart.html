@@ -10,37 +10,58 @@
 {% endblock %}
 
 {% block content %}
-    <div>
-        {% if not cart_items %}
-            <p>Your Cart Is Empty</p>   
-        {% else %} 
-            {% for item in cart_items %}
-                <div class="container">
-                    <div class="row">
-                        <div class="col-10">
-                            <div class="row">
-                                <div class="col-3">
-                                    <img src="{{ item.product.image_display }}" alt="{{ item.product.brand }}{{ item.product.name }}" style="width: 100%;">
-                                </div>
-                                <div class="col-3">
-                                    {{ item.product.brand }}<br>
-                                    {{ item.product.name }}
-                                </div>
-                                <div class="col-3">
-                                    Colour: {{ item.colour }}<br>
-                                    Storage: {{ item.storage }}
-                                </div>
-                                <div class="col-1">
-                                    {{ item.quantity }}
-                                </div>
-                                <div class="col-2">
-                                    {{ item.product.price }}
-                                </div>
-                            </div>
-                        </div>
+    <div class="container">
+        <div class="col-10 offset-md-1 mt-5 mb-3">
+            {% if not cart_items %}
+                <p>Your Cart Is Empty</p>
+            {% else %}
+                <div class="row">
+                    <div class="col-8">
+                        <h3>
+                            Cart
+                        </h3>
+                    </div>
+                    <div class="col-2">
+                        <h5 class="text-center">
+                            Unit Cost
+                        </h5>
+                    </div>
+                    <div class="col-2">
+                        <h5 class="text-center">
+                            Total
+                        </h5>
                     </div>
                 </div>
-            {% endfor %}
-        {% endif %}
+                <div class="col-12 custom-border mt-3 mb-3" style="height: 2px; background-color: blue;"></div>
+                {% for item in cart_items %}
+                    <div class="row">
+                        <div class="col-3">
+                            <img src="{{ item.product.image_display }}" alt="{{ item.product.brand }}{{ item.product.name }}" style="width: 100%;">
+                        </div>
+                        <div class="col-5">
+                            {{ item.product.brand }}<br>
+                            {{ item.product.name }}
+                            Colour: {{ item.colour }}<br>
+                            {% if item.storage != "False" %}
+                                Storage: {{ item.storage }}
+                            {% endif %}
+                            {{ item.quantity }}
+                        </div>
+                        <div class="col-2 text-center">
+                            {{ item.product.price }}
+                        </div>
+                        <div class="col-2 text-center">
+                            Total
+                        </div>
+                        <div class="col-12 custom-border mt-3 mb-3" style="height: 2px; background-color: blue;"></div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+        <div id="cart-header" style="margin-top: 5%; margin-bottom: 5%; text-align: center;" class="row offset-md-1">
+            <div class="col-6">
+                <a href="{% url 'products' %}"><i class="fas fa-chevron-left"></i> Back To All Products</a>
+            </div>
+        </div>
     </div>
 {% endblock %}
