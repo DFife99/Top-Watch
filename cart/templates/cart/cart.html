@@ -39,13 +39,46 @@
                             <img src="{{ item.product.image_display }}" alt="{{ item.product.brand }}{{ item.product.name }}" style="width: 100%;">
                         </div>
                         <div class="col-5">
-                            {{ item.product.brand }}<br>
-                            {{ item.product.name }}
-                            Colour: {{ item.colour }}<br>
-                            {% if item.storage != "False" %}
-                                Storage: {{ item.storage }}
-                            {% endif %}
-                            {{ item.quantity }}
+                            <div class="align-middle" style="position: absolute;
+                            top: 50%; left: 50%;
+                            transform: translate(-50%,-50%);">
+                                <h5 class="mb-3"><strong>{{ item.product.brand }}</strong> {{ item.product.name }}<br></h5>
+                                Colour: <strong>{{ item.colour }}</strong><br>
+                                {% if item.storage != "False" %}
+                                    Storage: <strong>{{ item.storage }}</strong><br>
+                                {% endif %}
+                                Quantity: <strong>{{ item.quantity }}</strong><br>
+                                <form action="" style="margin: 0%;">
+                                    {% csrf_token %}
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <button class="decrement-qty btn btn-sm btn-black rounded-0" 
+                    data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
+                    <span>
+                        <i class="fas fa-minus fa-sm"></i>
+                    </span>
+                </button>
+            </div>
+            <input class="form-control form-control-sm qty_input" type="number"
+                name="quantity" value="{{ item.quantity }}" min="1" max="99"
+                data-item_id="{{ item.item_id }}"
+                id="id_qty_{{ item.item_id }}">
+            <div class="input-group-append">
+                <button class="increment-qty btn btn-sm btn-black rounded-0"
+                    data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+                    <span>
+                        <i class="fas fa-plus fa-sm"></i>
+                    </span>
+                </button>
+            </div>
+            {% if item.product.has_sizes %}
+                <input type="hidden" name="product_size" value="{{ item.size }}">
+            {% endif %}
+        </div>
+    </div>
+                                </form>
+                            </div>
                         </div>
                         <div class="col-2 text-center">
                             {{ item.product.price }}
@@ -64,4 +97,9 @@
             </div>
         </div>
     </div>
+
+        <script src="./src/input-spinner.js"></script>
+        <script>
+            $("input[type='number']").inputSpinner()
+        </script>
 {% endblock %}
