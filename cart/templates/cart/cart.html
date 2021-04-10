@@ -38,21 +38,31 @@
                         <div class="col-4">
                             <img src="{{ item.product.image_display }}" alt="{{ item.product.brand }}{{ item.product.name }}" style="width: 100%;">
                         </div>
-                        <div class="col-4">
-                            <div class="align-middle" style="position: absolute;
-                            top: 50%; left: 50%;
-                            transform: translate(-50%,-50%);
-                            width: 70%;">
-                                <h5 class="mb-3"><strong>{{ item.product.brand }}</strong> {{ item.product.name }}<br></h5>
-                                <div>
-                                    Colour: <strong>{{ item.colour }}</strong><br>
-                                    {% if item.storage != "False" %}
-                                        Storage: <strong>{{ item.storage }}</strong><br>
-                                    {% endif %}
-                                    <br>
-                                    Quantity: {{ item.quantity }}
-                                    <form action="" style="margin: 0%; width: 60%;">
+                        <div class="col-8">
+                            <div class="row" style="height:50%;">
+                                <div class="col-8">
+                                    <div class="centered-info-text">
+                                        <h5 class="mb-3"><strong>{{ item.product.brand }}</strong> {{ item.product.name }}<br></h5>
+                                        <div>
+                                            Colour: <strong>{{ item.colour }}</strong><br>
+                                            {% if item.storage != "False" %}
+                                                Storage: <strong>{{ item.storage }}</strong><br>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-2 text-center centered-cost-text">
+                                    {{ item.product.price }}
+                                </div>
+                                <div class="col-2 text-center centered-total-text">
+                                    Total
+                                </div>
+                            </div>
+                            <div class="row" style="height: 50%;">
+                                <div class="col-6">
+                                    <form action="" class="positioned-quantity">
                                         {% csrf_token %}
+                                        <p style="margin: 0%;">Quantity:</p>
                                         <div class="form-group">
                                             <div class="input-group" style="border: solid 2px;
                                                                             border-radius: 5px;">
@@ -86,13 +96,13 @@
                                         </div>
                                     </form>
                                 </div>
+                                <div class="col-2 offset-md-1">
+                                    <button type="button" class="btn btn-danger" style=" position: absolute; bottom: 26%; left: -12.5%;">Remove</button>
+                                </div>
+                                <div class="col-3">
+                                    <button type="button" class="btn btn-success" style=" position: absolute; bottom: 26%; left: 14%;">Buy Seperately</button>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-2 text-center">
-                            {{ item.product.price }}
-                        </div>
-                        <div class="col-2 text-center">
-                            Total
                         </div>
                         <div class="col-12 custom-border mt-3 mb-3" style="height: 2px; background-color: blue;"></div>
                     </div>
