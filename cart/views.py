@@ -41,7 +41,8 @@ def add_to_cart(request, item_id):
                 # If everything being added to the cart is already there
                 # the QUANTITY for that ITEM will be increased
                 cart[item_id]['products_by_colour'][colour]['products_by_size'].update(
-                    {storage: quantity+1})
+                    {storage: quantity + 1})
+                print('Reaches here')
             else:
 
                 # If the storage is different to those already in the cart
