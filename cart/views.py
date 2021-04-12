@@ -1,6 +1,7 @@
 import json
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 
+from products.models import Product, Category
 
 # Create your views here.
 
@@ -8,11 +9,14 @@ from django.shortcuts import render, redirect
 def view_cart(request):
 
     context = {
-        'cart': 'active'
+        'hi':'hi'
     }
 
     return render(request, 'cart/cart.html', context)
 
+
+def remove_from_cart(request):
+    return render(request, 'cart/cart.html')
 
 def add_to_cart(request, item_id):
     # Taking variables from the html form
