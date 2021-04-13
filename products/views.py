@@ -72,21 +72,36 @@ def product_detail(request, product_id):
     """ a view to return a specific product details """
 
     products = get_object_or_404(Product, pk=product_id)
+
     storage_1 = None
     storage_2 = None
     storage_3 = None
+
     hex_1 = None
     hex_2 = None
     hex_3 = None
     hex_4 = None
     hex_5 = None
     hex_6 = None
-    colour_1 = None
+
+    colour = products.colour
+
+    colour_1 = colour
     colour_2 = None
     colour_3 = None
     colour_4 = None
     colour_5 = None
     colour_6 = None
+
+
+
+    unfriendly_colour = products.unfriendly_colour
+    unfriendly_colour_1 = unfriendly_colour
+    unfriendly_colour_2 = None
+    unfriendly_colour_3 = None
+    unfriendly_colour_4 = None
+    unfriendly_colour_5 = None
+    unfriendly_colour_6 = None
 
     storage_cap = products.storage_cap
 
@@ -120,9 +135,6 @@ def product_detail(request, product_id):
         if len(hex_split) >= 6:
             hex_6 = hex_split[5]
 
-    colour = products.colour
-
-    colour_1 = colour
 
     if "/" in colour:
         colour_split = colour.split('/')
@@ -140,6 +152,23 @@ def product_detail(request, product_id):
 
         if len(colour_split) >= 6:
             colour_6 = colour_split[5]
+
+    if "/" in unfriendly_colour:
+        unfriendly_colour_split = unfriendly_colour.split('/')
+        unfriendly_colour_1 = unfriendly_colour_split[0]
+        unfriendly_colour_2 = unfriendly_colour_split[1]
+
+        if len(unfriendly_colour_split) >= 3:
+            unfriendly_colour_3 = colour_split[2]
+
+        if len(unfriendly_colour_split) >= 4:
+            unfriendly_colour_4 = colour_split[3]
+
+        if len(unfriendly_colour_split) >= 5:
+            unfriendly_colour_5 = colour_split[4]
+
+        if len(unfriendly_colour_split) >= 6:
+            unfriendly_colour_6 = colour_split[5]
 
     current_brand = request.session.get('current_brand')
     category = request.session.get('category')
@@ -165,6 +194,12 @@ def product_detail(request, product_id):
         'colour_4': colour_4,
         'colour_5': colour_5,
         'colour_6': colour_6,
+        'unfriendly_colour_1': unfriendly_colour_1,
+        'unfriendly_colour_2': unfriendly_colour_2,
+        'unfriendly_colour_3': unfriendly_colour_3,
+        'unfriendly_colour_4': unfriendly_colour_4,
+        'unfriendly_colour_5': unfriendly_colour_5,
+        'unfriendly_colour_6': unfriendly_colour_6,
     }
 
     return render(request, 'products/product_detail.html', context)

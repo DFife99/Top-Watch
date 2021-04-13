@@ -27,6 +27,8 @@ def add_to_cart(request, item_id):
 
     colour = request.POST['product_colour']
 
+    unfriendly_colour = request.POST['unfriendly_colour']
+
     storage = request.POST['storage_cap']
 
     # Creating a new cart or retrieving the current one
@@ -40,34 +42,38 @@ def add_to_cart(request, item_id):
             # Checking to see if the STROAGE is already in the cart
             # under a product with the same ID and COLOUR
             if storage in list(
-                cart[item_id]['products_by_colour'][colour]['products_by_size']):
+                cart[item_id]['products_by_colour'][colour]['unfriendly_colour'][unfriendly_colour]['products_by_size']):
 
                 # If everything being added to the cart is already there
                 # the QUANTITY for that ITEM will be increased
-                cart[item_id]['products_by_colour'][colour]['products_by_size'].update(
+                cart[item_id]['products_by_colour'][colour]['unfriendly_colour'][unfriendly_colour]['products_by_size'].update(
                     {storage: quantity + 1})
-                print('Reaches here')
             else:
 
                 # If the storage is different to those already in the cart
                 # it will create a second storage key with the quantity of 1
-                cart[item_id]['products_by_colour'][colour]['products_by_size'].update(
+                cart[item_id]['products_by_colour'][colour]['unfriendly_colour'][unfriendly_colour]['products_by_size'].update(
                     {storage: quantity})
 
         else:
             # If the colour is different to those already in the cart
             # it will create another colour key and include the storage
             # and the quantity of 1
-            cart[item_id]['products_by_colour'].update(
-                {colour: {'products_by_size': {storage: quantity}}})
+            cart[item_id]['products_by_colour'].update({
+                colour: {'unfriendly_colour': { unfriendly_colour: {
+                         'products_by_size': {storage: quantity}}}}})
     else:
         # If the item id isnt in the cart at all, it will create a new
         # Dictionary for the new item
         cart[item_id] = {
                 'products_by_colour': {
                     colour: {
-                        'products_by_size': {
-                            storage: quantity
+                        'unfriendly_colour': {
+                            unfriendly_colour: {
+                                'products_by_size': {
+                                    storage: quantity
+                                }
+                            }
                         }
                     }
                 }

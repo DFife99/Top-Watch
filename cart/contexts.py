@@ -13,15 +13,17 @@ def cart_contents(request):
         pk = key
         product = get_object_or_404(Product, pk=pk)
         for colour, value in value['products_by_colour'].items():
-            for storage, quantity in value['products_by_size'].items():
-                cart_item = {
-                    'product': product,
-                    'colour': colour,
-                    'storage': storage,
-                    'quantity': quantity
-                }
+            for unfriendly_colour, value in value['unfriendly_colour'].items():
+                for storage, quantity in value['products_by_size'].items():
+                    cart_item = {
+                        'product': product,
+                        'colour': colour,
+                        'unfriendly_colour': unfriendly_colour,
+                        'storage': storage,
+                        'quantity': quantity
+                        }
 
-                cart_items.append(cart_item)
+            cart_items.append(cart_item)
 
     context = {
         'cart_items': cart_items,

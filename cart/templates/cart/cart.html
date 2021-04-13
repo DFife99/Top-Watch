@@ -45,6 +45,7 @@
                                         <h5 class="mb-3"><strong>{{ item.product.brand }}</strong> {{ item.product.name }}<br></h5>
                                         <div>
                                             Colour: <strong>{{ item.colour }}</strong><br>
+                                            {{ item.unfriendly_colour }}
                                             {% if item.storage != "False" %}
                                                 Storage: <strong>{{ item.storage }}</strong><br>
                                             {% endif %}
@@ -112,6 +113,8 @@
                     <!-- Modal -->
                     <div class="modal fade" id="staticBackdrop_{{ item.item_id }}_{{ item.product.brand }}_{{ item.product.unfriendly_name }}_{{ item.colour }}_{{ item.storage }}" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered">
+                            <!-- NEED TO ADD UNFRIENDLY COLOUR TO FIXTURE AND ADD IT TO THE ADD TO BAG FORM, PLACE IT INSIDE THE COLOUR VARIABLE *OR* SWAP IT FOR THE
+                                 REGULAR COLOUR AND PUT THE COLOUR VARIABLE INSIDE THE UNFRIENDLY COLOUR -->
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="staticBackdropLabel">Remove Item</h5>
@@ -121,12 +124,14 @@
                                 </div>
                                 <div class="modal-body">
                                     <h4>
-                                        Are you sure you want to remove {{ item.product.brand }} {{ item.product.name }} from the cart?
+                                        Are you sure you want to remove<br><br>
+                                        <strong>
+                                            {{ item.product.brand }} {{ item.product.name }}<br>
+                                            Colour : {{ item.colour }}<br>
+                                            Storage : {{ item.storage }}
+                                        </strong>
+                                        <br><br>from the cart?
                                     </h4>
-                                    <h5>
-                                        Colour : {{ item.colour }}
-                                        Storage : {{ item.storage }}
-                                    </h5>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Nevermind</button>

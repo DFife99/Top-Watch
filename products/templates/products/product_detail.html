@@ -168,6 +168,7 @@
                         <div class="custom-radio-inner" style="background-color: {{ hex_1 }}"></div>
                     </div>
                     <input class="radio-btn form-check-input d-none" type="text" name="product_colour" id="colour" value="{{ colour_1 }}">
+                    <input id="unfriendly_colour" type="hidden" name="unfriendly_colour" value="{{ unfriendly_colour_1 }}">
                 </div>
                 {% if colour_2 != None %}
                 <div class="form-check form-check-inline">
@@ -517,36 +518,42 @@
     $('.colour_1').click(function () {
         $('#colour_selected').html('{{ colour_1 }}');
         $('#colour').val('{{ colour_1 }}');
+        $('#unfriendly_colour').val('{{ unfriendly_colour_1 }}');
         $('.carousel-image-1').attr('src', '{{ product.image_front }}colour_1.png');
         $('.carousel-image-2').attr('src', '{{ product.image_rear }}colour_1.png');
     });
     $('.colour_2').click(function () {
         $('#colour_selected').html('{{ colour_2 }}');
         $('#colour').val('{{ colour_2 }}');
+        $('#unfriendly_colour').val('{{ unfriendly_colour_2 }}');
         $('.carousel-image-1').attr('src', '{{ product.image_front }}colour_2.png');
         $('.carousel-image-2').attr('src', '{{ product.image_rear }}colour_2.png');
     });
     $('.colour_3').click(function () {
         $('#colour_selected').html('{{ colour_3 }}');
         $('#colour').val('{{ colour_3 }}');
+        $('#unfriendly_colour').val('{{ unfriendly_colour_3 }}');
         $('.carousel-image-1').attr('src', '{{ product.image_front }}colour_3.png');
         $('.carousel-image-2').attr('src', '{{ product.image_rear }}colour_3.png');
     });
     $('.colour_4').click(function () {
         $('#colour_selected').html('{{ colour_4 }}');
         $('#colour').val('{{ colour_4 }}');
+        $('#unfriendly_colour').val('{{ unfriendly_colour_4 }}');
         $('.carousel-image-1').attr('src', '{{ product.image_front }}colour_4.png');
         $('.carousel-image-2').attr('src', '{{ product.image_rear }}colour_4.png');
     });
     $('.colour_5').click(function () {
         $('#colour_selected').html('{{ colour_5 }}');
         $('#colour').val('{{ colour_5 }}');
+        $('#unfriendly_colour').val('{{ unfriendly_colour_5 }}');
         $('.carousel-image-1').attr('src', '{{ product.image_front }}colour_5.png');
         $('.carousel-image-2').attr('src', '{{ product.image_rear }}colour_5.png');
     });
     $('.colour_6').click(function () {
         $('#colour_selected').html('{{ colour_6 }}');
         $('#colour').val('{{ colour_6 }}');
+        $('#unfriendly_colour').val('{{ unfriendly_colour_6 }}');
         $('.carousel-image-1').attr('src', '{{ product.image_front }}colour_6.png');
         $('.carousel-image-2').attr('src', '{{ product.image_rear }}colour_6.png');
     });
