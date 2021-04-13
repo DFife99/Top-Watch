@@ -36,7 +36,11 @@
                 {% for item in cart_items %}
                     <div class="row">
                         <div class="col-4">
-                            <img src="{{ item.product.image_display }}" alt="{{ item.product.brand }}{{ item.product.name }}" style="width: 100%;">
+                            {% if item.product.image_rear == 'N/A' %}
+                                <img src="{{ item.product.image_front }}{{ item.unfriendly_colour }}.png" alt="{{ item.product.brand }}{{ item.product.name }}" style="width: 100%;">
+                            {% else %}
+                                <img src="{{ item.product.image_rear }}{{ item.unfriendly_colour }}.png" alt="{{ item.product.brand }}{{ item.product.name }}" style="width: 100%;">
+                            {% endif %}
                         </div>
                         <div class="col-8">
                             <div class="row" style="height:50%;">
