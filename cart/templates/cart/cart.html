@@ -45,7 +45,6 @@
                                         <h5 class="mb-3"><strong>{{ item.product.brand }}</strong> {{ item.product.name }}<br></h5>
                                         <div>
                                             Colour: <strong>{{ item.colour }}</strong><br>
-                                            {{ item.unfriendly_colour }}
                                             {% if item.storage != "False" %}
                                                 Storage: <strong>{{ item.storage }}</strong><br>
                                             {% endif %}
@@ -96,7 +95,7 @@
                                 </div>
                                 <div class="col-2 offset-md-1">
                                     <!-- Button trigger modal -->
-                                    <button type="button" class="btn btn-danger"  data-toggle="modal" data-target="#staticBackdrop_{{ item.item_id }}_{{ item.product.brand }}_{{ item.product.unfriendly_name }}_{{ item.colour }}_{{ item.storage }}" style=" position: absolute; bottom: 26%; left: -12.5%;">
+                                    <button type="button" class="btn btn-danger"  data-toggle="modal" data-target="#staticBackdrop_{{ item.item_id }}_{{ item.product.brand }}_{{ item.product.unfriendly_name }}_{{ item.unfriendly_colour }}_{{ item.storage }}" style=" position: absolute; bottom: 26%; left: -12.5%;">
                                         <a class="modal-trigger" href="#staticBackdrop">Remove</a>
                                     </button>
                                 </div>
@@ -111,7 +110,7 @@
                     <!-- MODAL POP -->
 
                     <!-- Modal -->
-                    <div class="modal fade" id="staticBackdrop_{{ item.item_id }}_{{ item.product.brand }}_{{ item.product.unfriendly_name }}_{{ item.colour }}_{{ item.storage }}" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal fade" id="staticBackdrop_{{ item.item_id }}_{{ item.product.brand }}_{{ item.product.unfriendly_name }}_{{ item.unfriendly_colour }}_{{ item.storage }}" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered">
                             <!-- NEED TO ADD UNFRIENDLY COLOUR TO FIXTURE AND ADD IT TO THE ADD TO BAG FORM, PLACE IT INSIDE THE COLOUR VARIABLE *OR* SWAP IT FOR THE
                                  REGULAR COLOUR AND PUT THE COLOUR VARIABLE INSIDE THE UNFRIENDLY COLOUR -->
@@ -126,9 +125,10 @@
                                     <h4>
                                         Are you sure you want to remove<br><br>
                                         <strong>
-                                            {{ item.product.brand }} {{ item.product.name }}<br>
+                                            {{ item.product.brand }} {{ item.product.name }}<br><br>
                                             Colour : {{ item.colour }}<br>
-                                            Storage : {{ item.storage }}
+                                            Storage : {{ item.storage }}<br>
+                                            Quantity : {{ item.quantity }}
                                         </strong>
                                         <br><br>from the cart?
                                     </h4>

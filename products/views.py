@@ -159,16 +159,16 @@ def product_detail(request, product_id):
         unfriendly_colour_2 = unfriendly_colour_split[1]
 
         if len(unfriendly_colour_split) >= 3:
-            unfriendly_colour_3 = colour_split[2]
+            unfriendly_colour_3 = unfriendly_colour_split[2]
 
         if len(unfriendly_colour_split) >= 4:
-            unfriendly_colour_4 = colour_split[3]
+            unfriendly_colour_4 = unfriendly_colour_split[3]
 
         if len(unfriendly_colour_split) >= 5:
-            unfriendly_colour_5 = colour_split[4]
+            unfriendly_colour_5 = unfriendly_colour_split[4]
 
         if len(unfriendly_colour_split) >= 6:
-            unfriendly_colour_6 = colour_split[5]
+            unfriendly_colour_6 = unfriendly_colour_split[5]
 
     current_brand = request.session.get('current_brand')
     category = request.session.get('category')

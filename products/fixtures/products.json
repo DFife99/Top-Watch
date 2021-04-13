@@ -556,7 +556,7 @@
             "price":720.00,
             "rating": 4,
             "image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl6_qP8SeSReZjF33q1qi0adZXRYXGfrUHzg&usqp=CAU",
-            "image_display": "/media/products/ipad_air_front_colour_1.png",
+            "image_display": "/media/products/ipad_air_display.png",
             "image_rear_check":true,
             "image_front":"/media/products/ipad_air_front_",
             "image_rear":"/media/products/ipad_air_rear_"
