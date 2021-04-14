@@ -338,6 +338,11 @@ input[type=radio]
     left: -7%;
 }
 
+.modal-trigger {
+    text-decoration: none;
+    color: white;
+}
+
 /* PHONES */
 @media only screen and (max-width: 600px) {
     #bundle-1,

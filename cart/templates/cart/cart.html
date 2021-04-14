@@ -10,6 +10,21 @@
 {% endblock %}
 
 {% block content %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-10 offset-md-1 mt-5">
+                {% if messages %}
+                    <div class="messages">
+                        {% for message in messages %}
+                        <h3{% if message.tags %} class="{{ message.tags }} text-center"{% endif %}>{{ message }}</h3>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
     <div class="container">
         <div class="col-10 offset-md-1 mt-5 mb-3">
             {% if not cart_items %}
@@ -99,7 +114,7 @@
                                 </div>
                                 <div class="col-2 offset-md-1">
                                     <!-- Button trigger modal -->
-                                    <button type="button" class="btn btn-danger"  data-toggle="modal" data-target="#staticBackdrop_{{ item.item_id }}_{{ item.product.brand }}_{{ item.product.unfriendly_name }}_{{ item.unfriendly_colour }}_{{ item.storage }}" style=" position: absolute; bottom: 26%; left: -12.5%;">
+                                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#staticBackdrop_{{ item.item_id }}_{{ item.product.brand }}_{{ item.product.unfriendly_name }}_{{ item.unfriendly_colour }}_{{ item.storage }}" style=" position: absolute; bottom: 26%; left: -12.5%;">
                                         <a class="modal-trigger" href="#staticBackdrop">Remove</a>
                                     </button>
                                 </div>

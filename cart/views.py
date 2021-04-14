@@ -1,5 +1,6 @@
 import json
 from django.shortcuts import render, redirect, get_object_or_404, reverse
+from django.contrib import messages
 
 from products.models import Product, Category
 
@@ -34,20 +35,19 @@ def remove_from_cart(request):
         else: 
             # if there is only one storage amount, it will remove the selected colour
             print('First Else')
+            del cart[item_id]['products_by_colour'][colour]
     else:
         # if there is only one colour under the id, it will check to see if there is multiple storage sizes chosen
         if len(cart[item_id]['products_by_colour'][colour]['unfriendly_colour'][unfriendly_colour]['products_by_size']) > 1:
             print('Third If')
             del cart[item_id]['products_by_colour'][colour]['unfriendly_colour'][unfriendly_colour]['products_by_size'][storage]
-            print(cart)
         # if there is only one storage under the one colour it will remove the id entirelty from the cart
         else: 
             print('Second Else')
+            cart.pop(item_id)
 
-        
-
-
-
+    messages.success(request, 'Product Removed Successfully!')
+    request.session['cart'] = cart
     return redirect(reverse('cart'))
 
 def add_to_cart(request, item_id):
@@ -81,7 +81,6 @@ def add_to_cart(request, item_id):
                 # the QUANTITY for that ITEM will be increased
                 cart[item_id]['products_by_colour'][colour]['unfriendly_colour'][unfriendly_colour]['products_by_size'].update(
                     {storage: quantity + 1}) 
-                print('Doesnt Reach Here')
                 print(cart[item_id]['products_by_colour'][colour]['unfriendly_colour'][unfriendly_colour]['products_by_size'])
             else:
 
@@ -89,7 +88,6 @@ def add_to_cart(request, item_id):
                 # it will create a second storage key with the quantity of 1
                 cart[item_id]['products_by_colour'][colour]['unfriendly_colour'][unfriendly_colour]['products_by_size'].update(
                     {storage: quantity})
-                print('Reaches Here')
 
         else:
             # If the colour is different to those already in the cart
