@@ -1,5 +1,5 @@
 import json
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404, reverse
 
 from products.models import Product, Category
 
@@ -18,34 +18,37 @@ def view_cart(request):
 def remove_from_cart(request):
 
     item_id = request.POST['item_id']
-    print(item_id)
     colour = request.POST['product_colour']
-    print(colour)
     unfriendly_colour = request.POST['unfriendly_colour']
-    print(unfriendly_colour)
     storage = request.POST['storage']
-    print(storage)
-
     cart = request.session.get('cart')
-
-    count = 0
 
     # checks to see if there is more than one colour under the item id currently in the cart
     if len(cart[item_id]['products_by_colour']) > 1:
         # checks to see if there is more than one storage under the colour currently in the cart
+        print('First If')
         if len(cart[item_id]['products_by_colour'][colour]['unfriendly_colour'][unfriendly_colour]['products_by_size']) > 1:
             # if there is more than different type of storage amount, it will only remove the selected one
-            print('')
+            del cart[item_id]['products_by_colour'][colour]['unfriendly_colour'][unfriendly_colour]['products_by_size'][storage]
+            print('Second If')
         else: 
             # if there is only one storage amount, it will remove the selected colour
-            print('')
+            print('First Else')
     else:
-        # if there is only one colour under the id, it will remove the id from the cart
-        print('')
+        # if there is only one colour under the id, it will check to see if there is multiple storage sizes chosen
+        if len(cart[item_id]['products_by_colour'][colour]['unfriendly_colour'][unfriendly_colour]['products_by_size']) > 1:
+            print('Third If')
+            del cart[item_id]['products_by_colour'][colour]['unfriendly_colour'][unfriendly_colour]['products_by_size'][storage]
+            print(cart)
+        # if there is only one storage under the one colour it will remove the id entirelty from the cart
+        else: 
+            print('Second Else')
+
+        
 
 
 
-    return render(request, 'cart/cart.html')
+    return redirect(reverse('cart'))
 
 def add_to_cart(request, item_id):
     # Taking variables from the html form
