@@ -12,15 +12,21 @@ def cart_contents(request):
     for key, value in cart.items():
         pk = key
         product = get_object_or_404(Product, pk=pk)
+        price = product.price
+        subtotal = 0
         for colour, value in value['products_by_colour'].items():
             for unfriendly_colour, value in value['unfriendly_colour'].items():
                 for storage, quantity in value['products_by_size'].items():
+                    
+                    subtotal = price * quantity
+
                     cart_item = {
                         'product': product,
                         'colour': colour,
                         'unfriendly_colour': unfriendly_colour,
                         'storage': storage,
-                        'quantity': quantity
+                        'quantity': quantity,
+                        'subtotal': subtotal,
                         }
 
                     cart_items.append(cart_item)
@@ -30,4 +36,5 @@ def cart_contents(request):
         'total': total,
         'product_count': product_count
     }
+
     return context
