@@ -16,6 +16,35 @@ def view_cart(request):
 
 
 def remove_from_cart(request):
+
+    item_id = request.POST['item_id']
+    print(item_id)
+    colour = request.POST['product_colour']
+    print(colour)
+    unfriendly_colour = request.POST['unfriendly_colour']
+    print(unfriendly_colour)
+    storage = request.POST['storage']
+    print(storage)
+
+    cart = request.session.get('cart')
+
+    count = 0
+
+    # checks to see if there is more than one colour under the item id currently in the cart
+    if len(cart[item_id]['products_by_colour']) > 1:
+        # checks to see if there is more than one storage under the colour currently in the cart
+        if len(cart[item_id]['products_by_colour'][colour]['unfriendly_colour'][unfriendly_colour]['products_by_size']) > 1:
+            # if there is more than different type of storage amount, it will only remove the selected one
+            print('')
+        else: 
+            # if there is only one storage amount, it will remove the selected colour
+            print('')
+    else:
+        # if there is only one colour under the id, it will remove the id from the cart
+        print('')
+
+
+
     return render(request, 'cart/cart.html')
 
 def add_to_cart(request, item_id):
@@ -41,27 +70,38 @@ def add_to_cart(request, item_id):
         if colour in list(cart[item_id]['products_by_colour']):
             # Checking to see if the STROAGE is already in the cart
             # under a product with the same ID and COLOUR
+            print(storage)
             if storage in list(
                 cart[item_id]['products_by_colour'][colour]['unfriendly_colour'][unfriendly_colour]['products_by_size']):
 
                 # If everything being added to the cart is already there
                 # the QUANTITY for that ITEM will be increased
                 cart[item_id]['products_by_colour'][colour]['unfriendly_colour'][unfriendly_colour]['products_by_size'].update(
-                    {storage: quantity + 1})
+                    {storage: quantity + 1}) 
+                print('Doesnt Reach Here')
+                print(cart[item_id]['products_by_colour'][colour]['unfriendly_colour'][unfriendly_colour]['products_by_size'])
             else:
 
                 # If the storage is different to those already in the cart
                 # it will create a second storage key with the quantity of 1
                 cart[item_id]['products_by_colour'][colour]['unfriendly_colour'][unfriendly_colour]['products_by_size'].update(
                     {storage: quantity})
+                print('Reaches Here')
 
         else:
             # If the colour is different to those already in the cart
             # it will create another colour key and include the storage
             # and the quantity of 1
             cart[item_id]['products_by_colour'].update({
-                colour: {'unfriendly_colour': { unfriendly_colour: {
-                         'products_by_size': {storage: quantity}}}}})
+                colour: 
+                {'unfriendly_colour': 
+                    { unfriendly_colour: 
+                        {'products_by_size': 
+                            {storage: quantity}
+                        }
+                    }
+                }
+            })
     else:
         # If the item id isnt in the cart at all, it will create a new
         # Dictionary for the new item
@@ -81,10 +121,5 @@ def add_to_cart(request, item_id):
 
     # This will change the cart to refelct the added items
     request.session['cart'] = cart
-
-    print('Cart:')
-    print(request.session['cart'])
-
-    print("For Loop:")
 
     return redirect(redirect_url)

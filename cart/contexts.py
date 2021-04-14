@@ -23,12 +23,12 @@ def cart_contents(request):
                         'quantity': quantity
                         }
 
-            cart_items.append(cart_item)
+                    cart_items.append(cart_item)
 
     context = {
         'cart_items': cart_items,
         'total': total,
         'product_count': product_count
     }
-
+    
     return context

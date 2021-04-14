@@ -109,7 +109,7 @@
         </div>
         {% else %}
             <div id="no_rear_image" class="col-12 col-md-7 product-detail-margin">
-                <img class="d-block carousel-image-1 details-image" src="{{ product.image_front }}colour_1.png" alt="{{ product.brand }}{{ product.name }}">
+                <img class="d-block carousel-image-1 details-image" src="{{ product.image_front }}{{ unfriendly_colour_1 }}.png" alt="{{ product.brand }}{{ product.name }}">
             </div>
         {% endif %}
         <div id="product-detail-info" class="col-12 col-md-5 product-detail-margin">
@@ -525,7 +525,7 @@
     $('.colour_2').click(function () {
         $('#colour_selected').html('{{ colour_2 }}');
         $('#colour').val('{{ colour_2 }}');
-        $('#unfriendly_colour').val('{{ unfriendly_colour_2 }} }}');
+        $('#unfriendly_colour').val('{{ unfriendly_colour_2 }}');
         $('.carousel-image-1').attr('src', '{{ product.image_front }}{{ unfriendly_colour_2 }}.png');
         $('.carousel-image-2').attr('src', '{{ product.image_rear }}{{ unfriendly_colour_2 }}.png');
     });

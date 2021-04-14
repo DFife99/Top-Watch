@@ -321,7 +321,7 @@
             "rating": 3,
             "price":219.99,
             "image_url":"https://i.pinimg.com/originals/d7/46/c0/d746c0d24739dcd70da2d7adf57b3df7.jpg",
-            "image_display": "/media/products/apple_air_pods_pro_colour_1.png",
+            "image_display": "/media/products/apple_air_pods_pro_white.png",
             "image_rear_check":false,
             "image_front":"/media/products/apple_air_pods_pro_",
             "image_rear":"N/A"
@@ -462,7 +462,7 @@
             "rating": 2.5,
             "price":219.99,
             "image_url":"https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRxONMC2X6k8lPal2TLEBqbYBA0eH4CcAvHN5p4bRASDkawCAQn&usqp=CAY",
-            "image_display": "/media/products/samsung_galaxy_buds_colour_1.png",
+            "image_display": "/media/products/samsung_galaxy_buds_black.png",
             "image_rear_check":false,
             "image_front":"/media/products/samsung_galaxy_buds_",
             "image_rear":"N/A"
@@ -509,7 +509,7 @@
             "price":300.00,
             "rating": 1,
             "image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVi6bADrZFIZqr01OyLLE24ZDMgPNBTLbTRw&usqp=CAU",
-            "image_display": "/media/products/lg_g_pad5_front_colour_1.png",
+            "image_display": "/media/products/lg_g_pad5_front_silver.png",
             "image_rear_check":true,
             "image_front":"/media/products/lg_g_pad5_front_",
             "image_rear":"/media/products/lg_g_pad5_rear_"
@@ -603,7 +603,7 @@
             "price":120.00,
             "rating": 4.5,
             "image_url":"https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQfHmhr69Xnxn0RZu9NR1IOZWSW3zZfdCySklxOMQUmefrPhKYajV3bM49nCqDixQpoQA34OM8&usqp=CAc",
-            "image_display": "/media/products/galaxy_buds_live_colour_1.png",
+            "image_display": "/media/products/galaxy_buds_live_mystic_black.png",
             "image_rear_check":false,
             "image_front":"/media/products/galaxy_buds_live_",
             "image_rear":"/media/products/galaxy_buds_live_"

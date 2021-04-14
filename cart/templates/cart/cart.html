@@ -138,8 +138,15 @@
                                     </h4>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Nevermind</button>
-                                    <button type="button" class="btn btn-primary">Yes, I'm sure!</button>
+                                    <button type="submit" class="btn btn-danger" data-dismiss="modal">Nevermind</button>
+                                    <form action="{% url 'remove_from_cart' %}" method="post">
+                                        {% csrf_token %}
+                                        <input type="hidden" name="item_id" value="{{ item.product.pk }}">
+                                        <input type="hidden" name="product_colour" value="{{ item.colour }}">
+                                        <input type="hidden" name="unfriendly_colour" value="{{ item.unfriendly_colour }}">
+                                        <input type="hidden" name="storage" value="{{ item.storage }}">
+                                        <button type="submit" class="btn btn-success">Yes, I'm sure!</button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
