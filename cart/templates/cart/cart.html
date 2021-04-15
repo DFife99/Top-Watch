@@ -1,16 +1,9 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
-{% endblock %}
-
 {% block content %}
 
+    <!-- MESSAGES -->
     <div class="container">
         <div class="row">
             <div class="col-10 offset-md-1 mt-5">
@@ -24,16 +17,22 @@
             </div>
         </div>
     
+        <!-- NAVIGATION BACK TO THE PRODUCTS PAGE -->
         <div id="cart-header" style="text-align: left;" class="row offset-md-1 mt-3">
             <div class="col-10">
                 <a href="{% url 'products' %}"><i class="fas fa-chevron-left"></i> Back To All Products</a>
             </div>
         </div>
+
+        <!-- CHECKS TO SEE IF ANY ITEMS ARE IN THE CART AND DISPLAYS ACCORDINGLY -->
         <div class="row">
             <div class="col-10 offset-md-1 mt-5 mb-3">
                 {% if not cart_items %}
                     <p>Your Cart Is Empty</p>
+
+                <!-- SHOWS CART ITEMS -->
                 {% else %}
+                    <!-- CART HEADER -->
                     <div class="row">
                         <div class="col-8">
                             <h3>
@@ -53,14 +52,20 @@
                     </div>
                     <div class="col-12 custom-border mt-3 mb-3" style="height: 2px; background-color: blue;"></div>
                     {% for item in cart_items %}
+                    <!-- CART BODY -->
                         <div class="row">
+
+                            <!-- ITEM IMAGE -->
                             <div class="col-4">
                                 {% if item.product.image_rear == 'N/A' %}
+                                <!-- CHECKS WHICH IMAGES THE PRODUCT HAS AND DISPLAYS ACCORDINGLY -->
                                     <img src="{{ item.product.image_front }}{{ item.unfriendly_colour }}.png" alt="{{ item.product.brand }}{{ item.product.name }}" style="width: 100%;">
                                 {% else %}
                                     <img src="{{ item.product.image_rear }}{{ item.unfriendly_colour }}.png" alt="{{ item.product.brand }}{{ item.product.name }}" style="width: 100%;">
                                 {% endif %}
                             </div>
+
+                            <!-- ITEM INFO -->
                             <div class="col-8">
                                 <div class="row" style="height:50%;">
                                     <div class="col-8">
@@ -68,18 +73,25 @@
                                             <h5 class="mb-3"><strong>{{ item.product.brand }}</strong> {{ item.product.name }}<br></h5>
                                             <div>
                                                 Colour: <strong>{{ item.colour }}</strong><br>
+
+                                                <!-- CHECKS TO SEE IF THE ITEM HAS STORAGE AND ONLY DISPLAYS THE STORAGE IF IT DOES -->
                                                 {% if item.storage != "False" %}
                                                     Storage: <strong>{{ item.storage }}</strong><br>
                                                 {% endif %}
                                             </div>
                                         </div>
                                     </div>
+
+                                    <!-- ITEM PRICE -->
                                     <div class="col-2 text-center centered-cost-text">
                                         {{ item.product.price }}
                                     </div>
+
+                                    <!-- ITEM TOTAL ( PRICE TIMES THE QUANTITY )-->
                                     <div class="col-2 text-center centered-total-text">
                                         {{ item.subtotal }}
                                     </div>
+                                    
                                 </div>
                                 <div class="row" style="height: 50%;">
                                     <div class="col-6">
