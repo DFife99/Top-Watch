@@ -12,48 +12,6 @@ def view_cart(request):
     return render(request, 'cart/cart.html')
 
 
-def remove_from_cart(request):
-
-    # Taking items from the html form
-    item_id = request.POST['item_id']
-    colour = request.POST['product_colour']
-    unfriendly_colour = request.POST['unfriendly_colour']
-    storage = request.POST['storage']
-    cart = request.session.get('cart')
-
-    # checks to see if there is more than one colour under the item id currently in the cart
-    if len(cart[item_id]['products_by_colour']) > 1:
-
-        # checks to see if there is more than one storage under the colour currently in the cart
-        if len(cart[item_id]['products_by_colour'][colour]['unfriendly_colour'][unfriendly_colour]['products_by_size']) > 1:
-            # if there is more than different type of storage amount, it will only remove the selected one
-            del cart[item_id]['products_by_colour'][colour]['unfriendly_colour'][unfriendly_colour]['products_by_size'][storage]
-            print('Second If')
-
-        else: 
-            # if there is only one storage amount, it will remove the selected colour
-            print('First Else')
-            del cart[item_id]['products_by_colour'][colour]
-
-    else:
-
-        # if there is only one colour under the id, it will check to see if there is multiple storage sizes chosen
-        if len(cart[item_id]['products_by_colour'][colour]['unfriendly_colour'][unfriendly_colour]['products_by_size']) > 1:
-
-            # If there is multiple storage sizes it will only remove the selected one
-            del cart[item_id]['products_by_colour'][colour]['unfriendly_colour'][unfriendly_colour]['products_by_size'][storage]
-
-        # if there is only one storage under the one colour it will remove the id entirelty from the cart
-        else: 
-            cart.pop(item_id)
-
-    # Sends a message to the html to allow the user to know theyve been successful
-    messages.success(request, 'Product Removed Successfully!')
-
-    # Updates the cart without the item that was removed
-    request.session['cart'] = cart
-    return redirect(reverse('cart'))
-
 def add_to_cart(request, item_id):
     # Taking variables from the html form
     redirect_url = request.POST.get('redirect_url')
@@ -125,3 +83,54 @@ def add_to_cart(request, item_id):
     messages.success(request, 'Product Added To Your Cart!')
 
     return redirect(redirect_url)
+
+
+def remove_from_cart(request):
+
+    # Taking items from the html form
+    item_id = request.POST['item_id']
+    colour = request.POST['product_colour']
+    unfriendly_colour = request.POST['unfriendly_colour']
+    storage = request.POST['storage']
+    cart = request.session.get('cart')
+
+    # checks to see if there is more than one colour under the item id currently in the cart
+    if len(cart[item_id]['products_by_colour']) > 1:
+
+        # checks to see if there is more than one storage under the colour currently in the cart
+        if len(cart[item_id]['products_by_colour'][colour]['unfriendly_colour'][unfriendly_colour]['products_by_size']) > 1:
+            # if there is more than different type of storage amount, it will only remove the selected one
+            del cart[item_id]['products_by_colour'][colour]['unfriendly_colour'][unfriendly_colour]['products_by_size'][storage]
+            print('Second If')
+
+        else: 
+            # if there is only one storage amount, it will remove the selected colour
+            print('First Else')
+            del cart[item_id]['products_by_colour'][colour]
+
+    else:
+
+        # if there is only one colour under the id, it will check to see if there is multiple storage sizes chosen
+        if len(cart[item_id]['products_by_colour'][colour]['unfriendly_colour'][unfriendly_colour]['products_by_size']) > 1:
+
+            # If there is multiple storage sizes it will only remove the selected one
+            del cart[item_id]['products_by_colour'][colour]['unfriendly_colour'][unfriendly_colour]['products_by_size'][storage]
+
+        # if there is only one storage under the one colour it will remove the id entirelty from the cart
+        else: 
+            cart.pop(item_id)
+
+    # Sends a message to the html to allow the user to know theyve been successful
+    messages.success(request, 'Product Removed Successfully!')
+
+    # Updates the cart without the item that was removed
+    request.session['cart'] = cart
+    return redirect(reverse('cart'))
+
+
+def clear_cart(request):
+    cart = request.session.get('cart')
+    cart.clear()
+    request.session['cart'] = cart
+    messages.success(request, 'Cart Cleared Successfully!')
+    return redirect(reverse('cart'))

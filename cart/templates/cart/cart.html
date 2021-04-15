@@ -23,155 +23,195 @@
                 {% endif %}
             </div>
         </div>
-    </div>
-
-    <div class="container">
-        <div class="col-10 offset-md-1 mt-5 mb-3">
-            {% if not cart_items %}
-                <p>Your Cart Is Empty</p>
-            {% else %}
-                <div class="row">
-                    <div class="col-8">
-                        <h3>
-                            Cart
-                        </h3>
-                    </div>
-                    <div class="col-2">
-                        <h5 class="text-center">
-                            Unit Cost
-                        </h5>
-                    </div>
-                    <div class="col-2">
-                        <h5 class="text-center">
-                            Total
-                        </h5>
-                    </div>
-                </div>
-                <div class="col-12 custom-border mt-3 mb-3" style="height: 2px; background-color: blue;"></div>
-                {% for item in cart_items %}
+    
+        <div id="cart-header" style="text-align: left;" class="row offset-md-1 mt-3">
+            <div class="col-10">
+                <a href="{% url 'products' %}"><i class="fas fa-chevron-left"></i> Back To All Products</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10 offset-md-1 mt-5 mb-3">
+                {% if not cart_items %}
+                    <p>Your Cart Is Empty</p>
+                {% else %}
                     <div class="row">
-                        <div class="col-4">
-                            {% if item.product.image_rear == 'N/A' %}
-                                <img src="{{ item.product.image_front }}{{ item.unfriendly_colour }}.png" alt="{{ item.product.brand }}{{ item.product.name }}" style="width: 100%;">
-                            {% else %}
-                                <img src="{{ item.product.image_rear }}{{ item.unfriendly_colour }}.png" alt="{{ item.product.brand }}{{ item.product.name }}" style="width: 100%;">
-                            {% endif %}
-                        </div>
                         <div class="col-8">
-                            <div class="row" style="height:50%;">
-                                <div class="col-8">
-                                    <div class="centered-info-text">
-                                        <h5 class="mb-3"><strong>{{ item.product.brand }}</strong> {{ item.product.name }}<br></h5>
-                                        <div>
-                                            Colour: <strong>{{ item.colour }}</strong><br>
-                                            {% if item.storage != "False" %}
-                                                Storage: <strong>{{ item.storage }}</strong><br>
-                                            {% endif %}
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-2 text-center centered-cost-text">
-                                    {{ item.product.price }}
-                                </div>
-                                <div class="col-2 text-center centered-total-text">
-                                    {{ item.subtotal }}
-                                </div>
+                            <h3>
+                                Cart
+                            </h3>
+                        </div>
+                        <div class="col-2">
+                            <h5 class="text-center">
+                                Unit Cost
+                            </h5>
+                        </div>
+                        <div class="col-2">
+                            <h5 class="text-center">
+                                Total
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="col-12 custom-border mt-3 mb-3" style="height: 2px; background-color: blue;"></div>
+                    {% for item in cart_items %}
+                        <div class="row">
+                            <div class="col-4">
+                                {% if item.product.image_rear == 'N/A' %}
+                                    <img src="{{ item.product.image_front }}{{ item.unfriendly_colour }}.png" alt="{{ item.product.brand }}{{ item.product.name }}" style="width: 100%;">
+                                {% else %}
+                                    <img src="{{ item.product.image_rear }}{{ item.unfriendly_colour }}.png" alt="{{ item.product.brand }}{{ item.product.name }}" style="width: 100%;">
+                                {% endif %}
                             </div>
-                            <div class="row" style="height: 50%;">
-                                <div class="col-6">
-                                    <form action="" class="positioned-quantity">
-                                        {% csrf_token %}
-                                        <p style="margin: 0%;">Quantity:</p>
-                                        <div class="form-group">
-                                            <div class="input-group" style="border: solid 2px;
-                                                                            border-radius: 5px;">
-                                                <div class="input-group-prepend"
-                                                    style="border-right: solid 2px">
-                                                    <button class="decrement-qty btn btn-sm btn-black rounded-0" 
-                                                        data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
-                                                        <span>
-                                                            <i class="fas fa-minus fa-sm"></i>
-                                                        </span>
-                                                    </button>
-                                                </div>
-                                                <input class="form-control form-control-sm qty_input" type="number"
-                                                    name="quantity" value="{{ item.quantity }}" min="1" max="99"
-                                                    data-item_id="{{ item.item_id }}"
-                                                    id="id_qty_{{ item.item_id }}"
-                                                    style="text-align: center;">
-                                                <div class="input-group-append"
-                                                    style="border-left: solid 2px">
-                                                    <button class="increment-qty btn btn-sm btn-black rounded-0"
-                                                        data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
-                                                        <span>
-                                                            <i class="fas fa-plus fa-sm"></i>
-                                                        </span>
-                                                    </button>
-                                                </div>
+                            <div class="col-8">
+                                <div class="row" style="height:50%;">
+                                    <div class="col-8">
+                                        <div class="centered-info-text">
+                                            <h5 class="mb-3"><strong>{{ item.product.brand }}</strong> {{ item.product.name }}<br></h5>
+                                            <div>
+                                                Colour: <strong>{{ item.colour }}</strong><br>
+                                                {% if item.storage != "False" %}
+                                                    Storage: <strong>{{ item.storage }}</strong><br>
+                                                {% endif %}
                                             </div>
                                         </div>
-                                    </form>
+                                    </div>
+                                    <div class="col-2 text-center centered-cost-text">
+                                        {{ item.product.price }}
+                                    </div>
+                                    <div class="col-2 text-center centered-total-text">
+                                        {{ item.subtotal }}
+                                    </div>
                                 </div>
-                                <div class="col-2 offset-md-1">
-                                    <!-- Button trigger modal -->
-                                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#staticBackdrop_{{ item.item_id }}_{{ item.product.brand }}_{{ item.product.unfriendly_name }}_{{ item.unfriendly_colour }}_{{ item.storage }}" style=" position: absolute; bottom: 26%; left: -12.5%;">
-                                        <a class="modal-trigger" href="#staticBackdrop">Remove</a>
-                                    </button>
+                                <div class="row" style="height: 50%;">
+                                    <div class="col-6">
+                                        <form action="" class="positioned-quantity">
+                                            {% csrf_token %}
+                                            <p style="margin: 0%;">Quantity:</p>
+                                            <div class="form-group">
+                                                <div class="input-group" style="border: solid 2px;
+                                                                                border-radius: 5px;">
+                                                    <div class="input-group-prepend"
+                                                        style="border-right: solid 2px">
+                                                        <button class="decrement-qty btn btn-sm btn-black rounded-0" 
+                                                            data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
+                                                            <span>
+                                                                <i class="fas fa-minus fa-sm"></i>
+                                                            </span>
+                                                        </button>
+                                                    </div>
+                                                    <input class="form-control form-control-sm qty_input" type="number"
+                                                        name="quantity" value="{{ item.quantity }}" min="1" max="99"
+                                                        data-item_id="{{ item.item_id }}"
+                                                        id="id_qty_{{ item.item_id }}"
+                                                        style="text-align: center;">
+                                                    <div class="input-group-append"
+                                                        style="border-left: solid 2px">
+                                                        <button class="increment-qty btn btn-sm btn-black rounded-0"
+                                                            data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+                                                            <span>
+                                                                <i class="fas fa-plus fa-sm"></i>
+                                                            </span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-2 offset-md-1">
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn btn-danger modal-trigger" data-toggle="modal" data-target="#staticBackdrop_{{ item.item_id }}_{{ item.product.brand }}_{{ item.product.unfriendly_name }}_{{ item.unfriendly_colour }}_{{ item.storage }}" style=" position: absolute; bottom: 26%; left: -12.5%;">Remove</button>
+                                    </div>
+                                    <div class="col-3">
+                                        <button type="button" class="btn btn-success" style=" position: absolute; bottom: 26%; left: 14%;">Buy Seperately</button>
+                                    </div>
                                 </div>
-                                <div class="col-3">
-                                    <button type="button" class="btn btn-success" style=" position: absolute; bottom: 26%; left: 14%;">Buy Seperately</button>
+                            </div>
+                            <div class="col-12 custom-border mt-3 mb-3" style="height: 2px; background-color: blue;"></div>
+                        </div>
+
+                        <!-- Remove Item Modal -->
+                        <div class="modal fade" id="staticBackdrop_{{ item.item_id }}_{{ item.product.brand }}_{{ item.product.unfriendly_name }}_{{ item.unfriendly_colour }}_{{ item.storage }}" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Remove Item</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h4>
+                                            Are you sure you want to remove<br><br>
+                                            <strong>
+                                                {{ item.product.brand }} {{ item.product.name }}<br><br>
+                                                Colour : {{ item.colour }}<br>
+                                                Storage : {{ item.storage }}<br>
+                                                Quantity : {{ item.quantity }}
+                                            </strong>
+                                            <br><br>from the cart?
+                                        </h4>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="submit" class="btn btn-danger" data-dismiss="modal">Nevermind</button>
+                                        <form action="{% url 'remove_from_cart' %}" method="post">
+                                            {% csrf_token %}
+                                            <input type="hidden" name="item_id" value="{{ item.product.pk }}">
+                                            <input type="hidden" name="product_colour" value="{{ item.colour }}">
+                                            <input type="hidden" name="unfriendly_colour" value="{{ item.unfriendly_colour }}">
+                                            <input type="hidden" name="storage" value="{{ item.storage }}">
+                                            <button type="submit" class="btn btn-success">Yes, I'm sure!</button>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 custom-border mt-3 mb-3" style="height: 2px; background-color: blue;"></div>
-                    </div>
+                    {% endfor %}
+                {% endif %}
 
-                    <!-- MODAL POP -->
+                <div class="col-6 offset-md-6" style="text-align: right;">
+                    {{ product_count }} Items | Total : {{ total }}
+                </div>
 
-                    <!-- Modal -->
-                    <div class="modal fade" id="staticBackdrop_{{ item.item_id }}_{{ item.product.brand }}_{{ item.product.unfriendly_name }}_{{ item.unfriendly_colour }}_{{ item.storage }}" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <!-- NEED TO ADD UNFRIENDLY COLOUR TO FIXTURE AND ADD IT TO THE ADD TO BAG FORM, PLACE IT INSIDE THE COLOUR VARIABLE *OR* SWAP IT FOR THE
-                                 REGULAR COLOUR AND PUT THE COLOUR VARIABLE INSIDE THE UNFRIENDLY COLOUR -->
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="staticBackdropLabel">Remove Item</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <h4>
-                                        Are you sure you want to remove<br><br>
-                                        <strong>
-                                            {{ item.product.brand }} {{ item.product.name }}<br><br>
-                                            Colour : {{ item.colour }}<br>
-                                            Storage : {{ item.storage }}<br>
-                                            Quantity : {{ item.quantity }}
-                                        </strong>
-                                        <br><br>from the cart?
-                                    </h4>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="submit" class="btn btn-danger" data-dismiss="modal">Nevermind</button>
-                                    <form action="{% url 'remove_from_cart' %}" method="post">
-                                        {% csrf_token %}
-                                        <input type="hidden" name="item_id" value="{{ item.product.pk }}">
-                                        <input type="hidden" name="product_colour" value="{{ item.colour }}">
-                                        <input type="hidden" name="unfriendly_colour" value="{{ item.unfriendly_colour }}">
-                                        <input type="hidden" name="storage" value="{{ item.storage }}">
-                                        <button type="submit" class="btn btn-success">Yes, I'm sure!</button>
-                                    </form>
+                <div class="col-4 offset-md-8 mt-3 mb-3">
+                    <div class="row">
+                        <div class="col-6" style="left:1%">
+                            <button type="button" class="btn btn-danger modal-trigger" data-toggle="modal" data-target="#staticBackdrop_clearCart"
+                            {% if not cart_items %}
+                                disabled data-toggle="tooltip" data-placement="top" title="Cart is empty!"
+                            {% endif %}>Clear Cart</button>
+                        </div>
+                        <div class="col-6" style="left: 10%;">
+                            <button type="button" class="btn btn-success">Buy All</button>
+                        </div>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdrop_clearCart" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Remove Item</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h4>
+                                            Are you sure you want to remove <br>
+                                            <strong>ALL</strong><br>
+                                            items from the cart?
+                                        </h4>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="submit" class="btn btn-danger" data-dismiss="modal">Nevermind</button>
+                                        <form action="{% url 'clear_cart' %}" method="post">
+                                            {% csrf_token %}
+                                            <button type="submit" class="btn btn-success">Yes, I'm sure!</button>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                {% endfor %}
-            {% endif %}
-        </div>
-        <div id="cart-header" style="margin-top: 5%; margin-bottom: 5%; text-align: center;" class="row offset-md-1">
-            <div class="col-6">
-                <a href="{% url 'products' %}"><i class="fas fa-chevron-left"></i> Back To All Products</a>
+                </div>
             </div>
         </div>
     </div>
@@ -182,6 +222,10 @@
     <script>
         $('#myModal').on('shown.bs.modal', function () {
             $('#myInput').trigger('focus')
+        })
+
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
         })
     </script>
 {% endblock %}

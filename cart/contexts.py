@@ -20,6 +20,10 @@ def cart_contents(request):
                     
                     subtotal = price * quantity
 
+                    total += subtotal
+
+                    product_count += quantity
+
                     cart_item = {
                         'product': product,
                         'colour': colour,
